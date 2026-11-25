@@ -613,4 +613,40 @@ export const PAGES = [
     ],
     related: ["deletion-request-45-days", "appeal-denied-privacy-request", "texas-attorney-general-complaint"],
   },
+  {
+    slug: "do-i-have-to-live-in-texas",
+    title: "Do I have to live in Texas to use its privacy law?",
+    h1: "Do I have to live in Texas to use its privacy law?",
+    description: "The law protects a \"consumer\": a Texas resident acting only in an individual or household context. What that includes and excludes, and the company tests.",
+    short: "On the statute's text, yes. Section 541.001(7) defines a consumer as an individual who is a resident of this state acting only in an individual or household context. It excludes an individual acting in a commercial or employment context. The statute does not say how a company checks residency or what happens if you move.",
+    sections: [
+      { h: "The definition", blocks: [
+        { p: "Section 541.001(7) defines who the law's rights belong to:" },
+        { q: "\"Consumer\" means an individual who is a resident of this state acting only in an individual or household context.", src: "bc541" },
+        { q: "The term does not include an individual acting in a commercial or employment context.", src: "bc541" },
+        { p: "The rights in section 541.051 are given to that consumer:" },
+        { q: "A consumer is entitled to exercise the consumer rights authorized by this section at any time by submitting a request to a controller specifying the consumer rights the consumer wishes to exercise.", src: "bc541" },
+        { p: "Read together, a person who is not a resident of Texas is not a \"consumer\" under this chapter. Other states have their own laws. This page covers only Texas." },
+      ] },
+      { h: "Individual context, not business or work", blocks: [
+        { p: "Data about you as a private person fits the definition. Data about you acting in a commercial or employment context does not. The statute does not say how to treat a record that mixes your personal and business details, such as a listing under your own name for a business you run." },
+      ] },
+      { h: "The company has its own tests", blocks: [
+        { p: "Being a Texas resident is half of it. Section 541.002(a) says the chapter applies only to a person that:" },
+        { q: "conducts business in this state or produces a product or service consumed by residents of this state;", src: "bc541" },
+        { q: "processes or engages in the sale of personal data; and", src: "bc541" },
+        { q: "is not a small business as defined by the United States Small Business Administration, except to the extent that Section 541.107 applies to a person described by this subdivision.", src: "bc541" },
+        { p: "The Attorney General's page describes the same reach: it says the safeguards apply to companies that \"conduct business in [Texas] or produce a product or service consumed by residents of [Texas]\". [[The small-business page|/texas-privacy-law-small-business/]] covers the third test. Section 541.002(b) also lists entities the chapter does not apply to, including nonprofit organizations and financial institutions." },
+      ] },
+      { h: "What the statute does not say", blocks: [
+        { p: "The text has no residency proof requirement and no rule for a move. What it says about proving who you are is about identity, not address. Section 541.052(e) lets a company that cannot authenticate a request decline it and ask for more information. [[The 45-day page|/deletion-request-45-days/]] has that text." },
+      ] },
+    ],
+    notSaid: [
+      { t: "How a company confirms you live in Texas. The statute names no residency proof.", absent: ["proof of residency", "verify residency", "residency"], files: ["bc541"] },
+      { t: "What happens to a request if you move out of Texas after sending it. The statute does not address a move.", absent: ["moves out", "ceases to be a resident", "no longer a resident"], files: ["bc541"] },
+      { t: "Whether a non-resident can use another state's law against a company covered here. This page covers Texas only.", absent: [], files: [], ours: true },
+    ],
+    related: ["texas-privacy-law-small-business", "deletion-request-45-days", "texas-data-broker-registry"],
+  },
 ];
