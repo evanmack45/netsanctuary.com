@@ -459,6 +459,36 @@ export const PAGES = [
       { t: "A date when companies had to start honoring signals. The chapter text gives none. Some guides say January 1, 2025.", absent: ["January 1, 2025"], files: ["bc541"] },
       { t: "Whether a particular site honors your signal. We did not test any.", absent: [], files: [], ours: true },
     ],
-    related: ["deletion-request-45-days", "texas-attorney-general-complaint", "people-search-said-no"],
+    related: ["authorized-agent-texas-privacy-request", "deletion-request-45-days", "texas-attorney-general-complaint"],
+  },
+  {
+    slug: "authorized-agent-texas-privacy-request",
+    title: "Can someone send my Texas privacy request for me?",
+    h1: "Can someone else send my Texas privacy request for me? What the law says about authorized agents",
+    description: "The Texas privacy law lets you name an authorized agent to opt out of targeted ads and sales. Whitepages' rule for agents on delete requests.",
+    short: "Yes, for opt-outs. Section 541.055(e) lets you name an authorized agent to opt out of targeted advertising and the sale of personal data, and a company must comply if it can verify you and the agent's authority. The chapter uses the term authorized agent only there. Whitepages' notice says an agent can send a delete request with signed written permission.",
+    sections: [
+      { h: "What the statute says", blocks: [
+        { q: "A consumer may designate another person to serve as the consumer's authorized agent and act on the consumer's behalf to opt out of the processing of the consumer's personal data under Sections 541.051(b)(5)(A) and (B).", src: "bc541" },
+        { p: "Those two items are targeted advertising and the sale of personal data. Chapter 541 uses the term authorized agent only in section 541.055(e) and the lines that follow it. For a child, section 541.051(a) has a separate rule, covered on [[the child's data page|/childs-data/]]." },
+        { p: "A company can refuse an agent's request in some cases. Two of them:" },
+        { q: "the authorized agent does not communicate the request to the controller in a clear and unambiguous manner;", src: "bc541" },
+        { q: "the controller is not able to verify, with commercially reasonable effort, that the consumer is a resident of this state;", src: "bc541" },
+      ] },
+      { h: "What one company says about agents", blocks: [
+        { p: "Whitepages' notice has an Authorized Agents paragraph in the section that covers Texas residents:" },
+        { q: "You may submit a request to know or a request to delete your Personal Information through an authorized agent. If you do so, the agent must present signed written permission to act on your behalf and you may also be required to independently verify your identity with us.", src: "wp" },
+        { p: "That is one company's rule. The statute does not set a signed-permission requirement, and other companies can set their own." },
+      ] },
+      { h: "What the free pack does", blocks: [
+        { p: "The pack's letter says the sender is the person asking and that no one else is acting for them. We are not your agent. We do not send, file, or follow up for you. If you want someone to send your requests, you would have to edit the letter and check the company's own rules first." },
+      ] },
+    ],
+    notSaid: [
+      { t: "That an agent can send a deletion request under the statute. Section 541.055(e) covers opt-outs.", absent: ["delete personal data on behalf", "authorized agent to delete"], files: ["bc541"] },
+      { t: "What proof of authority a company will accept. The statute says only that the company must be able to verify it.", absent: ["power of attorney", "notarized"], files: ["bc541"] },
+      { t: "Whether any company will accept an agent's request. We did not test any.", absent: [], files: [], ours: true },
+    ],
+    related: ["texas-browser-opt-out-signals", "childs-data", "deletion-request-45-days"],
   },
 ];
