@@ -882,6 +882,54 @@ export const PAGES = [
     ],
     related: ["texas-sensitive-data-consent", "texas-privacy-law-small-business", "can-i-sue-texas-privacy-law"],
   },
+  {
+    slug: "does-the-law-cover-government",
+    title: "Does the Texas privacy law cover cities and police?",
+    h1: "Does the Texas privacy law cover a city or police cameras?",
+    description: "The Act does not apply to a state agency or a political subdivision of this state. What the text says, and what it leaves open for camera vendors.",
+    short: "Not the government body itself. Section 541.002(b)(1) says the chapter does not apply to a state agency or a political subdivision of this state. The exemption names the government body. It does not name a company that sells cameras or software to one, and the chapter has no text on police or cameras. Whether a vendor is covered turns on the Act's general test in section 541.002(a), and we found no source that settles it.",
+    sections: [
+      { h: "What the Act says", blocks: [
+        { p: "Section 541.002(b) of the Business & Commerce Code lists who the chapter does not apply to. The first item:" },
+        { q: "(b) This chapter does not apply to: (1) a state agency or a political subdivision of this state;", src: "bc541" },
+        { p: "The Attorney General's summary page says the same:" },
+        { q: "The Act exempts six types of entities: state agencies and political subdivisions of the state", src: "agtdpsa" },
+        { p: "\"State agency\" is defined, in section 541.001(30):" },
+        { q: "\"State agency\" means a department, commission, board, office, council, authority, or other agency in any branch of state government that is created by the constitution or a statute of this state, including a university system or institution of higher education as defined by Section 61.003, Education Code.", src: "bc541" },
+        { p: "\"Political subdivision\" has no definition in chapter 541. A city or a county is the everyday example, but this page cannot point to statute text in the chapter that says so." },
+      ] },
+      { h: "What it means for a city or a police department", blocks: [
+        { p: "On the text and ordinary usage, a city or county is a political subdivision, and a police department is part of one. If so, the chapter does not apply to it, and an access, correction, deletion or opt-out request under the Act sent to it is outside the statute. The Act also speaks to local rules:" },
+        { q: "This chapter supersedes and preempts any ordinance, resolution, rule, or other regulation adopted by a political subdivision regarding the processing of personal data by a controller or processor.", src: "bc541" },
+        { p: "That is section 541.205. It is about ordinances on processing by controllers and processors. We have not found a source on how it applies to a city's own cameras." },
+      ] },
+      { h: "What it does not say about a vendor", blocks: [
+        { p: "The exemption is for \"a state agency or a political subdivision.\" A company that makes or runs cameras for one is a different kind of entity. The chapter's text has no entry for vendors, no mention of police and no mention of cameras. So the text does not say a vendor is exempt, and it does not say a vendor is covered." },
+        { p: "The general test is section 541.002(a):" },
+        { q: "This chapter applies only to a person that: (1) conducts business in this state or produces a product or service consumed by residents of this state; (2) processes or engages in the sale of personal data; and (3) is not a small business as defined by the United States Small Business Administration", src: "bc541" },
+        { p: "A \"processor\" is defined as:" },
+        { q: "\"Processor\" means a person that processes personal data on behalf of a controller.", src: "bc541" },
+        { p: "Two open questions follow, and the sources here answer neither. First, whether the data a camera vendor holds is \"personal data\", meaning information linked or reasonably linkable to an identified or identifiable individual. Second, whether a vendor that works for an exempt city counts as covered, given that the city is the party deciding why the data is processed. The chapter also leaves room for companies to respond to government demands:" },
+        { q: "(a) This chapter may not be construed to restrict a controller's or processor's ability to: (1) comply with federal, state, or local laws, rules, or regulations; (2) comply with a civil, criminal, or regulatory inquiry, investigation, subpoena, or summons by federal, state, local, or other governmental authorities;", src: "bc541" },
+        { p: "That is section 541.201(a). It is a limit on what the Act is read to restrict." },
+      ] },
+      { h: "What people say", blocks: [
+        { p: "An August 2026 comment on an r/texas thread about Houston's Flock cameras:" },
+        { q: "All of FLOCK cameras are in violation of TDPSA protection Law.", src: "rgov" },
+        { p: "That is one commenter's statement. This page does not say any camera company violates the Act, and nothing in the statute text we read supports or rules it out." },
+        { p: "On who can enforce the Act, section 541.156 says:" },
+        { q: "This chapter may not be construed as providing a basis for, or being subject to, a private right of action for a violation of this chapter or any other law.", src: "bc541" },
+        { p: "See [[Can I sue under the Texas privacy law?|/can-i-sue-texas-privacy-law/]] and [[when to complain to the Texas Attorney General|/texas-attorney-general-complaint/]]." },
+      ] },
+    ],
+    notSaid: [
+      { t: "Anything on police, cameras, or license plate readers. The chapter text has none.", absent: ["police", "camera", "license plate", "law enforcement"], files: ["bc541"] },
+      { t: "A rule for vendors or contractors of government bodies. The words do not appear in the chapter or the Attorney General's summary.", absent: ["vendor"], files: ["bc541", "agtdpsa"] },
+      { t: "A definition of \"political subdivision\".", absent: ["political subdivision\" means", "political subdivision means"], files: ["bc541"] },
+      { t: "Whether any city's or company's cameras follow the Act. We have not looked at any contract or practice.", absent: [], files: [], ours: true },
+    ],
+    related: ["texas-privacy-law-small-business", "do-i-have-to-live-in-texas", "texas-attorney-general-complaint"],
+  },
 ];
 
 // Hub page content. Every answer slug must appear in exactly one group (the builder throws otherwise).
@@ -898,7 +946,7 @@ export const HUB = {
   groups: [
     { h: "Making a request and the clocks", slugs: ["deletion-request-45-days", "access-my-data", "deletion-request-fee", "authorized-agent-texas-privacy-request", "correct-my-data", "appeal-denied-privacy-request"] },
     { h: "Opting out and consent", slugs: ["texas-browser-opt-out-signals", "opt-out-of-sale", "one-texas-opt-out-form", "texas-sensitive-data-consent", "can-they-refuse-service"] },
-    { h: "Who the law covers", slugs: ["do-i-have-to-live-in-texas", "texas-privacy-law-small-business", "childs-data", "employer-face-scan"] },
+    { h: "Who the law covers", slugs: ["do-i-have-to-live-in-texas", "texas-privacy-law-small-business", "childs-data", "employer-face-scan", "does-the-law-cover-government"] },
     { h: "Enforcement", slugs: ["can-i-sue-texas-privacy-law", "texas-attorney-general-complaint"] },
     { h: "Data brokers and people-search listings", slugs: ["texas-data-broker-registry", "people-search-said-no", "listing-came-back", "remove-home-address"] },
   ],

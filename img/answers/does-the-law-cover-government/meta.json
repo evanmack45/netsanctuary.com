@@ -1,0 +1,23 @@
+{
+  "alt": "An unlit iron street lamp on a short post above an empty limestone walk, with dry grass at the base, in indigo dusk.",
+  "width": 1280,
+  "height": 720,
+  "srcset": [
+    [
+      640,
+      "header-640.webp"
+    ],
+    [
+      960,
+      "header-960.webp"
+    ],
+    [
+      1280,
+      "header.webp"
+    ]
+  ],
+  "ogAlt": "An unlit iron street lamp on a short post above an empty limestone walk, with dry grass at the base, in indigo dusk.",
+  "ogWidth": 1200,
+  "ogHeight": 630,
+  "source": "/workspace/mason/art/incoming/netsanctuary.com/does-the-law-cover-government/"
+}
