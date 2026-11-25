@@ -695,4 +695,44 @@ export const PAGES = [
     ],
     related: ["texas-privacy-law-small-business", "deletion-request-45-days", "texas-data-broker-registry"],
   },
+  {
+    slug: "can-they-refuse-service",
+    title: "Can a company refuse me over Texas privacy rights?",
+    h1: "Can a company charge more or refuse service if I use my rights under the Texas privacy law?",
+    description: "Section 541.101(b)(3) bars discrimination for using your rights, such as denying service or charging more. Subsection (c) allows loyalty and no-fee offers.",
+    short: "Generally no. Section 541.101(b)(3) says a controller cannot discriminate against a consumer for exercising any of the consumer rights, including by denying goods or services, charging different prices or rates, or providing a different level of quality. Subsection (c) carves out a company's duty to provide a service that needs data it does not hold, different pricing after an opt-out, and bona fide loyalty or club card programs.",
+    sections: [
+      { h: "The rule", blocks: [
+        { p: "Section 541.101(b) lists what a controller cannot do. Item (3) is:" },
+        { q: "discriminate against a consumer for exercising any of the consumer rights contained in this chapter, including by denying goods or services, charging different prices or rates for goods or services, or providing a different level of quality of goods or services to the consumer;", src: "bc541" },
+        { p: "The Attorney General's page lists the same protection among your rights:" },
+        { q: "Right to not face retaliation or discrimination for exercising these rights.", src: "agtdpsa" },
+        { p: "Section 541.054 adds that a contract cannot waive the rights:" },
+        { q: "Any provision of a contract or agreement that waives or limits in any way a consumer right described by Sections 541.051, 541.052, and 541.053 is contrary to public policy and is void and unenforceable.", src: "bc541" },
+      ] },
+      { h: "The two exceptions in subsection (c)", blocks: [
+        { p: "Subsection (c) limits how far item (3) reaches. It does not" },
+        { q: "require a controller to provide a product or service that requires the personal data of a consumer that the controller does not collect or maintain", src: "bc541" },
+        { p: "and it does not" },
+        { q: "prohibit a controller from offering a different price, rate, level, quality, or selection of goods or services to a consumer, including offering goods or services for no fee, if the consumer has exercised the consumer's right to opt out under Section 541.051 or the offer is related to a consumer's voluntary participation in a bona fide loyalty, rewards, premium features, discounts, or club card program.", src: "bc541" },
+        { p: "That second exception names two cases: you opted out, or you chose to join a bona fide loyalty, rewards, premium features, discounts, or club card program." },
+      ] },
+      { h: "Reading the two together", blocks: [
+        { p: "Item (3) bars worse treatment because you used a right, and subsection (c) names the exceptions. If you delete data a service runs on, the first exception points to the company not having to keep providing that service. That is our reading. The statute gives no example." },
+        { p: "The statute does not define \"bona fide\" for a loyalty program and sets no limit on how much more a company can charge after an opt-out. A company that charges more after you opt out is relying on subsection (c), and you can ask in writing which part it relies on." },
+      ] },
+      { h: "Fees for answering a request are separate", blocks: [
+        { p: "A fee for handling your request falls under section 541.052(d), not this rule. [[The fee page|/deletion-request-fee/]] covers it." },
+      ] },
+      { h: "If a company does it anyway", blocks: [
+        { p: "The Attorney General enforces the Act, and the statute gives no private right of action. [[Can I sue|/can-i-sue-texas-privacy-law/]] covers that, and [[the complaint page|/texas-attorney-general-complaint/]] covers the Attorney General's online complaint form." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A definition of \"bona fide loyalty program.\" Section 541.001 defines no such term.", absent: ["\"bona fide loyalty", "\"loyalty program\" means"], files: ["bc541"] },
+      { t: "A limit on how large a difference in cost can be after an opt-out. The statute states no percentage or dollar figure.", absent: ["%", "percentage"], files: ["bc541"] },
+      { t: "Whether any court has applied section 541.101(b)(3). We did not search case law.", absent: [], files: [], ours: true },
+    ],
+    related: ["deletion-request-fee", "can-i-sue-texas-privacy-law", "texas-attorney-general-complaint"],
+  },
 ];
