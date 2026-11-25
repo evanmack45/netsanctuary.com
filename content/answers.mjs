@@ -423,4 +423,42 @@ export const PAGES = [
     ],
     related: ["texas-privacy-law-small-business", "childs-data", "deletion-request-45-days"],
   },
+  {
+    slug: "texas-browser-opt-out-signals",
+    title: "Texas privacy law and browser opt-out signals",
+    h1: "Does the Texas privacy law make companies honor Global Privacy Control and browser opt-out signals?",
+    description: "Section 541.055 lets you opt out of targeted ads and sales with a browser setting or extension. What it requires, what it excludes, and what it does not name.",
+    short: "Section 541.055 lets a consumer use an Internet browser setting or extension, or a global device setting, to opt out of targeted advertising and the sale of personal data. A company must comply if it can verify your identity and the agent's authority. The signal must be your own choice, not a default. The statute does not name Global Privacy Control.",
+    sections: [
+      { h: "What the statute says", blocks: [
+        { p: "Section 541.055(e) lets you name an authorized agent. It then says how:" },
+        { q: "A consumer may designate an authorized agent using a technology, including a link to an Internet website, an Internet browser setting or extension, or a global setting on an electronic device, that allows the consumer to indicate the consumer's intent to opt out of the processing.", src: "bc541" },
+        { q: "A controller shall comply with an opt-out request received from an authorized agent under this subsection if the controller is able to verify, with commercially reasonable effort, the identity of the consumer and the authorized agent's authority to act on the consumer's behalf.", src: "bc541" },
+      ] },
+      { h: "What counts as a valid signal", blocks: [
+        { p: "Subsection (f) limits the technology. It says the technology" },
+        { q: "may not make use of a default setting, but must require the consumer to make an affirmative, freely given, and unambiguous choice to indicate the consumer's intent to opt out of any processing of a consumer's personal data; and", src: "bc541" },
+        { q: "must be consumer-friendly and easy to use by the average consumer.", src: "bc541" },
+        { p: "So a browser that turns the signal on for everyone by default does not meet the rule. You have to choose it." },
+      ] },
+      { h: "When a company does not have to comply", blocks: [
+        { p: "Subsection (e) lists four cases:" },
+        { q: "the authorized agent does not communicate the request to the controller in a clear and unambiguous manner;", src: "bc541" },
+        { q: "the controller is not able to verify, with commercially reasonable effort, that the consumer is a resident of this state;", src: "bc541" },
+        { q: "the controller does not possess the ability to process the request; or", src: "bc541" },
+        { q: "the controller does not process similar or identical requests the controller receives from consumers for the purpose of complying with similar or identical laws or regulations of another state.", src: "bc541" },
+      ] },
+      { h: "What a signal covers", blocks: [
+        { p: "Subsection (e) points to section 541.051(b)(5)(A) and (B). Those are the rights to opt out of targeted advertising and of the sale of personal data. A signal does not ask a company to delete anything. For deletion, see [[the 45-day page|/deletion-request-45-days/]]." },
+        { p: "Whitepages' notice, in the section that covers Texas residents, mentions the signal:" },
+        { q: "You may also opt out of targeted advertising by setting the Global Privacy Control.", src: "wp" },
+      ] },
+    ],
+    notSaid: [
+      { t: "That the statute names Global Privacy Control. It does not use that name.", absent: ["Global Privacy Control"], files: ["bc541"] },
+      { t: "A date when companies had to start honoring signals. The chapter text gives none. Some guides say January 1, 2025.", absent: ["January 1, 2025"], files: ["bc541"] },
+      { t: "Whether a particular site honors your signal. We did not test any.", absent: [], files: [], ours: true },
+    ],
+    related: ["deletion-request-45-days", "texas-attorney-general-complaint", "people-search-said-no"],
+  },
 ];
