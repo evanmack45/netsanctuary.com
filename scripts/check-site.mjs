@@ -24,6 +24,13 @@ const all = [...html, ...js].map(text).join("\n").toLowerCase();
 const allNoStatute = all.replace(/\bdifferent prices?\b/g, ""); // section 541.101(b)(3) and (c) quote "different price(s)"; every other use of the word stays banned
 for (const w of ["stripe", "checkout", "buy now", "add to cart", "paypal", "price", "pay now", "order now", "subscribe now"]) ok(!allNoStatute.includes(w), `no "${w}" anywhere in html/js (except the statute phrase "different price")`);
 ok(!/\$\s?\d/.test(all.replace(/\$300\b/g, "").replace(/\$7,500\b/g, "")), "no dollar amounts except the $300 state registration fee and the $7,500 civil penalty ceiling (cited legal facts)");
+// Three pages share one art setting (window sill and lamp). No two of them may sit next to each other in any link list.
+const SHARED_ART = ["access-my-data", "correct-my-data", "opt-out-of-sale"];
+for (const f of html) for (const m of text(f).matchAll(/<ul class="links">([\s\S]*?)<\/ul>/g)) {
+  const hrefs = [...m[1].matchAll(/href="\/([^\/"]+)\/"/g)].map(x => x[1]);
+  hrefs.forEach((h, i) => { if (SHARED_ART.includes(h) && SHARED_ART.includes(hrefs[i + 1])) ok(false, `${relative(root, f)}: ${h} and ${hrefs[i + 1]} are adjacent in a link list`); });
+}
+ok(true, "no two of the shared-art pages are adjacent in any link list");
 ok(html.every(f => /This domain is for sale/.test(text(f))), "every page carries the 'This domain is for sale' footer link");
 ok(html.every(f => /afternic\.com\/domain\/netsanctuary\.com/.test(text(f))), "for-sale link points at the Afternic listing");
 ok(["index.html", "pack/index.html", "privacy.html"].every(p => /not legal advice/i.test(text(root + p)) && /not your agent/i.test(text(root + p))), "'not legal advice' and 'not your agent' on home, pack, privacy");
