@@ -578,10 +578,10 @@ export const PAGES = [
   },
   {
     slug: "deletion-request-fee",
-    title: "Can a company charge a fee for a Texas deletion request?",
+    title: "Can a company charge a fee for my Texas request?",
     h1: "Can a company charge me a fee to act on my request under the Texas privacy law?",
     description: "Section 541.052(d): free at least twice a year. A fee is allowed only for manifestly unfounded, excessive or repetitive requests, and the company must prove it.",
-    short: "Not for an ordinary request. Section 541.052(d) says a controller shall provide information in response to a consumer request free of charge, at least twice annually per consumer. It may charge a reasonable fee, or decline, only if a request is manifestly unfounded, excessive, or repetitive, and it bears the burden of showing that.",
+    short: "Not for an ordinary request. Section 541.052(d) says a controller shall provide information in response to a consumer request free of charge, at least twice annually per consumer. It can charge a reasonable fee, or decline, only if a request is manifestly unfounded, excessive, or repetitive, and it bears the burden of showing that.",
     sections: [
       { h: "What section 541.052(d) says", blocks: [
         { q: "A controller shall provide information in response to a consumer request free of charge, at least twice annually per consumer.", src: "bc541" },
