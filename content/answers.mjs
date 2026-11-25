@@ -537,4 +537,43 @@ export const PAGES = [
     ],
     related: ["texas-attorney-general-complaint", "deletion-request-45-days", "people-search-said-no"],
   },
+  {
+    slug: "appeal-denied-privacy-request",
+    title: "Texas privacy request denied: appeal to the company",
+    h1: "A company denied my Texas privacy request. How do I appeal?",
+    description: "Section 541.053 requires an appeal process, a written answer within 60 days, and a link to the Attorney General if you lose. What it leaves out.",
+    short: "Under section 541.053 the company must run an appeal process that is conspicuously available and similar to the request process. It must answer your appeal in writing within 60 days of receiving it, with reasons. If it denies the appeal, it must give you the Attorney General's online complaint mechanism. The statute sets no number of days for you to appeal.",
+    sections: [
+      { h: "The denial must tell you how to appeal", blocks: [
+        { p: "Section 541.052(c) says what a company owes you when it says no:" },
+        { q: "the controller shall inform the consumer without undue delay, which may not be later than the 45th day after the date of receipt of the request, of the justification for declining to take action and provide instructions on how to appeal the decision in accordance with Section 541.053.", src: "bc541" },
+        { p: "The Attorney General's page says the same in plain terms:" },
+        { q: "A company that declines a consumer's request must provide the consumer with notice of that decision, including a justification for the declination and instructions on how to appeal the decision.", src: "agtdpsa" },
+      ] },
+      { h: "What the appeal process must look like", blocks: [
+        { p: "Section 541.053(a) and (b):" },
+        { q: "A controller shall establish a process for a consumer to appeal the controller's refusal to take action on a request within a reasonable period of time after the consumer's receipt of the decision under Section 541.052(c).", src: "bc541" },
+        { q: "The appeal process must be conspicuously available and similar to the process for initiating action to exercise consumer rights by submitting a request under Section 541.051.", src: "bc541" },
+        { p: "So if you made the request through a web form, the appeal route should not be harder to find or use than that form. The statute gives no number of days for you to file. It says \"a reasonable period of time\"." },
+        { p: "A contract cannot take the appeal right away. Section 541.054:" },
+        { q: "Any provision of a contract or agreement that waives or limits in any way a consumer right described by Sections 541.051, 541.052, and 541.053 is contrary to public policy and is void and unenforceable.", src: "bc541" },
+      ] },
+      { h: "The company's answer to your appeal", blocks: [
+        { p: "Section 541.053(c) sets the clock and the content:" },
+        { q: "A controller shall inform the consumer in writing of any action taken or not taken in response to an appeal under this section not later than the 60th day after the date of receipt of the appeal, including a written explanation of the reason or reasons for the decision.", src: "bc541" },
+        { p: "The 60 days run from the date the company receives your appeal. Keep a copy of what you sent and when." },
+      ] },
+      { h: "If the appeal is denied", blocks: [
+        { p: "Section 541.053(d):" },
+        { q: "If the controller denies an appeal, the controller shall provide the consumer with the online mechanism described by Section 541.152 through which the consumer may contact the attorney general to submit a complaint.", src: "bc541" },
+        { p: "That is the Attorney General's complaint form. What to bring and what to expect are on [[When to complain to the Attorney General|/texas-attorney-general-complaint/]]. The 45-day request clock is on [[the 45-day page|/deletion-request-45-days/]]." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A deadline in days for you to file an appeal. The statute says only \"a reasonable period of time\".", absent: ["days after the consumer", "30 days of the decision"], files: ["bc541"] },
+      { t: "What an appeal must contain. The statute lists no required contents.", absent: ["appeal must include", "appeal must contain"], files: ["bc541"] },
+      { t: "A remedy for you if a company ignores an appeal. The statute names none, and enforcement belongs to the Attorney General.", absent: ["remedy"], files: ["bc541"] },
+    ],
+    related: ["texas-attorney-general-complaint", "can-i-sue-texas-privacy-law", "deletion-request-45-days"],
+  },
 ];
