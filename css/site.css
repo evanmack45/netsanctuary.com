@@ -76,3 +76,7 @@ ul.links{list-style:none;padding-left:0}
 ul.links a{display:block;padding:.7rem 0;border-top:1px solid var(--line);min-height:44px}
 ul.links li:last-child a{border-bottom:1px solid var(--line)}
 main p a,main li a{padding-block:.2rem}
+
+.page-art{margin:0 0 1.25rem}
+.page-art img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:var(--line)}
+@media print{.page-art{display:none}}

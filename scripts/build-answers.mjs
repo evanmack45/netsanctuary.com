@@ -1,11 +1,40 @@
 // Builds /<slug>/index.html for each answer page, sitemap.xml, robots.txt, and the "Common questions" block on the home page.
 // Run: node scripts/build-answers.mjs. The output is committed. Content owner: content/answers.mjs.
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { PAGES, SOURCES, CHECKED, DATE } from "../content/answers.mjs";
 import { esc, inline, renderBlocks } from "./lib/answers-lib.mjs";
 const root = new URL("../", import.meta.url).pathname;
 const SITE = "https://netsanctuary.com";
 const bySlug = Object.fromEntries(PAGES.map(p => [p.slug, p]));
+
+function artFor(slug) {
+  const f = root + "img/answers/" + slug + "/meta.json";
+  if (!existsSync(f)) return null;
+  return JSON.parse(readFileSync(f, "utf8"));
+}
+
+function artHead(p, art) {
+  if (!art) return `  <meta name="twitter:card" content="summary">`;
+  const og = `${SITE}/img/answers/${p.slug}/og.webp`;
+  return `  <meta property="og:image" content="${og}">
+  <meta property="og:image:width" content="${art.ogWidth}">
+  <meta property="og:image:height" content="${art.ogHeight}">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:alt" content="${esc(art.ogAlt)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="${og}">
+  <meta name="twitter:image:alt" content="${esc(art.ogAlt)}">`;
+}
+
+function artFigure(p, art) {
+  if (!art) return "";
+  const base = `/img/answers/${p.slug}`;
+  return `      <figure class="page-art">
+        <img src="${base}/header-1280.webp" srcset="${base}/header-640.webp 640w, ${base}/header-960.webp 960w, ${base}/header-1280.webp 1280w, ${base}/header.webp 2048w" sizes="(max-width: 48.2rem) calc(100vw - 2.2rem), 46rem" width="${art.width}" height="${art.height}" alt="${esc(art.alt)}" fetchpriority="high" decoding="async">
+      </figure>
+`;
+}
+
 
 function sourcesFor(p) {
   const keys = new Set();
@@ -16,11 +45,12 @@ function sourcesFor(p) {
 
 function jsonLd(p) {
   const url = `${SITE}/${p.slug}/`;
+  const art = artFor(p.slug);
   const org = { "@type": "Organization", name: "Net Sanctuary", url: SITE + "/" };
   return JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Article", "@id": url + "#article", headline: p.h1, description: p.description, url, mainEntityOfPage: url, inLanguage: "en", datePublished: DATE, dateModified: DATE, author: org, publisher: org, citation: sourcesFor(p).map(k => SOURCES[k].url) },
+      { "@type": "Article", "@id": url + "#article", headline: p.h1, description: p.description, ...(art ? { image: [`${SITE}/img/answers/${p.slug}/og.webp`, `${SITE}/img/answers/${p.slug}/header.webp`] } : {}), url, mainEntityOfPage: url, inLanguage: "en", datePublished: DATE, dateModified: DATE, author: org, publisher: org, citation: sourcesFor(p).map(k => SOURCES[k].url) },
       { "@type": "BreadcrumbList", itemListElement: [
         { "@type": "ListItem", position: 1, name: "Net Sanctuary", item: SITE + "/" },
         { "@type": "ListItem", position: 2, name: p.title, item: url },
@@ -48,7 +78,7 @@ function page(p) {
   <meta property="og:title" content="${esc(p.title)}">
   <meta property="og:description" content="${esc(p.description)}">
   <meta property="og:url" content="${url}">
-  <meta name="twitter:card" content="summary">
+${artHead(p, artFor(p.slug))}
   <meta name="twitter:title" content="${esc(p.title)}">
   <meta name="twitter:description" content="${esc(p.description)}">
   <script type="application/ld+json">
@@ -70,7 +100,7 @@ ${jsonLd(p)}
   <main id="main">
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Net Sanctuary</a> &rsaquo; Common questions</nav>
-      <h1 class="page-h1">${esc(p.h1)}</h1>
+${artFigure(p, artFor(p.slug))}      <h1 class="page-h1">${esc(p.h1)}</h1>
       <div class="answer" role="note">
         <h2 class="answer-label">Short answer</h2>
         <p>${esc(p.short)}</p>
