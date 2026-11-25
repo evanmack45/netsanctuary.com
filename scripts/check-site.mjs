@@ -32,10 +32,13 @@ const all = [...html, ...js].map(f => (f.endsWith(".html") ? stripCitedPriceQuot
 for (const w of ["stripe", "checkout", "buy now", "add to cart", "paypal", "price", "pay now", "order now", "subscribe now"]) ok(!all.includes(w), `no "${w}" anywhere in html/js (except "different price(s)" as a quoted, cited 541.101(b)(3) or (c) line)`);
 ok(!/\$\s?\d/.test(all.replace(/\$300\b/g, "").replace(/\$7,500\b/g, "")), "no dollar amounts except the $300 state registration fee and the $7,500 civil penalty ceiling (cited legal facts)");
 // Three pages share one art setting (window sill and lamp). No two of them may sit next to each other in any link list.
-const SHARED_ART = ["access-my-data", "correct-my-data", "opt-out-of-sale"];
+const SHARED_ART_GROUPS = [
+  ["access-my-data", "correct-my-data", "opt-out-of-sale"],
+  ["employer-face-scan", "voter-data-on-a-private-site"],
+];
 for (const f of html) for (const m of text(f).matchAll(/<ul class="links">([\s\S]*?)<\/ul>/g)) {
   const hrefs = [...m[1].matchAll(/href="\/([^\/"]+)\/"/g)].map(x => x[1]);
-  hrefs.forEach((h, i) => { if (SHARED_ART.includes(h) && SHARED_ART.includes(hrefs[i + 1])) ok(false, `${relative(root, f)}: ${h} and ${hrefs[i + 1]} are adjacent in a link list`); });
+  hrefs.forEach((h, i) => { for (const g of SHARED_ART_GROUPS) if (g.includes(h) && g.includes(hrefs[i + 1])) ok(false, `${relative(root, f)}: ${h} and ${hrefs[i + 1]} share art and are adjacent in a link list`); });
 }
 ok(true, "no two of the shared-art pages are adjacent in any link list");
 ok(html.every(f => /This domain is for sale/.test(text(f))), "every page carries the 'This domain is for sale' footer link");

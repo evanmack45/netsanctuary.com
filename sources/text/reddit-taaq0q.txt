@@ -1,0 +1,8 @@
+URL: https://www.reddit.com/r/legaladvice/comments/taaq0q/a_website_is_doxxing_every_person_in_texas/
+FETCHED: 2026-11-25 (read from the Pullpush archive of the thread; original post only; Reddit blocks plain GET)
+
+A website is doxxing every person in Texas. A website has published all of people's voting information submitted by the state of Texas. This includes things like the current address, and it's all searchable for anyone to view. This is a .com website and not a government website. 
+
+They claim the only way to have your information removed is to petition the government to become a protected voter and submit that paperwork to this company.
+
+How can I have my information removed from this website without waiting months for my state government to consider granting me protected coter status?

@@ -21,6 +21,12 @@ export const SOURCES = {
   dropbrokers: { url: "https://droptexas.com/data-brokers", title: "Data brokers: what they hold and how Texans opt out", note: "DROP Texas", file: "drop-data-brokers.txt" },
   dropchildren: { url: "https://droptexas.com/children", title: "Children's data", note: "DROP Texas", file: "drop-children.txt" },
   drophome: { url: "https://droptexas.com/", title: "Texas data broker opt-out, free for Texans", note: "DROP Texas", file: "drop-home.txt" },
+  bc503: { url: "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.503.htm", title: "Texas Business & Commerce Code chapter 503 (biometric identifiers)", note: "Texas Constitution and Statutes", file: "bc503.txt" },
+  el18: { url: "https://statutes.capitol.texas.gov/GetStatute.aspx?Code=EL&Value=18.066", title: "Texas Election Code chapter 18, sections 18.008, 18.009, 18.066 and 18.067", note: "Texas Constitution and Statutes", file: "el18.txt" },
+  sosconf: { url: "https://www.sos.texas.gov/elections/laws/address-confidentiality.shtml", title: "Address Confidentiality", note: "Texas Secretary of State, Elections", file: "sos-address-confidentiality.txt" },
+  rface: { url: "https://www.reddit.com/r/legaladvice/comments/1d28sd8/facial_recognition_clock_in/", title: "Facial Recognition clock in", note: "a user-posted thread on Reddit, r/legaladvice", file: "reddit-1d28sd8.txt" },
+  rvoter: { url: "https://www.reddit.com/r/legaladvice/comments/taaq0q/a_website_is_doxxing_every_person_in_texas/", title: "A website is doxxing every person in Texas", note: "a user-posted thread on Reddit, r/legaladvice", file: "reddit-taaq0q.txt" },
+  rgov: { url: "https://www.reddit.com/r/texas/comments/1vzizcs/houstons_flock_cameras_are_tracking_uswithout_our/", title: "Houston's Flock Cameras Are Tracking Us, Without Our Say", note: "a user-posted thread on Reddit, r/texas", file: "reddit-1vzizcs.txt" },
 };
 
 export const PAGES = [
@@ -825,6 +831,57 @@ export const PAGES = [
     ],
     related: ["deletion-request-fee", "can-i-sue-texas-privacy-law", "texas-attorney-general-complaint"],
   },
+  {
+    slug: "employer-face-scan",
+    title: "Employer face scan to clock in: what Texas law says",
+    h1: "My employer wants 60 photos of my face to clock in. Does Texas law stop that?",
+    description: "Two separate Texas laws: chapter 503 on biometric identifiers, which needs notice and consent, and the privacy Act, which leaves employees out. What each says.",
+    short: "Two laws, kept apart. Chapter 503 of the Business & Commerce Code says a person must inform an individual and receive consent before capturing a biometric identifier of that individual for a commercial purpose. The Texas Data Privacy and Security Act does not help an employee here: its definition of consumer excludes an individual acting in an employment context, and data collected in the course of employment is exempt. Whether a given clock-in system falls under chapter 503 depends on facts the statute text does not settle.",
+    sections: [
+      { h: "The question", blocks: [
+        { p: "A 2024 post on r/legaladvice from a worker asking about Texas law, after the job changed management companies:" },
+        { q: "I have no idea what else the company could be using my face for, nor did I consent to this.", src: "rface" },
+        { q: "Are there any laws in Texas that prevent employers from doing this? Or any way to get out of this?", src: "rface" },
+        { p: "Two statutes come up in this question. They work differently, so this page takes them one at a time." },
+      ] },
+      { h: "Law one: chapter 503, biometric identifiers", blocks: [
+        { p: "Section 503.001 of the Business & Commerce Code defines the term:" },
+        { q: "\"Biometric identifier\" means a retina or iris scan, fingerprint, voiceprint, or record of hand or face geometry.", src: "bc503" },
+        { p: "The rule:" },
+        { q: "A person may not capture a biometric identifier of an individual for a commercial purpose unless the person: (1) informs the individual before capturing the biometric identifier; and (2) receives the individual's consent to capture the biometric identifier.", src: "bc503" },
+        { p: "On how long a collected identifier can be kept, the statute names employers once:" },
+        { q: "If a biometric identifier captured for a commercial purpose has been collected for security purposes by an employer, the purpose for collecting the identifier under Subsection (c)(3) is presumed to expire on termination of the employment relationship.", src: "bc503" },
+        { p: "The general destruction rule, which that sentence refers to, says a person who possesses an identifier:" },
+        { q: "shall destroy the biometric identifier within a reasonable time, but not later than the first anniversary of the date the purpose for collecting the identifier expires", src: "bc503" },
+        { p: "Who enforces it:" },
+        { q: "The attorney general may bring an action to recover the civil penalty.", src: "bc503" },
+        { p: "Section 503.001(d) sets the penalty per violation. The amount is in that subsection." },
+      ] },
+      { h: "What chapter 503 does not settle", blocks: [
+        { p: "The statute does not define \"commercial purpose\", and the text says nothing specific about a time clock. We found no court or Attorney General source in this research on whether an employer's clock-in system counts. The definition lists a record of face geometry, not a photograph. Whether a system that takes many photos and builds a template produces a record of face geometry is a fact about that system, and we cannot see it." },
+        { p: "Chapter 503 also does not say what happens to a worker who says no. Neither the text nor this page can tell you whether you can decline and keep the job." },
+      ] },
+      { h: "Law two: the privacy Act leaves employees out", blocks: [
+        { p: "The Texas Data Privacy and Security Act is chapter 541 of the same code. It gives \"consumers\" rights over their personal data. Section 541.001(7) defines the word:" },
+        { q: "\"Consumer\" means an individual who is a resident of this state acting only in an individual or household context. The term does not include an individual acting in a commercial or employment context.", src: "bc541" },
+        { p: "Section 541.003 separately exempts certain information from the chapter, including:" },
+        { q: "data processed or maintained in the course of an individual applying to, being employed by, or acting as an agent or independent contractor of a controller, processor, or third party, to the extent that the data is collected and used within the context of that role", src: "bc541" },
+        { p: "So a worker's face data collected for clocking in sits outside the Act's access, deletion and opt-out rights. The Act's own definition of biometric data also leaves out photographs:" },
+        { q: "The term does not include a physical or digital photograph or data generated from a physical or digital photograph", src: "bc541" },
+        { p: "That photograph sentence is in chapter 541. The definition in chapter 503 quoted above has no such sentence." },
+      ] },
+      { h: "What this means", blocks: [
+        { p: "The privacy Act does not give an employee a request to send here. Chapter 503 is the statute that speaks to capturing a face-based identifier, and it works through notice, consent and the Attorney General. See [[when to complain to the Texas Attorney General|/texas-attorney-general-complaint/]] for that office's complaint page and what it covers. The 2024 post predates the Act, which took effect July 1, 2024; chapter 503 is the older law and the text above is its current version." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A definition of \"commercial purpose\", or anything about time clocks. Chapter 503 has neither.", absent: ["commercial purpose\" means", "time clock", "timeclock", "clock in"], files: ["bc503"] },
+      { t: "A right for a worker to refuse, or protection from being fired for refusing. Chapter 503 does not address either.", absent: ["refuse", "decline", "retaliat", "discharge"], files: ["bc503"] },
+      { t: "A private right of action under chapter 503. The text gives the action to the Attorney General.", absent: ["private right", "cause of action"], files: ["bc503"] },
+      { t: "Whether any particular employer's system breaks the law. We cannot see the system or the notice given.", absent: [], files: [], ours: true },
+    ],
+    related: ["texas-sensitive-data-consent", "texas-privacy-law-small-business", "can-i-sue-texas-privacy-law"],
+  },
 ];
 
 // Hub page content. Every answer slug must appear in exactly one group (the builder throws otherwise).
@@ -841,7 +898,7 @@ export const HUB = {
   groups: [
     { h: "Making a request and the clocks", slugs: ["deletion-request-45-days", "access-my-data", "deletion-request-fee", "authorized-agent-texas-privacy-request", "correct-my-data", "appeal-denied-privacy-request"] },
     { h: "Opting out and consent", slugs: ["texas-browser-opt-out-signals", "opt-out-of-sale", "one-texas-opt-out-form", "texas-sensitive-data-consent", "can-they-refuse-service"] },
-    { h: "Who the law covers", slugs: ["do-i-have-to-live-in-texas", "texas-privacy-law-small-business", "childs-data"] },
+    { h: "Who the law covers", slugs: ["do-i-have-to-live-in-texas", "texas-privacy-law-small-business", "childs-data", "employer-face-scan"] },
     { h: "Enforcement", slugs: ["can-i-sue-texas-privacy-law", "texas-attorney-general-complaint"] },
     { h: "Data brokers and people-search listings", slugs: ["texas-data-broker-registry", "people-search-said-no", "listing-came-back", "remove-home-address"] },
   ],
