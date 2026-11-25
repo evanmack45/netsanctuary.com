@@ -1,10 +1,12 @@
 // Browser test of the letter builder. Usage: node scripts/e2e-builder.mjs <baseUrl> [chromiumArgs...]
 // Needs playwright-core; resolved from the austin-council-tracker checkout (read-only use).
 import { createRequire } from "node:module";
+import { routeToPages } from "./pages-route.mjs";
 const { chromium } = createRequire("/workspace/repos/austin-council-tracker/node_modules/")("playwright-core");
 const base = process.argv[2]; const args = process.argv.slice(3);
 const b = await chromium.launch({ headless: true, args });
 const ctx = await b.newContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true });
+if (process.env.VIA_PAGES) await routeToPages(ctx);
 const p = await ctx.newPage();
 const reqs = []; p.on("request", r => reqs.push(r.method() + " " + r.url()));
 const errs = []; p.on("pageerror", e => errs.push(String(e))); p.on("console", m => { if (m.type() === "error") errs.push(m.text()); });

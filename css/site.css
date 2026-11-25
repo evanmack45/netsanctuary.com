@@ -37,7 +37,7 @@ ol.steps{padding-left:1.3rem}
 ol.steps li{margin:.7rem 0}
 ul.tight li{margin:.4rem 0}
 .src{font-size:.9em}
-.src a{white-space:nowrap}
+.src a{overflow-wrap:anywhere}
 .small{font-size:.9rem;color:var(--muted)}
 label{display:block;font-weight:600;margin:.9rem 0 .25rem}
 label .opt{font-weight:400;color:var(--muted)}

@@ -31,4 +31,10 @@ for (const path of ["/", "/pack/", "/privacy.html"]) {
   ok(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${path} no horizontal overflow at default width`);
   ok(await p.evaluate(() => [...document.querySelectorAll("a[href]")].every(a => a.getAttribute("href") !== "" )), `${path} no empty hrefs`);
 }
+await p.setViewportSize({ width: 390, height: 844 });
+for (const path of ["/", "/pack/", "/privacy.html"]) {
+  await p.goto(base + path);
+  const over = await p.evaluate(() => [document.documentElement.scrollWidth, innerWidth, [...document.querySelectorAll("body *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest("textarea")).slice(0, 3).map(e => e.tagName + "." + e.className + ":" + e.textContent.slice(0, 40))]);
+  ok(over[0] <= over[1] + 1 && over[2].length === 0, `${path} at 390px: nothing extends past the viewport ` + JSON.stringify(over));
+}
 await b.close(); process.exit(fail ? 1 : 0);
