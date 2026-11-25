@@ -22,7 +22,7 @@ ok(external.filter(([, t]) => /<(script|iframe|img)/.test(t) || /rel="stylesheet
 
 const all = [...html, ...js].map(text).join("\n").toLowerCase();
 for (const w of ["stripe", "checkout", "buy now", "add to cart", "paypal", "price", "pay now", "order now", "subscribe now"]) ok(!all.includes(w), `no "${w}" anywhere in html/js`);
-ok(!/\$\s?\d/.test(all.replace(/\$300\b/g, "")), "no dollar amounts except the $300 state registration fee (a cited legal fact)");
+ok(!/\$\s?\d/.test(all.replace(/\$300\b/g, "").replace(/\$7,500\b/g, "")), "no dollar amounts except the $300 state registration fee and the $7,500 civil penalty ceiling (cited legal facts)");
 ok(html.every(f => /This domain is for sale/.test(text(f))), "every page carries the 'This domain is for sale' footer link");
 ok(html.every(f => /afternic\.com\/domain\/netsanctuary\.com/.test(text(f))), "for-sale link points at the Afternic listing");
 ok(["index.html", "pack/index.html", "privacy.html"].every(p => /not legal advice/i.test(text(root + p)) && /not your agent/i.test(text(root + p))), "'not legal advice' and 'not your agent' on home, pack, privacy");
