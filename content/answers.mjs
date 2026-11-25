@@ -363,6 +363,7 @@ export const PAGES = [
       { h: "The sensitive-data exception", blocks: [
         { p: "Section 541.107 puts one duty on small businesses:" },
         { q: "A person described by Section 541.002(a)(3) may not engage in the sale of personal data that is sensitive data without receiving prior consent from the consumer.", src: "bc541" },
+        { p: "What counts as sensitive data is on [[the sensitive data page|/texas-sensitive-data-consent/]]." },
       ] },
       { h: "Others the Act does not apply to", blocks: [
         { p: "Section 541.002(b) lists entities outside the chapter. Among them:" },
@@ -386,5 +387,40 @@ export const PAGES = [
       { t: "That a company outside the Act will ignore you. Some offer their own opt-out forms anyway.", absent: [], files: [], ours: true },
     ],
     related: ["people-search-said-no", "texas-data-broker-registry", "deletion-request-45-days"],
+  },
+  {
+    slug: "texas-sensitive-data-consent",
+    title: "Texas sensitive data: what needs your consent",
+    h1: "What counts as sensitive data under the Texas privacy law, and when is my consent required?",
+    description: "The Texas privacy law lists sensitive data and requires your consent to process it. The list, the known-child rule, and the small-business sale rule.",
+    short: "Section 541.001 lists sensitive data: data revealing race or ethnicity, religion, a health diagnosis, sexuality, or citizenship or immigration status; genetic or biometric data used to identify you; data from a known child; and precise geolocation. A company covered by the Act may not process it without your consent. A small business may not sell it without your prior consent.",
+    sections: [
+      { h: "The list", blocks: [
+        { p: "The definitions section says:" },
+        { q: "\"Sensitive data\" means a category of personal data. The term includes:", src: "bc541" },
+        { q: "personal data revealing racial or ethnic origin, religious beliefs, mental or physical health diagnosis, sexuality, or citizenship or immigration status;", src: "bc541" },
+        { q: "genetic or biometric data that is processed for the purpose of uniquely identifying an individual;", src: "bc541" },
+        { q: "personal data collected from a known child; or", src: "bc541" },
+        { q: "precise geolocation data.", src: "bc541" },
+      ] },
+      { h: "The consent rule", blocks: [
+        { p: "Section 541.101(b) lists what a company covered by the Act may not do. One item is:" },
+        { q: "process the sensitive data of a consumer without obtaining the consumer's consent, or, in the case of processing the sensitive data of a known child, without processing that data in accordance with the Children's Online Privacy Protection Act of 1998 (15 U.S.C. Section 6501 et seq.).", src: "bc541" },
+        { p: "For a known child, the rule points to the federal children's privacy law. [[The child's data page|/childs-data/]] covers who may send a request for a child." },
+      ] },
+      { h: "Small businesses and sales", blocks: [
+        { p: "A small business is outside most of the Act, with one exception. Section 541.107 says:" },
+        { q: "A person described by Section 541.002(a)(3) may not engage in the sale of personal data that is sensitive data without receiving prior consent from the consumer.", src: "bc541" },
+        { p: "[[The small business page|/texas-privacy-law-small-business/]] has the full applicability test." },
+      ] },
+      { h: "Using this with a request", blocks: [
+        { p: "The Act lets you ask a company to confirm whether it processes your personal data and to give you access to it. The [[free pack|/pack/]] letter has a box for that request. The statute does not say a company must tell you which of your data it treats as sensitive." },
+      ] },
+    ],
+    notSaid: [
+      { t: "Whether a given company holds sensitive data about you. Only the company can say.", absent: [], files: [], ours: true },
+      { t: "What a valid consent form must say. We quote only the rule that consent is required.", absent: [], files: [], ours: true },
+    ],
+    related: ["texas-privacy-law-small-business", "childs-data", "deletion-request-45-days"],
   },
 ];
