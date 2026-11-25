@@ -535,7 +535,7 @@ export const PAGES = [
       { t: "That the Attorney General will act on one person's complaint.", absent: ["we will investigate every", "guarantee"], files: ["agcomplaint"] },
       { t: "Whether a claim under another law, such as a general consumer protection statute, is open to you. We did not research that. Ask a lawyer.", absent: [], files: [], ours: true },
     ],
-    related: ["texas-attorney-general-complaint", "deletion-request-45-days", "people-search-said-no"],
+    related: ["texas-attorney-general-complaint", "appeal-denied-privacy-request", "deletion-request-45-days"],
   },
   {
     slug: "appeal-denied-privacy-request",
@@ -575,5 +575,42 @@ export const PAGES = [
       { t: "A remedy for you if a company ignores an appeal. The statute names none, and enforcement belongs to the Attorney General.", absent: ["remedy"], files: ["bc541"] },
     ],
     related: ["texas-attorney-general-complaint", "can-i-sue-texas-privacy-law", "deletion-request-45-days"],
+  },
+  {
+    slug: "deletion-request-fee",
+    title: "Can a company charge a fee for a Texas deletion request?",
+    h1: "Can a company charge me a fee to act on my request under the Texas privacy law?",
+    description: "Section 541.052(d): free at least twice a year. A fee is allowed only for manifestly unfounded, excessive or repetitive requests, and the company must prove it.",
+    short: "Not for an ordinary request. Section 541.052(d) says a controller shall provide information in response to a consumer request free of charge, at least twice annually per consumer. It may charge a reasonable fee, or decline, only if a request is manifestly unfounded, excessive, or repetitive, and it bears the burden of showing that.",
+    sections: [
+      { h: "What section 541.052(d) says", blocks: [
+        { q: "A controller shall provide information in response to a consumer request free of charge, at least twice annually per consumer.", src: "bc541" },
+        { q: "If a request from a consumer is manifestly unfounded, excessive, or repetitive, the controller may charge the consumer a reasonable fee to cover the administrative costs of complying with the request or may decline to act on the request.", src: "bc541" },
+        { q: "The controller bears the burden of demonstrating for purposes of this subsection that a request is manifestly unfounded, excessive, or repetitive.", src: "bc541" },
+        { p: "Subsection (d) says \"a consumer request\" and does not single out deletion. It sits in the section that governs responses to every rights request. Subsection (a) says:" },
+        { q: "a controller shall comply with a request submitted by a consumer to exercise the consumer's rights pursuant to Section 541.051 as provided by this section.", src: "bc541" },
+      ] },
+      { h: "The Attorney General's summary differs in one word", blocks: [
+        { p: "The Attorney General's page on the law says:" },
+        { q: "A company's response to a consumer request must be free of charge, up to twice annually per consumer", src: "agtdpsa" },
+        { q: "unless the request is unfounded, excessive, or repetitive, in which case the consumer may be charged a reasonable administrative cost.", src: "agtdpsa" },
+        { p: "The statute says \"at least twice annually\". The page says \"up to twice annually\". The statute is the law. We have not found an Attorney General explanation of the difference." },
+      ] },
+      { h: "What the statute leaves open", blocks: [
+        { p: "The chapter does not define \"manifestly unfounded, excessive, or repetitive\", and it sets no dollar figure for a reasonable fee. It limits the fee to the company's administrative costs of complying. Because the company has the burden, a fee demand without an explanation is something to ask about in writing." },
+        { p: "A company that charges a fee or declines on this ground is declining to act on your request in part. Section 541.052(c) then requires it to say why and how to appeal. [[Appeal a denied request|/appeal-denied-privacy-request/]] covers that step." },
+      ] },
+      { h: "Other limits that touch cost and effort", blocks: [
+        { q: "A controller may not require a consumer to create a new account to exercise the consumer's rights under this subchapter but may require a consumer to use an existing account.", src: "bc541" },
+        { q: "Any provision of a contract or agreement that waives or limits in any way a consumer right described by Sections 541.051, 541.052, and 541.053 is contrary to public policy and is void and unenforceable.", src: "bc541" },
+        { p: "Those are sections 541.055(b) and 541.054. For the 45-day response clock, see [[the 45-day page|/deletion-request-45-days/]]. Enforcement is by the Attorney General only: [[the complaint page|/texas-attorney-general-complaint/]]." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A definition of \"manifestly unfounded,\" \"excessive,\" or \"repetitive.\" Section 541.001 defines none of them.", absent: ["\"manifestly unfounded\" means", "\"excessive\" means", "\"repetitive\" means"], files: ["bc541"] },
+      { t: "A dollar limit on a reasonable fee. The statute caps it only by the administrative cost of complying.", absent: ["$25", "$50", "$100"], files: ["bc541"] },
+      { t: "That a company must erase data for free in every case. Subsection (d) covers responding to a request, and section 541.052(e) and (f) set other conditions.", absent: [], files: [], ours: true },
+    ],
+    related: ["deletion-request-45-days", "appeal-denied-privacy-request", "texas-attorney-general-complaint"],
   },
 ];
