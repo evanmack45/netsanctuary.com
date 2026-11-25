@@ -584,6 +584,52 @@ export const PAGES = [
     related: ["texas-attorney-general-complaint", "appeal-denied-privacy-request", "deletion-request-45-days"],
   },
   {
+    slug: "correct-my-data",
+    title: "Can I make a company correct my data under Texas law?",
+    h1: "Can I make a company correct inaccurate personal data about me under the Texas privacy law?",
+    description: "Section 541.051(b)(2) lets you ask a covered company to correct inaccuracies, weighed against the data's nature and purpose. The clock, the limits, the appeal.",
+    short: "Yes, for a covered company. Section 541.051(b)(2) gives you the right to correct inaccuracies in your personal data, taking into account the nature of the personal data and the purposes of the processing. The statute does not say what proof you must give or exactly what the company must change. The 45-day clock, the authentication rule and the appeal route in section 541.053 apply.",
+    sections: [
+      { h: "What the statute says", blocks: [
+        { p: "Section 541.051(b) lists the rights. The second is:" },
+        { q: "correct inaccuracies in the consumer's personal data, taking into account the nature of the personal data and the purposes of the processing of the consumer's personal data;", src: "bc541" },
+        { p: "The Attorney General's page on the Act has the same right in plain words:" },
+        { q: "Right to correct inaccuracies in the consumer's personal data, taking into account the nature of the data and the purposes for processing the data;", src: "agtdpsa" },
+        { p: "The closing clause gives the company room. It sets no test for what counts as an inaccuracy, and it sets no standard of proof for you." },
+      ] },
+      { h: "How to ask and how long it takes", blocks: [
+        { p: "You send a request that names the right you are using:" },
+        { q: "A consumer is entitled to exercise the consumer rights authorized by this section at any time by submitting a request to a controller specifying the consumer rights the consumer wishes to exercise.", src: "bc541" },
+        { p: "The company answers under section 541.052:" },
+        { q: "A controller shall respond to the consumer request without undue delay, which may not be later than the 45th day after the date of receipt of the request.", src: "bc541" },
+        { p: "It can ask you to prove who you are before it acts:" },
+        { q: "If a controller is unable to authenticate the request using commercially reasonable efforts, the controller is not required to comply with a consumer request submitted under Section 541.051", src: "bc541" },
+        { p: "For a correction, evidence of what the right value is will help the company judge the request. The statute does not require you to supply it. [[The 45-day page|/deletion-request-45-days/]] covers the extension and the clock in full." },
+      ] },
+      { h: "Correction is not deletion", blocks: [
+        { p: "Deleting data is a separate right in 541.051(b)(3):" },
+        { q: "delete personal data provided by or obtained about the consumer;", src: "bc541" },
+        { p: "If the aim is to remove a record, not fix it, that is the right to use. If a data broker's listing has your details wrong, a correction request and a removal request are different asks. [[Remove my home address|/remove-home-address/]] covers removal." },
+      ] },
+      { h: "Where the right stops", blocks: [
+        { p: "The right reaches personal data only. The definition says:" },
+        { q: "The term does not include deidentified data or publicly available information.", src: "bc541" },
+        { p: "So a company can argue that a listing copied from public records is outside the right. [[People-search said no|/people-search-said-no/]] covers that refusal. The Act also covers only companies it names, and only Texas residents acting in an individual or household context. See [[small business coverage|/texas-privacy-law-small-business/]]." },
+      ] },
+      { h: "If the company declines", blocks: [
+        { q: "If a controller declines to take action regarding the consumer's request, the controller shall inform the consumer without undue delay, which may not be later than the 45th day after the date of receipt of the request, of the justification for declining to take action and provide instructions on how to appeal the decision in accordance with Section 541.053.", src: "bc541" },
+        { q: "A controller shall inform the consumer in writing of any action taken or not taken in response to an appeal under this section not later than the 60th day after the date of receipt of the appeal, including a written explanation of the reason or reasons for the decision.", src: "bc541" },
+        { p: "[[Appealing a denied request|/appeal-denied-privacy-request/]] has the steps. The Attorney General alone enforces the Act: [[the complaint page|/texas-attorney-general-complaint/]]." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A definition of \"inaccuracy\" or a list of documents that prove one. Section 541.001 defines neither.", absent: ["\"inaccuracy\" means", "\"inaccuracies\" means", "proof of inaccuracy"], files: ["bc541"] },
+      { t: "That a company must correct data it copied from public records. The definition of personal data excludes publicly available information.", absent: ["publicly available information must be corrected"], files: ["bc541"] },
+      { t: "How any particular company handles a correction request. We did not send one.", absent: [], files: [], ours: true },
+    ],
+    related: ["deletion-request-45-days", "appeal-denied-privacy-request", "people-search-said-no"],
+  },
+  {
     slug: "appeal-denied-privacy-request",
     title: "Texas privacy request denied: appeal to the company",
     h1: "A company denied my Texas privacy request. How do I appeal?",
