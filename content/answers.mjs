@@ -826,3 +826,23 @@ export const PAGES = [
     related: ["deletion-request-fee", "can-i-sue-texas-privacy-law", "texas-attorney-general-complaint"],
   },
 ];
+
+// Hub page content. Every answer slug must appear in exactly one group (the builder throws otherwise).
+// Order matters: access-my-data, correct-my-data and opt-out-of-sale share one art setting, so no two of them sit next to each other here or on the home page list.
+export const HUB = {
+  slug: "texas-privacy-questions",
+  title: "Texas privacy law questions, grouped by topic",
+  h1: "Texas privacy law questions, by topic",
+  description: "Every answer on this site, grouped by topic: making a request, opting out, who the law covers, enforcement, and data brokers.",
+  intro: [
+    "These pages answer common questions about the Texas Data Privacy and Security Act and the people-search sites that hold Texans' data. Each one quotes the statute, the Attorney General or the company's own page, says what the sources do not cover, and lists them.",
+    "Pick the group that matches your question. If you want to send a request, start with making a request and the clocks.",
+  ],
+  groups: [
+    { h: "Making a request and the clocks", slugs: ["deletion-request-45-days", "access-my-data", "deletion-request-fee", "authorized-agent-texas-privacy-request", "correct-my-data", "appeal-denied-privacy-request"] },
+    { h: "Opting out and consent", slugs: ["texas-browser-opt-out-signals", "opt-out-of-sale", "one-texas-opt-out-form", "texas-sensitive-data-consent", "can-they-refuse-service"] },
+    { h: "Who the law covers", slugs: ["do-i-have-to-live-in-texas", "texas-privacy-law-small-business", "childs-data"] },
+    { h: "Enforcement", slugs: ["can-i-sue-texas-privacy-law", "texas-attorney-general-complaint"] },
+    { h: "Data brokers and people-search listings", slugs: ["texas-data-broker-registry", "people-search-said-no", "listing-came-back", "remove-home-address"] },
+  ],
+};
