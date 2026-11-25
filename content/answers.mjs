@@ -345,4 +345,46 @@ export const PAGES = [
     ],
     related: ["childs-data", "deletion-request-45-days", "texas-data-broker-registry"],
   },
+  {
+    slug: "texas-privacy-law-small-business",
+    title: "Does the Texas privacy law cover small businesses?",
+    h1: "Does the Texas privacy law apply to small businesses, and who is exempt?",
+    description: "The Texas privacy law skips small businesses as the SBA defines them, with one sensitive-data exception. Nonprofits, colleges, and state agencies are also out.",
+    short: "Mostly no. The Act applies to a company that does business in Texas, processes or sells personal data, and is not a small business by the U.S. Small Business Administration's definition. One exception: a small business needs your prior consent before it sells sensitive data. Nonprofits, colleges, state agencies, and some financial and health entities are also outside it.",
+    sections: [
+      { h: "Who the Act covers", blocks: [
+        { p: "Section 541.002(a) sets the test. It says the chapter" },
+        { q: "applies only to a person that:", src: "bc541" },
+        { q: "conducts business in this state or produces a product or service consumed by residents of this state;", src: "bc541" },
+        { q: "processes or engages in the sale of personal data; and", src: "bc541" },
+        { q: "is not a small business as defined by the United States Small Business Administration, except to the extent that Section 541.107 applies to a person described by this subdivision.", src: "bc541" },
+        { p: "The statute points to the SBA's definition and gives no revenue or headcount number of its own. We did not look up the SBA's size standards, and we cannot tell you whether a given company is a small business." },
+      ] },
+      { h: "The sensitive-data exception", blocks: [
+        { p: "Section 541.107 puts one duty on small businesses:" },
+        { q: "A person described by Section 541.002(a)(3) may not engage in the sale of personal data that is sensitive data without receiving prior consent from the consumer.", src: "bc541" },
+      ] },
+      { h: "Others the Act does not apply to", blocks: [
+        { p: "Section 541.002(b) lists entities outside the chapter. Among them:" },
+        { q: "a state agency or a political subdivision of this state;", src: "bc541" },
+        { q: "a financial institution or data subject to Title V, Gramm-Leach-Bliley Act (15 U.S.C. Section 6801 et seq.);", src: "bc541" },
+        { q: "a nonprofit organization;", src: "bc541" },
+        { q: "an institution of higher education;", src: "bc541" },
+        { p: "The list also names covered entities and business associates under the federal health privacy rules (HIPAA) and some electric utilities." },
+      ] },
+      { h: "Data brokers have their own size test", blocks: [
+        { p: "The data broker registration law, chapter 510, uses a different test. Section 510.003(a) says the chapter" },
+        { q: "applies only to a data broker that, in a 12-month period, derives:", src: "bc510" },
+        { q: "more than 50 percent of the data broker's revenue directly from processing or transferring personal data not collected by the data broker directly from the individuals to whom the data pertains; or", src: "bc510" },
+        { q: "revenue directly from processing or transferring the personal data of more than 50,000 individuals not collected by the data broker directly from the individuals to whom the data pertains.", src: "bc510" },
+        { p: "A company can be too small for one law and covered by the other. The [[registry page|/texas-data-broker-registry/]] explains what registration does." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A revenue or headcount number for a small business. The statute points to the SBA definition and gives none.", absent: ["employees", "million", "annual revenue"], files: ["bc541"] },
+      { t: "Whether a particular company is covered. We did not check any company's size.", absent: [], files: [], ours: true },
+      { t: "That a company outside the Act will ignore you. Some offer their own opt-out forms anyway.", absent: [], files: [], ours: true },
+    ],
+    related: ["people-search-said-no", "texas-data-broker-registry", "deletion-request-45-days"],
+  },
 ];
