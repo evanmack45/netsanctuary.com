@@ -1,0 +1,4 @@
+URL: https://droptexas.com/
+FETCHED: 2026-11-25 (WebFetch read; page is JavaScript-rendered or blocks curl)
+
+Texas data broker opt-out, free for Texans | DROP Texas DROP Texas is a free data broker delete and request opt-out platform that helps Texans gain control of their data. Each broker has its own opt-out form. You send those requests from the one form you fill out, so you are not repeating yourself. DROP Texas does not charge a fee for an opt-out request. You can also ask each broker yourself. Your information is encrypted in transit and never sold. We ask only for your name, date of birth, address, email, phone and Texas residency. Your information is stored securely and auto-deleted per our retention policy We built DROP Texas so any Texan can tell data brokers to delete it and stop selling it. DROP Texas is run by a private enterprise. It is not a government website and is not affiliated with the State of Texas or the Texas Attorney General.

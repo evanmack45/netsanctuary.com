@@ -1,0 +1,348 @@
+// Content owner for the eight answer pages. Every quote (q) must appear in sources/text/<file> (scripts/check-quotes.mjs).
+// Every "not said" claim lists terms that must be absent from the files it names.
+export const CHECKED = "Wednesday, 25 November 2026, America/Chicago";
+export const DATE = "2026-11-25";
+
+export const SOURCES = {
+  bc541: { url: "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm", title: "Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)", note: "Texas Constitution and Statutes", file: "bc541.txt" },
+  bc510: { url: "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.510.htm", title: "Texas Business & Commerce Code chapter 510 (Data Brokers)", note: "Texas Constitution and Statutes", file: "bc510.txt" },
+  sos: { url: "https://www.sos.texas.gov/statdoc/data-brokers.shtml", title: "Data Brokers", note: "Texas Secretary of State", file: "sos-data-brokers.txt" },
+  sosfaq: { url: "https://www.sos.texas.gov/statdoc/faqs4000.shtml", title: "Frequently Asked Questions for Data Brokers", note: "Texas Secretary of State", file: "sos-faq.txt" },
+  agcomplaint: { url: "https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint", title: "File a Consumer Complaint", note: "Texas Attorney General", file: "ag-complaint.txt" },
+  agtdpsa: { url: "https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights/texas-data-privacy-and-security-act", title: "Texas Data Privacy and Security Act", note: "Texas Attorney General", file: "ag-tdpsa.txt" },
+  agprivacy: { url: "https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights", title: "Consumer Privacy Rights", note: "Texas Attorney General", file: "ag-privacy.txt" },
+  spokeo: { url: "https://www.spokeo.com/optout", title: "Opt out your listing from Spokeo", note: "Spokeo", file: "spokeo-optout.txt" },
+  spokeohelp: { url: "https://help.spokeo.com/hc/en-us/articles/115010262907-How-do-I-remove-my-address-from-search-results", title: "How do I remove my address from search results?", note: "Spokeo Help Center", file: "spokeo-help-address.txt" },
+  wp: { url: "https://www.whitepages.com/privacy/consumer-rights", title: "Consumer Privacy Rights", note: "Whitepages", file: "whitepages-rights.txt" },
+  wpoptout: { url: "https://www.whitepages.com/suppression-requests", title: "Opt-out of Whitepages", note: "Whitepages", file: "whitepages-optout.txt" },
+  drophow: { url: "https://droptexas.com/how-it-works", title: "Opt out of data brokers using the free DROP Texas form", note: "DROP Texas", file: "drop-how-it-works.txt" },
+  dropoverview: { url: "https://droptexas.com/overview", title: "Delete personal information: a Texas opt-out guide", note: "DROP Texas", file: "drop-overview.txt" },
+  drophelp: { url: "https://droptexas.com/help", title: "Privacy help for Texans who use the DROP Texas form", note: "DROP Texas", file: "drop-help.txt" },
+  dropbrokers: { url: "https://droptexas.com/data-brokers", title: "Data brokers: what they hold and how Texans opt out", note: "DROP Texas", file: "drop-data-brokers.txt" },
+  dropchildren: { url: "https://droptexas.com/children", title: "Children's data", note: "DROP Texas", file: "drop-children.txt" },
+  drophome: { url: "https://droptexas.com/", title: "Texas data broker opt-out, free for Texans", note: "DROP Texas", file: "drop-home.txt" },
+};
+
+export const PAGES = [
+  {
+    slug: "texas-data-broker-registry",
+    title: "Texas data broker registry: what it can and cannot do",
+    h1: "Is there a Texas data broker registry, and does it remove me from anything?",
+    description: "The Texas Secretary of State keeps a public list of registered data brokers. It takes no deletion requests, but each entry links to the broker's rights page.",
+    short: "Yes, there is a registry, and no, it does not remove you from anything. The Secretary of State keeps it as a list. By law each entry includes a contact for the broker and a link to the broker's page on how to use your Texas privacy rights, so it is a place to find where to send a request.",
+    sections: [
+      { h: "What the registry is", blocks: [
+        { p: "Chapter 510 of the Business and Commerce Code is the Texas data broker law. It says:" },
+        { q: "The secretary of state shall establish and maintain, on its Internet website, a searchable, central registry of data brokers registered under Section 510.005.", src: "bc510" },
+        { p: "The Secretary of State's own page describes the same registry:" },
+        { q: "The Office of the Secretary of State maintains a searchable, central Data Broker Registry of registered data brokers as required by Business and Commerce Code Section 510.006.", src: "sos" },
+      ] },
+      { h: "What each entry holds", blocks: [
+        { p: "Section 510.005(b) lists what a broker must file. Two items matter for a request. The first is a contact:" },
+        { q: "a contact person and the primary physical address, e-mail address, telephone number, and Internet website address for the data broker;", src: "bc510" },
+        { p: "The second is a link to the broker's own instructions:" },
+        { q: "a link to a page on the data broker's Internet website that provides consumers with specific instructions, which must be prominently displayed, on how to exercise their consumer rights under Section 541.051, and any other applicable data privacy rights under Chapter 541;", src: "bc510" },
+        { p: "The registry must show that filing:" },
+        { q: "for each data broker, the information filed under Section 510.005(b).", src: "bc510" },
+      ] },
+      { h: "What the registry does not do", blocks: [
+        { p: "The Secretary of State says it is only the filing office:" },
+        { q: "The Secretary of State is the filing officer for data broker registration and does not have the authority to regulate the business practices of a data broker, investigate alleged violations by the data broker, or enforce the requirements referenced above.", src: "sos" },
+        { p: "Its FAQ sends complaints to a different office:" },
+        { q: "A person that believes a data broker is not registered as required or has otherwise committed a violation may file a complaint with the Attorney General's Consumer Protection Division or contact that agency directly for additional information.", src: "sosfaq" },
+        { p: "Not every company that sells data has to register. The law says:" },
+        { q: "To conduct business in this state, a data broker to which this chapter applies shall register with the secretary of state by filing a registration statement and paying a registration fee of $300.", src: "bc510" },
+      ] },
+      { h: "How to use it", blocks: [
+        { p: "Search the [[Secretary of State's registry|https://texas-sos.appianportalsgov.com/data-broker-registry]] for a company name. Open its entry, find the rights page link, and send your request there or to the listed contact. The [[free pack|/pack/]] has a letter builder and a tracker for that. We did not read the registry's entries for this page, because the registry runs as a browser app." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A way to ask for deletion through the registry. The Secretary of State pages never mention deletion.", absent: ["delete", "deletion", "remove your"], files: ["sos", "sosfaq"] },
+      { t: "Which companies are in the registry today. We did not search it.", absent: [], files: [], ours: true },
+      { t: "Whether a company that is not listed has to answer you. Chapter 541 has its own size tests.", absent: ["every business"], files: ["bc510"] },
+    ],
+    related: ["deletion-request-45-days", "people-search-said-no", "texas-attorney-general-complaint"],
+  },
+  {
+    slug: "deletion-request-45-days",
+    title: "You sent a Texas deletion request: the next 45 days",
+    h1: "You sent a Texas deletion request. What does the law say happens in the first 45 days?",
+    description: "Section 541.052 gives a company 45 days to answer, one extension, and a duty to explain a refusal and how to appeal. Here is the text and what it leaves out.",
+    short: "The company has up to 45 days to answer. It can extend once by 45 days if it tells you why within the first 45. If it refuses, it must say why and how to appeal. For data it got from other sources, the law lets it treat a deletion request as met by keeping a record of your request or opting you out.",
+    sections: [
+      { h: "The 45-day clock", blocks: [
+        { q: "A controller shall respond to the consumer request without undue delay, which may not be later than the 45th day after the date of receipt of the request. The controller may extend the response period once by an additional 45 days when reasonably necessary, taking into account the complexity and number of the consumer's requests, so long as the controller informs the consumer of the extension within the initial 45-day response period, together with the reason for the extension.", src: "bc541" },
+        { p: "That is section 541.052(b). The clock runs from the date the company receives the request, not the date you send it." },
+      ] },
+      { h: "If the company says no", blocks: [
+        { q: "If a controller declines to take action regarding the consumer's request, the controller shall inform the consumer without undue delay, which may not be later than the 45th day after the date of receipt of the request, of the justification for declining to take action and provide instructions on how to appeal the decision in accordance with Section 541.053.", src: "bc541" },
+        { p: "Section 541.053 covers the appeal:" },
+        { q: "A controller shall inform the consumer in writing of any action taken or not taken in response to an appeal under this section not later than the 60th day after the date of receipt of the appeal, including a written explanation of the reason or reasons for the decision.", src: "bc541" },
+        { q: "If the controller denies an appeal, the controller shall provide the consumer with the online mechanism described by Section 541.152 through which the consumer may contact the attorney general to submit a complaint.", src: "bc541" },
+      ] },
+      { h: "Data a company got from someone else", blocks: [
+        { p: "Data brokers mostly hold data they did not collect from you. Section 541.052(f) has a rule for that case:" },
+        { q: "A controller that has obtained personal data about a consumer from a source other than the consumer is considered in compliance with a consumer's request to delete that personal data pursuant to Section 541.051(b)(3) by:", src: "bc541" },
+        { q: "retaining a record of the deletion request and the minimum data necessary for the purpose of ensuring the consumer's personal data remains deleted from the business's records and not using the retained data for any other purpose under this chapter; or", src: "bc541" },
+        { q: "opting the consumer out of the processing of that personal data for any purpose other than a purpose that is exempt under the provisions of this chapter.", src: "bc541" },
+        { p: "So a reply that says your request was recorded and your data is suppressed can meet the law. It is not the same as erasing every copy." },
+      ] },
+      { h: "Who can enforce it", blocks: [
+        { q: "This chapter may not be construed as providing a basis for, or being subject to, a private right of action for a violation of this chapter or any other law.", src: "bc541" },
+        { q: "The attorney general has exclusive authority to enforce this chapter.", src: "bc541" },
+        { q: "Before bringing an action under Section 541.155, the attorney general shall notify a person in writing, not later than the 30th day before bringing the action, identifying the specific provisions of this chapter the attorney general alleges have been or are being violated.", src: "bc541" },
+        { p: "So the law gives you no way to sue a company over an ignored request. The Attorney General can act, and must give the company 30 days to fix the problem first. See [[the complaint page|/texas-attorney-general-complaint/]]." },
+      ] },
+      { h: "Proof of identity and cost", blocks: [
+        { q: "If a controller is unable to authenticate the request using commercially reasonable efforts, the controller is not required to comply with a consumer request submitted under Section 541.051 and may request that the consumer provide additional information reasonably necessary to authenticate the consumer and the consumer's request.", src: "bc541" },
+        { q: "A controller shall provide information in response to a consumer request free of charge, at least twice annually per consumer.", src: "bc541" },
+      ] },
+    ],
+    notSaid: [
+      { t: "How to count the days if you do not know when the company received your request. Keep proof of when you sent it.", absent: ["proof of mailing", "certified mail"], files: ["bc541"] },
+      { t: "That any particular broker will answer in 45 days or at all.", absent: ["every broker"], files: ["bc541"] },
+    ],
+    related: ["people-search-said-no", "texas-attorney-general-complaint", "listing-came-back"],
+  },
+  {
+    slug: "people-search-said-no",
+    title: "A people-search site said no to your request",
+    h1: "A people-search site refused my request. Why does \"publicly available\" matter?",
+    description: "Texas privacy law leaves out publicly available information, and people-search sites say they use it. The statute text, Spokeo's note, and where to appeal.",
+    short: "Both Texas laws leave out publicly available information, which includes government records. People-search sites say they build listings from public sources, so they can refuse a letter. A site's own opt-out page is a second route, and a refusal must come with a reason and appeal steps.",
+    sections: [
+      { h: "What the statute leaves out", blocks: [
+        { p: "The Texas Data Privacy and Security Act defines personal data this way:" },
+        { q: "The term does not include deidentified data or publicly available information.", src: "bc541" },
+        { p: "It defines the excluded category:" },
+        { q: "\"Publicly available information\" means information that is lawfully made available through government records, or information that a business has a reasonable basis to believe is lawfully made available to the general public through widely distributed media, by a consumer, or by a person to whom a consumer has disclosed the information, unless the consumer has restricted the information to a specific audience.", src: "bc541" },
+        { p: "The data broker law has a matching carve-out. Section 510.002(b) says the chapter does not apply to" },
+        { q: "publicly available information;", src: "bc510" },
+      ] },
+      { h: "What a people-search site says about itself", blocks: [
+        { p: "Spokeo's opt-out page says:" },
+        { q: "Spokeo aggregates only publicly available information from third party sources.", src: "spokeo" },
+        { q: "Although publicly available data is exempt from state privacy laws, for over a decade we've been an industry leader in respecting consumers' privacy preferences and enabling them to opt out", src: "spokeo" },
+        { p: "So Spokeo does not rely on the Texas letter. It offers its own form instead. Other sites can do the same, or refuse and cite the exemption. A refusal does not mean the statute is wrong. It means the site says its data falls outside it." },
+      ] },
+      { h: "If a site refuses", blocks: [
+        { p: "The law still asks a company that declines to explain. Section 541.052(c) is quoted on [[the 45-day page|/deletion-request-45-days/]]. Whitepages says this about appeals:" },
+        { q: "If you submitted a request to exercise your rights and are dissatisfied with the decision made by us, you have the right to appeal that decision. Please contact support@whitepages.com to appeal the decision.", src: "wp" },
+        { p: "Whitepages also points Texas residents to its removal instructions:" },
+        { q: "If you would like to remove your personal directory information (e.g., name, address, phone number, etc.) from public display on Whitepages' websites and applications, please review the instructions in our FAQ here.", src: "wp" },
+      ] },
+    ],
+    notSaid: [
+      { t: "Whether any one people-search site must delete you. That depends on what data it holds and where it came from.", absent: ["must delete"], files: ["bc541", "spokeo", "wp"] },
+      { t: "A list of sites that honor Texas letters. We did not test any site's response.", absent: [], files: [], ours: true },
+    ],
+    related: ["remove-home-address", "listing-came-back", "deletion-request-45-days"],
+  },
+  {
+    slug: "listing-came-back",
+    title: "Your listing came back after an opt-out: what to check",
+    h1: "My listing came back after I opted out. What should I check?",
+    description: "Spokeo says an opted-out listing can reappear, that each listing needs its own opt-out, and that the source records stay. Here is what that means for a tracker.",
+    short: "Spokeo says new public records can bring a listing back without notice, and that you can have several listings, each opted out one at a time. An opt-out does not touch the source record. Check for new listings on a schedule you set and log each one.",
+    sections: [
+      { h: "What Spokeo says", blocks: [
+        { q: "Opting out your listing from Spokeo will not remove the data from its original source. Your information may still appear on other websites.", src: "spokeo" },
+        { q: "Furthermore, you may have multiple listings on Spokeo. Each one is identified by a unique URL and must be opted out individually.", src: "spokeo" },
+        { q: "Since we continually receive new and updated records from public sources, your information may reappear on Spokeo in the future without notice. Please regularly check Spokeo for additional listings that may appear.", src: "spokeo" },
+        { p: "Spokeo's help page on addresses adds a limit:" },
+        { q: "We are not able to remove the entire listing. However, we respect your privacy preferences and you can easily remove individual names associated with the address.", src: "spokeohelp" },
+      ] },
+      { h: "How often you can ask again", blocks: [
+        { p: "Chapter 541 lets a company limit repeat requests:" },
+        { q: "If a request from a consumer is manifestly unfounded, excessive, or repetitive, the controller may charge the consumer a reasonable fee to cover the administrative costs of complying with the request or may decline to act on the request.", src: "bc541" },
+        { q: "The controller bears the burden of demonstrating for purposes of this subsection that a request is manifestly unfounded, excessive, or repetitive.", src: "bc541" },
+        { p: "A new listing is a new fact, so a new request about it is not the same request twice. The law does not define \"repetitive\" here." },
+      ] },
+      { h: "A routine for it", blocks: [
+        { p: "The [[free pack|/pack/]] includes a tracker file with one row per company. These steps use it:" },
+        { ul: [
+          "Write the company, the page where you sent the request, and the date.",
+          "Write the listing's web address in the notes column, because Spokeo says each listing has its own.",
+          "Pick a date to search again. Spokeo says to check regularly and gives no interval, so the date is yours to choose.",
+          "When a listing returns, add a new row with a new date instead of overwriting the old one.",
+        ] },
+      ] },
+    ],
+    notSaid: [
+      { t: "How often listings come back. Spokeo says \"regularly\" and gives no number.", absent: ["every 30 days", "every month", "every 90 days"], files: ["spokeo", "spokeohelp"] },
+      { t: "Whether other sites behave the way Spokeo describes. We read only Spokeo's pages for this question.", absent: [], files: [], ours: true },
+    ],
+    related: ["people-search-said-no", "remove-home-address", "deletion-request-45-days"],
+  },
+  {
+    slug: "remove-home-address",
+    title: "Remove a home address from data broker sites",
+    h1: "How do I remove my home address from data broker sites? The steps two sites publish",
+    description: "The steps Spokeo and Whitepages publish for removing a listing, what each form asks for, and the limits each site states, read from their own pages.",
+    short: "Both sites ask you to find your own listing, copy its web address, and paste it into their form. Spokeo asks for an email address and sends a confirmation link. Whitepages describes an automated tool that asks for a phone number, with an email alternative. Spokeo says its opt-out does not remove the record from its original source.",
+    sections: [
+      { h: "Spokeo", blocks: [
+        { p: "Spokeo's help page lists the steps. It says what an address removal can and cannot do:" },
+        { q: "We are not able to remove the entire listing. However, we respect your privacy preferences and you can easily remove individual names associated with the address.", src: "spokeohelp" },
+        { p: "The steps, in Spokeo's order:" },
+        { ul: [
+          "Open an incognito window in your browser.",
+          "Find the address listing and the name you want removed.",
+          "Right-click the report name and choose Copy link address.",
+          "Open Spokeo's opt-out page and paste the address into the box.",
+          "Enter your email address. Spokeo says it uses it to verify the removal.",
+          "Check the captcha box.",
+        ] },
+        { p: "Spokeo's opt-out page adds that it sends a confirmation email and that you must click the link, and it gives a time:" },
+        { q: "Depending on the nature of your request and the amount of data, your opt-out request should be processed in 24-48 hours.", src: "spokeo" },
+        { q: "To complete this process, we will send you a confirmation email. Please click the link in the email.", src: "spokeo" },
+      ] },
+      { h: "Whitepages", blocks: [
+        { p: "Whitepages' opt-out tool opens with this line:" },
+        { q: "You can opt out and have your listing removed from the Whitepages website. Copy and paste the URL of your profile.", src: "wpoptout" },
+        { p: "Its consumer rights page gives the steps to find the address of your listing:" },
+        { ul: [
+          "Visit whitepages.com.",
+          "Enter your name and city and state in the People Search filter.",
+          "Click the listing that matches you.",
+          "Copy the web address from your browser.",
+          "Paste it into the opt-out tool.",
+        ] },
+        { p: "In the California section of that page, Whitepages describes the tool's requirements:" },
+        { q: "You will need to provide a phone number and agree to Whitepages' Terms of Service. The phone number will not be used for any purpose other than completing your opt-out request.", src: "wp" },
+        { q: "If you would prefer not to provide a phone number or agree to Whitepages' Terms of Service, please submit a request to a customer service agent using the first or second option (online form or email) listed above.", src: "wp" },
+        { p: "That text sits under the California heading. The Texas heading points to a separate FAQ for removal. Read the current Whitepages page before you enter anything." },
+      ] },
+      { h: "Limits both sites state", blocks: [
+        { q: "Opting out your listing from Spokeo will not remove the data from its original source. Your information may still appear on other websites.", src: "spokeo" },
+        { p: "The [[listing-came-back page|/listing-came-back/]] covers what to log when a listing returns." },
+      ] },
+    ],
+    notSaid: [
+      { t: "Whether removal is permanent. Spokeo says listings can reappear.", absent: ["permanent"], files: ["spokeo", "spokeohelp"] },
+      { t: "Steps for any site other than these two. We did not read other sites' pages, and several block automated reads.", absent: [], files: [], ours: true },
+    ],
+    related: ["listing-came-back", "people-search-said-no", "one-texas-opt-out-form"],
+  },
+  {
+    slug: "childs-data",
+    title: "Can a parent ask brokers to delete a child's data?",
+    h1: "Can a Texas parent ask data brokers to delete a child's data?",
+    description: "Section 541.051(a) lets a parent or guardian use a known child's rights. The definitions, what the pack covers, and what it does not.",
+    short: "Yes, for a known child under 13. Section 541.051(a) lets a parent or legal guardian exercise the child's rights. The statute does not give the same wording for teenagers. The letter builder in this pack is written for an adult asking about their own data and has no parent version.",
+    sections: [
+      { h: "What the statute says", blocks: [
+        { q: "With respect to the processing of personal data belonging to a known child, a parent or legal guardian of the child may exercise the consumer rights on behalf of the child.", src: "bc541" },
+        { p: "The definitions that matter:" },
+        { q: "\"Child\" means an individual younger than 13 years of age.", src: "bc541" },
+      ] },
+      { h: "Proof", blocks: [
+        { p: "A company may ask you to prove you are the parent or guardian. Section 541.052(e) lets it hold a request until it can confirm it:" },
+        { q: "If a controller is unable to authenticate the request using commercially reasonable efforts, the controller is not required to comply with a consumer request submitted under Section 541.051", src: "bc541" },
+      ] },
+      { h: "Brokers that hold a child's data", blocks: [
+        { p: "A registered broker that knows it holds a child's data must file extra statements. Section 510.005(b)(5) lists them:" },
+        { q: "a statement detailing the data collection practices, databases, sales activities, and opt-out policies that are applicable to the personal data of a known child; and", src: "bc510" },
+        { p: "That statement is part of the broker's registry entry, so the [[registry|/texas-data-broker-registry/]] is one place to look for it." },
+      ] },
+      { h: "What this pack does for a parent", blocks: [
+        { p: "The letter builder says \"I am sending this request myself. No one else is acting for me.\" That is wrong for a parent. A parent would need to edit the letter by hand and say they act for the child. We have not built a parent version." },
+        { p: "DROP Texas says its form has a parent path:" },
+        { q: "A parent or legal guardian can choose My child on the request form for a child under 13 and send the requests for free.", src: "dropchildren" },
+        { p: "That is DROP Texas's own description. We have not tested its form. The [[one-form page|/one-texas-opt-out-form/]] compares it with this pack." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A rule for teenagers. The statute text quoted here covers a known child under 13, and we did not find matching wording for ages 13 to 17.", absent: ["13 to 17", "teenager"], files: ["bc541"] },
+      { t: "What a company will accept as proof of guardianship.", absent: ["birth certificate", "court order"], files: ["bc541"] },
+    ],
+    related: ["one-texas-opt-out-form", "deletion-request-45-days", "texas-data-broker-registry"],
+  },
+  {
+    slug: "texas-attorney-general-complaint",
+    title: "When to complain to the Texas Attorney General",
+    h1: "When can I complain to the Texas Attorney General about a data request?",
+    description: "Only the Attorney General enforces the Texas privacy law. The AG's own page says what to bring, that complaints are public, and what a number means.",
+    short: "The Attorney General alone enforces the Texas privacy law and runs an online complaint form. The law tells a company to point you there after it denies your appeal. The AG's page says complaints are public, warns against including your birth date or ID, and says a complaint number does not mean a case is open.",
+    sections: [
+      { h: "What the statute says", blocks: [
+        { q: "If the controller denies an appeal, the controller shall provide the consumer with the online mechanism described by Section 541.152 through which the consumer may contact the attorney general to submit a complaint.", src: "bc541" },
+        { q: "The attorney general has exclusive authority to enforce this chapter.", src: "bc541" },
+        { q: "an online mechanism through which a consumer may submit a complaint under this chapter to the attorney general.", src: "bc541" },
+        { p: "Section 541.152(2) is the source of that last line. The statute does not say a complaint must wait until an appeal is denied." },
+      ] },
+      { h: "What the Attorney General's page says", blocks: [
+        { q: "The Privacy complaint form is used for complaints that your personal information is being unlawfully collected, shared, or mishandled by a business.", src: "agcomplaint" },
+        { q: "Know that under Texas law your complaint is open to the public.", src: "agcomplaint" },
+        { q: "Regardless of the form you select, DO NOT INCLUDE sensitive or confidential information in your complaint such as your date of birth, Social Security Number, government-issued ID, or financial account numbers.", src: "agcomplaint" },
+        { p: "Have the business name and its full address ready. The page says the form cannot save a half-finished complaint:" },
+        { q: "Be ready to complete the complaint form in full because the system cannot save your in-progress complaint.", src: "agcomplaint" },
+      ] },
+      { h: "What to expect after you file", blocks: [
+        { q: "The number assigned to your complaint is strictly for reference. It does not indicate that any decision has been made regarding the merits of the complaint and does not reflect that the OAG has a case or investigation pending.", src: "agcomplaint" },
+        { q: "Your complaint will be reviewed for informational purposes, helping the Attorney General monitor consumer protection issues throughout the State of Texas.", src: "agcomplaint" },
+        { q: "Texas law prohibits the Office of the Attorney General from providing legal advice, opinions, or representation to private individuals.", src: "agtdpsa" },
+      ] },
+    ],
+    notSaid: [
+      { t: "That the Attorney General will act on one person's complaint. The page says complaints are reviewed for information.", absent: ["we will investigate every", "guarantee"], files: ["agcomplaint"] },
+      { t: "A deadline for filing or for a reply.", absent: ["within 30 days", "within 60 days", "deadline to file"], files: ["agcomplaint"] },
+    ],
+    related: ["deletion-request-45-days", "people-search-said-no", "texas-data-broker-registry"],
+  },
+  {
+    slug: "one-texas-opt-out-form",
+    title: "Is there one Texas opt-out form? DROP Texas compared",
+    h1: "Is there one Texas opt-out form for data brokers? What DROP Texas does and what this pack does",
+    description: "DROP Texas is a free private form that sends opt-out requests to the companies it names. This pack makes letters you send yourself. A plain comparison.",
+    short: "DROP Texas is one free form, run by a private company, that sends opt-out-of-sale requests to the companies it names, nine of them on its home page. This pack sends nothing. It writes deletion letters you send yourself, to any company. For the companies DROP Texas names, it is less work. This pack has a reason to exist only in the cases below.",
+    sections: [
+      { h: "What DROP Texas says it is", blocks: [
+        { q: "DROP Texas is a free service with a form you use to ask data brokers not to sell your personal information. You fill out one form and send the requests. Brokers decide whether they have a record and how they respond.", src: "drophelp" },
+        { q: "DROP Texas is an independent, free service run by a private enterprise. It is not a government website and is not affiliated with the State of Texas or the Texas Attorney General.", src: "drophelp" },
+        { q: "The home page carousel names DMAchoice, Catalog Choice, Acxiom, Epsilon, Equifax, Experian, TransUnion, Spokeo, Whitepages.", src: "dropbrokers" },
+        { p: "Its own pages say plainly that the form is not a deletion tool:" },
+        { q: "This form does not delete personal information a broker already holds. It is an opt-out of sale you send yourself.", src: "dropoverview" },
+        { q: "DROP Texas does not check that a broker deleted a record.", src: "dropoverview" },
+      ] },
+      { h: "What it asks you for", blocks: [
+        { q: "The form asks for your name (including an optional middle name), date of birth, mailing address, email, Texas residency, and, if you choose to provide it, your phone number.", src: "drophelp" },
+        { q: "Your information is stored securely and auto-deleted per our retention policy", src: "drophow" },
+        { p: "We did not read DROP Texas's retention policy, so we cannot say how long it keeps what you enter. We have not tested its form." },
+      ] },
+      { h: "What this pack does", blocks: [
+        { ul: [
+          "It runs in your browser. It sends nothing and stores nothing. See [[what we store|/privacy.html]].",
+          "Its letter needs your name and Texas city. The email and listing address are optional. It does not ask for a birth date or a mailing address.",
+          "It can ask a company to delete your data and to stop selling it, in one letter, or to give you access to it.",
+          "It has an appeal letter and a tracker with a reply-by date 45 days after you send.",
+          "It works for any company, including companies DROP Texas does not name.",
+        ] },
+      ] },
+      { h: "A limit on the deletion difference", blocks: [
+        { p: "A deletion letter does not guarantee erasure. For data a company got from another source, section 541.052(f) says the company is treated as compliant with a deletion request if it" },
+        { q: "retaining a record of the deletion request and the minimum data necessary for the purpose of ensuring the consumer's personal data remains deleted from the business's records and not using the retained data for any other purpose under this chapter; or", src: "bc541" },
+        { q: "opting the consumer out of the processing of that personal data for any purpose other than a purpose that is exempt under the provisions of this chapter.", src: "bc541" },
+        { p: "So a broker can answer a deletion letter by suppressing your record, which is close to what an opt-out does. The difference is real in the words of the request. It can be small in the result." },
+      ] },
+      { h: "Verdict", blocks: [
+        { p: "Use DROP Texas if you want one form for the companies it names and you are willing to give it a name, birth date, mailing address, and email. It is less work than this pack, and we cannot beat that." },
+        { p: "Use this pack if one of these is true:" },
+        { ul: [
+          "You want to ask for deletion or access, not only an opt-out of sale.",
+          "You need to contact a company DROP Texas does not name.",
+          "You do not want to give a third party your birth date and mailing address.",
+          "You want an appeal letter and a deadline tracker for each company.",
+        ] },
+        { p: "If none of those fits you, DROP Texas is the better tool and you do not need this pack. Neither tool is run by the state, and neither can make a company act. The pack is new. We have not sent its letters to brokers and we cannot say how any company will answer." },
+      ] },
+    ],
+    notSaid: [
+      { t: "Whether DROP Texas's requests reach the companies it names or are honored. We have not tested it.", absent: ["we guarantee"], files: ["drophow", "drophelp"] },
+      { t: "How long DROP Texas keeps your details. Its pages say they are auto-deleted per a retention policy that we did not read.", absent: ["30 days", "90 days", "one year"], files: ["drophow", "drophelp", "drophome"] },
+      { t: "Whether any company will answer this pack's letters. We have not tested that either.", absent: [], files: [], ours: true },
+    ],
+    related: ["childs-data", "deletion-request-45-days", "texas-data-broker-registry"],
+  },
+];

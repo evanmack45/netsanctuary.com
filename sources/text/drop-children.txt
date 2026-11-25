@@ -1,0 +1,4 @@
+URL: https://droptexas.com/children
+FETCHED: 2026-11-25 (WebFetch read; page is JavaScript-rendered or blocks curl)
+
+Children's data and the DROP Texas opt-out form notes Texas privacy law Under the Texas Data Privacy and Security Act, Texas Business and Commerce Code chapter 541, a child is under 13 (section 541.001). Data collected from a known child is sensitive data. A parent or legal guardian may exercise the consumer rights on behalf of a child (section 541.051), including asking a company to delete data or stop selling it. Companies may ask for verification (section 541.052). How DROP Texas helps A parent or legal guardian can choose My child on the request form for a child under 13 and send the requests for free. Companies decide how to respond, and they may ask for proof of guardianship. Teens who are 13 to 17 can submit a request for themselves.

@@ -56,3 +56,22 @@ legend{font-weight:700;padding:0 .4rem}
 .hidden{display:none}
 @media (max-width:640px){.grid,.two{grid-template-columns:1fr}.hero{padding-top:1.8rem}body{font-size:16.5px}}
 @media print{.site-header,.site-footer,.no-print,.skip{display:none!important}body{background:#fff;font-size:12pt}#out{border:0;min-height:0;width:100%}}
+
+/* Answer pages */
+.crumbs{margin:1.4rem 0 .4rem;font-size:.92rem;color:var(--muted)}
+.crumbs a{display:inline-block;padding:.35rem 0}
+.page-h1{margin-top:.4rem}
+.answer{margin:0 0 1.5rem;padding:1rem 1.1rem .4rem;background:var(--note);border-left:5px solid var(--teal);border-radius:0 10px 10px 0}
+.answer-label{margin:0 0 .4rem;font-size:.95rem;font-weight:700;color:var(--teal-d)}
+.answer p{font-size:1.06rem}
+.answer .checked{font-size:.9rem;color:var(--muted)}
+blockquote.quote{margin:0 0 1.1rem;padding:.15rem 0 .15rem 1rem;border-left:3px solid var(--line)}
+blockquote.quote p{margin:0 0 .6rem}
+blockquote.quote footer{font-size:.88rem;color:var(--muted)}
+blockquote.quote footer a{display:inline-block;padding-block:.22rem}
+.not-said{margin-top:2.2rem;padding:.1rem 1.1rem .6rem;border:1px dashed var(--muted);border-radius:10px;background:var(--card)}
+.not-said h2{margin-top:1rem}
+ul.links{list-style:none;padding-left:0}
+ul.links a{display:block;padding:.7rem 0;border-top:1px solid var(--line);min-height:44px}
+ul.links li:last-child a{border-bottom:1px solid var(--line)}
+main p a,main li a{padding-block:.2rem}
