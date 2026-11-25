@@ -1,0 +1,23 @@
+{
+  "alt": "A loose stack of identical unbound blank cream sheets on limestone, one sheet drawn halfway out, lit by a kerosene lamp.",
+  "width": 1280,
+  "height": 720,
+  "srcset": [
+    [
+      640,
+      "header-640.webp"
+    ],
+    [
+      960,
+      "header-960.webp"
+    ],
+    [
+      1280,
+      "header.webp"
+    ]
+  ],
+  "ogAlt": "A loose stack of identical unbound blank cream sheets on limestone, one sheet drawn halfway out, lit by a kerosene lamp.",
+  "ogWidth": 1200,
+  "ogHeight": 630,
+  "source": "/workspace/mason/art/incoming/netsanctuary.com/voter-data-on-a-private-site/"
+}

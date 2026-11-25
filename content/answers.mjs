@@ -930,6 +930,55 @@ export const PAGES = [
     ],
     related: ["texas-privacy-law-small-business", "do-i-have-to-live-in-texas", "texas-attorney-general-complaint"],
   },
+  {
+    slug: "voter-data-on-a-private-site",
+    title: "Voter data on a private website: Texas privacy law",
+    h1: "A website posts Texas voter registration data, including my address. Can I get it removed?",
+    description: "The 2022 thread predates the Texas privacy Act, which excludes publicly available information. What the voter-list law says, what the Act says, and what's open.",
+    short: "The thread behind this question is from March 2022. The Texas Data Privacy and Security Act took effect July 1, 2024, so it was not in play then. Under the Act today, personal data does not include publicly available information, and that term covers information lawfully made available through government records. Under the Election Code, the Secretary of State furnishes the voter list to any person on request, with an affidavit against commercial advertising use. Neither text gives you a way to make a private site delete a record.",
+    sections: [
+      { h: "The question, and its date", blocks: [
+        { p: "A March 2022 post on r/legaladvice about a website with Texas voter data:" },
+        { q: "A website has published all of people's voting information submitted by the state of Texas.", src: "rvoter" },
+        { q: "They claim the only way to have your information removed is to petition the government to become a protected voter and submit that paperwork to this company.", src: "rvoter" },
+        { p: "That post is older than the Texas Data Privacy and Security Act. The statute's own history line:" },
+        { q: "Added by Acts 2023, 88th Leg., R.S., Ch. 995 (H.B. 4), Sec. 2, eff. July 1, 2024.", src: "bc541" },
+        { p: "The Act was not available to anyone in 2022. The poster asked for removal and we do not know how the site answered or whether it is still online." },
+      ] },
+      { h: "What the Election Code says about the voter list", blocks: [
+        { p: "Section 18.066 of the Election Code governs the statewide list:" },
+        { q: "The secretary of state shall furnish information in the statewide computerized voter registration list to any person on request not later than the 15th day after the date the request is received.", src: "el18" },
+        { q: "Information furnished under this section may not include: (1) a voter's social security number; or (2) the residence address of a voter whose residence address is confidential under Section 13.004.", src: "el18" },
+        { p: "The second line implies that other voters' residence addresses are in the list. The Secretary of State's page says the same about the basic fields:" },
+        { q: "a person’s name, date of birth, and voter identification number are public information.", src: "sosconf" },
+        { p: "There is a condition on use:" },
+        { q: "To receive information under this section, a person must submit an affidavit to the secretary stating that the person will not use the information obtained in connection with advertising or promoting commercial products or services.", src: "el18" },
+        { q: "A person commits an offense if the person uses information in connection with advertising or promoting commercial products or services that the person knows was obtained under Section 18.066.", src: "el18" },
+        { p: "Whether a particular site's use meets that description is a question about the site, and we cannot answer it. These sections are an affidavit rule and an offense. They are not a removal right for a voter." },
+      ] },
+      { h: "Hiding an address: what the Secretary of State says", blocks: [
+        { p: "The poster's \"protected voter\" is the poster's phrase. The Secretary of State's page describes programs for named groups. For one:" },
+        { q: "This program allows certain government employees or peace officers to request that their address be kept confidential from an open records request or any postings.", src: "sosconf" },
+        { p: "The same page says what a general request to the office can and cannot do:" },
+        { q: "While all voters can request that their information be suppressed from the web, a voter’s information will still remain subject to disclosure under the Public Information Act.", src: "sosconf" },
+        { p: "Who qualifies for each program is listed on that page, not here." },
+      ] },
+      { h: "What the Act says, honestly", blocks: [
+        { p: "The Act's rights to access, delete and opt out apply to personal data. Section 541.001(19) says:" },
+        { q: "The term does not include deidentified data or publicly available information.", src: "bc541" },
+        { p: "And section 541.001(27) defines the exclusion:" },
+        { q: "\"Publicly available information\" means information that is lawfully made available through government records, or information that a business has a reasonable basis to believe is lawfully made available to the general public through widely distributed media, by a consumer, or by a person to whom a consumer has disclosed the information, unless the consumer has restricted the information to a specific audience.", src: "bc541" },
+        { p: "Voter list data furnished by the state under the Election Code is information made available through government records. On the text, that points to it being outside the Act's definition of personal data. That is our reading. The Attorney General pages saved for this site do not mention voter data, and we found no ruling on it. A site that also holds data it got elsewhere, such as a phone number from a data purchase, is a separate question for each piece of data." },
+        { p: "For the removal routes that do exist for people-search sites, see [[removing a home address|/remove-home-address/]] and [[when a people-search site says no|/people-search-said-no/]]." },
+      ] },
+    ],
+    notSaid: [
+      { t: "Anything about voter registration data from the Attorney General. The two Attorney General pages saved for this site never mention voters.", absent: ["voter", "election"], files: ["agtdpsa", "agprivacy"] },
+      { t: "A right to make a private website delete voter list data. The Election Code sections quoted give a right to request the list and an offense for commercial advertising use.", absent: [], files: [], ours: true },
+      { t: "Whether the site in the 2022 thread broke any law, or how it responded.", absent: [], files: [], ours: true },
+    ],
+    related: ["remove-home-address", "people-search-said-no", "texas-data-broker-registry"],
+  },
 ];
 
 // Hub page content. Every answer slug must appear in exactly one group (the builder throws otherwise).
@@ -948,6 +997,6 @@ export const HUB = {
     { h: "Opting out and consent", slugs: ["texas-browser-opt-out-signals", "opt-out-of-sale", "one-texas-opt-out-form", "texas-sensitive-data-consent", "can-they-refuse-service"] },
     { h: "Who the law covers", slugs: ["do-i-have-to-live-in-texas", "texas-privacy-law-small-business", "childs-data", "employer-face-scan", "does-the-law-cover-government"] },
     { h: "Enforcement", slugs: ["can-i-sue-texas-privacy-law", "texas-attorney-general-complaint"] },
-    { h: "Data brokers and people-search listings", slugs: ["texas-data-broker-registry", "people-search-said-no", "listing-came-back", "remove-home-address"] },
+    { h: "Data brokers and people-search listings", slugs: ["texas-data-broker-registry", "people-search-said-no", "listing-came-back", "remove-home-address", "voter-data-on-a-private-site"] },
   ],
 };
