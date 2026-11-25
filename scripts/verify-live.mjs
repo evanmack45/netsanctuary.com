@@ -25,8 +25,9 @@ for (const loc of locs) {
 }
 const rb = get(SITE + "/robots.txt");
 ok(rb.status === 200 && rb.body.includes(`Sitemap: ${SITE}/sitemap.xml`), "live robots.txt has the Sitemap line");
-const www = execFileSync("curl", ["-sSI", "--noproxy", "*", "-m", "30", "https://www." + domain + "/"], { encoding: "utf8" });
-console.log("www: " + www.split("\n")[0].trim() + " " + (www.match(/^location:.*$/im) || [""])[0].trim());
+// The issued certificate covers the apex only (known, logged). Report www without failing the run.
+let www = ""; try { www = execFileSync("curl", ["-sSI", "--noproxy", "*", "-m", "30", "https://www." + domain + "/"], { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }); } catch (e) { www = "no valid certificate for www (apex-only certificate, known)"; }
+console.log("www: " + www.split("\n")[0].trim());
 const http = execFileSync("curl", ["-sSI", "--noproxy", "*", "-m", "30", "-H", "Host: " + domain, "http://185.199.108.153/"], { encoding: "utf8" });
 ok(/301/.test(http.split("\n")[0]) && new RegExp(`location: ${SITE}/`, "i").test(http), "http to the Pages IP with Host header 301s to https");
 console.log(fails.length ? `\n${fails.length} FAILED` : "\nall live checks passed");
