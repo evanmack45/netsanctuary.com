@@ -508,6 +508,50 @@ export const PAGES = [
     related: ["authorized-agent-texas-privacy-request", "deletion-request-45-days", "texas-attorney-general-complaint"],
   },
   {
+    slug: "opt-out-of-sale",
+    title: "How to opt out of data sales and targeted ads in Texas",
+    h1: "How do I opt out of the sale of my data, targeted ads, or profiling under the Texas privacy law?",
+    description: "Section 541.051(b)(5): opt out of targeted ads, the sale of data, and some profiling. What each term means, what companies must tell you, and the 45-day clock.",
+    short: "You send a covered company a request under section 541.051(b)(5) to opt out of one or more of three things: targeted advertising, the sale of personal data, or profiling in furtherance of a decision with a legal or similarly significant effect. A company that sells data or runs targeted ads must clearly and conspicuously disclose that and how to opt out (section 541.103). The same 45-day answer clock applies.",
+    sections: [
+      { h: "The three opt-outs", blocks: [
+        { p: "Section 541.051(b)(5) gives the right to:" },
+        { q: "opt out of the processing of the personal data for purposes of:", src: "bc541" },
+        { p: "followed by three items: targeted advertising, the sale of personal data, and profiling in furtherance of a decision that produces a legal or similarly significant effect concerning the consumer. Each term has a definition in section 541.001." },
+      ] },
+      { h: "What the terms mean", blocks: [
+        { p: "Sale of personal data:" },
+        { q: "the sharing, disclosing, or transferring of personal data for monetary or other valuable consideration by the controller to a third party.", src: "bc541" },
+        { p: "The definition leaves out five transfers: to a processor working for the company, to a third party to provide a product you requested, to an affiliate, of information you made public through mass media without restricting the audience, and as an asset in a merger or acquisition. Targeted advertising:" },
+        { q: "displaying to a consumer an advertisement that is selected based on personal data obtained from that consumer's activities over time and across nonaffiliated websites or online applications to predict the consumer's preferences or interests.", src: "bc541" },
+        { p: "It does not include ads based on activities within the company's own websites or apps, ads based on your current search or visit, or ads in response to your request. Profiling:" },
+        { q: "any form of solely automated processing performed on personal data to evaluate, analyze, or predict personal aspects related to an identified or identifiable individual's economic situation, health, personal preferences, interests, reliability, behavior, location, or movements.", src: "bc541" },
+        { p: "The profiling opt-out applies only when the decision results in the provision or denial of financial and lending services; housing, insurance, or health care services; education enrollment; employment opportunities; criminal justice; or access to basic necessities, such as food and water." },
+      ] },
+      { h: "What the company must tell you", blocks: [
+        { q: "If a controller sells personal data to third parties or processes personal data for targeted advertising, the controller shall clearly and conspicuously disclose that process and the manner in which a consumer may exercise the right to opt out of that process.", src: "bc541" },
+        { p: "That is section 541.103. The privacy notice under section 541.102 also has to describe how to submit requests. Look for both on the company's website before you write your own request." },
+      ] },
+      { h: "Ways to opt out", blocks: [
+        { p: "You can send the request yourself, naming section 541.051(b)(5) and the items you want to stop:" },
+        { q: "A consumer is entitled to exercise the consumer rights authorized by this section at any time by submitting a request to a controller specifying the consumer rights the consumer wishes to exercise.", src: "bc541" },
+        { p: "Two other routes exist for the sale and targeted-ad opt-outs. A browser setting or device setting can send the opt-out for you: [[browser opt-out signals|/texas-browser-opt-out-signals/]]. An authorized agent can send it: [[authorized agents|/authorized-agent-texas-privacy-request/]]. [[The one-form page|/one-texas-opt-out-form/]] covers DROP Texas, a free form that sends opt-out-of-sale requests to the companies it names." },
+      ] },
+      { h: "What an opt-out does and does not do", blocks: [
+        { p: "An opt-out stops the named processing. It does not delete data. Deletion is a different right in section 541.051(b)(3). Selling sensitive data is a separate matter that needs your consent first: [[sensitive data consent|/texas-sensitive-data-consent/]]." },
+        { p: "A company is also allowed some differences in cost after you opt out. Section 541.101(c) says the ban on discrimination does not" },
+        { q: "prohibit a controller from offering a different price, rate, level, quality, or selection of goods or services to a consumer, including offering goods or services for no fee, if the consumer has exercised the consumer's right to opt out under Section 541.051", src: "bc541" },
+        { p: "[[Can they refuse service|/can-they-refuse-service/]] covers that rule." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A single place to opt out of every company. The chapter requires each controller to offer its own methods.", absent: ["single opt-out", "universal opt-out"], files: ["bc541", "agtdpsa"] },
+      { t: "A deadline shorter than 45 days for an opt-out request. Section 541.052(b) sets the same clock for every right.", absent: ["15 days", "15th day"], files: ["bc541"] },
+      { t: "Whether any particular company sells your data. We did not check any company's practices.", absent: [], files: [], ours: true },
+    ],
+    related: ["texas-browser-opt-out-signals", "one-texas-opt-out-form", "can-they-refuse-service"],
+  },
+  {
     slug: "authorized-agent-texas-privacy-request",
     title: "Can someone send my Texas privacy request for me?",
     h1: "Can someone else send my Texas privacy request for me? What the law says about authorized agents",
