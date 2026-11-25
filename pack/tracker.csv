@@ -1,0 +1,11 @@
+Company,Where I sent it (form or email),Date sent,First date to check (sent + 45 days),Answer received (date),What they said,Appeal sent (date),Notes
+,,,"=IF(C2="""","""",C2+45)",,,,
+,,,"=IF(C3="""","""",C3+45)",,,,
+,,,"=IF(C4="""","""",C4+45)",,,,
+,,,"=IF(C5="""","""",C5+45)",,,,
+,,,"=IF(C6="""","""",C6+45)",,,,
+,,,"=IF(C7="""","""",C7+45)",,,,
+,,,"=IF(C8="""","""",C8+45)",,,,
+,,,"=IF(C9="""","""",C9+45)",,,,
+,,,"=IF(C10="""","""",C10+45)",,,,
+,,,"=IF(C11="""","""",C11+45)",,,,

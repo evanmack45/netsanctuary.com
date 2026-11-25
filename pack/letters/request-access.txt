@@ -1,0 +1,24 @@
+Subject: Texas privacy request for [company name]
+
+To the privacy team at [company name],
+
+I live in Texas. I am sending this request myself. No one else is acting for me.
+I am making it under the Texas Data Privacy and Security Act, Texas Business & Commerce Code chapter 541.
+
+Under section 541.051, I ask you to:
+1. Tell me whether you process my personal data, and give me access to it.
+
+So you can find my record:
+Name: [your full name]
+City: [your Texas city], Texas
+Email on the record: [optional, delete this line if you leave it out]
+Profile page: [optional, delete this line if you leave it out]
+
+Section 541.052(b) gives you up to 45 days from receiving this request to answer. If you decline any part, please tell me why and how to appeal, as section 541.052(c) says.
+
+If you need to confirm it is me, tell me exactly what you need and why. I will decide what to send.
+
+Sent on [date].
+
+Thank you,
+[your full name]

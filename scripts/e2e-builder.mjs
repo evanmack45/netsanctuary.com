@@ -1,0 +1,46 @@
+// Browser test of the letter builder. Usage: node scripts/e2e-builder.mjs <baseUrl> [chromiumArgs...]
+// Needs playwright-core; resolved from the austin-council-tracker checkout (read-only use).
+import { createRequire } from "node:module";
+const { chromium } = createRequire("/workspace/repos/austin-council-tracker/node_modules/")("playwright-core");
+const base = process.argv[2]; const args = process.argv.slice(3);
+const b = await chromium.launch({ headless: true, args });
+const ctx = await b.newContext({ viewport: { width: 1280, height: 900 }, acceptDownloads: true });
+const p = await ctx.newPage();
+const reqs = []; p.on("request", r => reqs.push(r.method() + " " + r.url()));
+const errs = []; p.on("pageerror", e => errs.push(String(e))); p.on("console", m => { if (m.type() === "error") errs.push(m.text()); });
+let fail = 0; const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); if (!c) fail++; };
+
+await p.goto(base + "/pack/", { waitUntil: "load" });
+const afterLoad = reqs.length;
+await p.fill("#f-broker", "Café Data Co.");
+await p.fill("#f-name", "José Peña");
+await p.fill("#f-city", "San Antonio");
+await p.fill("#f-date", "2026-11-25");
+await p.fill("#f-email", "jose@example.com");
+let out = await p.inputValue("#out");
+ok(out.includes("Name: José Peña") && out.includes("Café Data Co.") && out.includes("City: San Antonio, Texas"), "accented name, company, and city appear in the letter");
+ok(out.includes("1. Delete the personal data you hold about me.") && out.includes("2. Stop selling my personal data."), "default asks: delete and stop selling");
+ok((await p.textContent("#reply-by")).includes("January 9, 2027"), "reply-by box says January 9, 2027 for a Nov 25, 2026 send");
+await p.check("#w-access"); await p.uncheck("#w-delete");
+out = await p.inputValue("#out");
+ok(!out.includes("Delete the personal data") && out.includes("3. ") === false && out.includes("2. Tell me whether"), "checkbox change renumbers the letter");
+const [dl] = await Promise.all([p.waitForEvent("download"), p.click("#b-download")]);
+const path = await dl.path(); const fs = await import("node:fs");
+ok(fs.readFileSync(path, "utf8") === (await p.inputValue("#out")), "downloaded .txt equals the textarea (" + dl.suggestedFilename() + ")");
+const href = await p.getAttribute("#b-mail", "href");
+ok(href.startsWith("mailto:?subject=") && decodeURIComponent(href).includes("José Peña"), "mailto draft has no recipient and carries the letter");
+await p.check("input[name=kind][value=appeal]");
+await p.fill("#f-sent", "2026-11-25"); await p.fill("#f-date", "2027-01-20"); await p.fill("#f-reason", "they said it is public record");
+out = await p.inputValue("#out");
+ok(out.includes("Appeal of your decision") && out.includes("What you told me: they said it is public record") && out.includes("November 25, 2026"), "appeal letter renders");
+ok((await p.textContent("#reply-by")).includes("March 21, 2027"), "appeal 60-day date is March 21, 2027 for Jan 20, 2027");
+await p.setViewportSize({ width: 390, height: 800 });
+ok(await p.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), "no horizontal scroll at 390px");
+await ctx.setOffline(true);
+await p.fill("#f-name", "Zoë Nuñez");
+ok((await p.inputValue("#out")).includes("Zoë Nuñez"), "builder still works with the network switched off");
+ok(reqs.length === afterLoad, `no network requests after page load (${reqs.length - afterLoad} extra)`);
+const foreign = reqs.filter(r => !r.includes(new URL(base).host) && !r.startsWith("GET data:"));
+ok(foreign.length === 0, "no request to any other host: " + JSON.stringify(foreign));
+ok(errs.length === 0, "no console or page errors " + JSON.stringify(errs));
+await b.close(); process.exit(fail ? 1 : 0);
