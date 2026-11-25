@@ -812,7 +812,7 @@ export const PAGES = [
         { p: "The statute does not define \"bona fide\" for a loyalty program and sets no limit on how much more a company can charge after an opt-out. A company that charges more after you opt out is relying on subsection (c), and you can ask in writing which part it relies on." },
       ] },
       { h: "Fees for answering a request are separate", blocks: [
-        { p: "A fee for handling your request falls under section 541.052(d), not this rule. [[The fee page|/deletion-request-fee/]] covers it." },
+        { p: "A fee for handling your request falls under section 541.052(d), not this rule. [[The fee page|/deletion-request-fee/]] covers it. For opting out of sales and targeted ads, see [[opt out of sale|/opt-out-of-sale/]]." },
       ] },
       { h: "If a company does it anyway", blocks: [
         { p: "The Attorney General enforces the Act, and the statute gives no private right of action. [[Can I sue|/can-i-sue-texas-privacy-law/]] covers that, and [[the complaint page|/texas-attorney-general-complaint/]] covers the Attorney General's online complaint form." },
