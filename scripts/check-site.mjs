@@ -20,9 +20,16 @@ ok(js.every(f => !/\bfetch\s*\(|XMLHttpRequest|sendBeacon|localStorage|sessionSt
 const external = html.flatMap(f => [...text(f).matchAll(/<(script|link|img|iframe)[^>]+(src|href)="(https?:)?\/\/[^"]+"/g)].filter(m => m[1] !== "a").map(m => [relative(root, f), m[0]]));
 ok(external.filter(([, t]) => /<(script|iframe|img)/.test(t) || /rel="stylesheet"/.test(t)).length === 0, "no third-party script, iframe, image or stylesheet");
 
-const all = [...html, ...js].map(text).join("\n").toLowerCase();
-const allNoStatute = all.replace(/\bdifferent prices?\b/g, ""); // section 541.101(b)(3) and (c) quote "different price(s)"; every other use of the word stays banned
-for (const w of ["stripe", "checkout", "buy now", "add to cart", "paypal", "price", "pay now", "order now", "subscribe now"]) ok(!allNoStatute.includes(w), `no "${w}" anywhere in html/js (except the statute phrase "different price")`);
+// "different price(s)" is allowed only as a verbatim quote of Bus. & Com. Code 541.101(b)(3) or (c),
+// inside a <blockquote>, with the chapter 541 cite in that same block (same idea as the $7,500 rule).
+// Paraphrases, short answers, and any other use of the word stay banned.
+const STATUTE_PRICE = /charging different prices or rates for goods or services|offering a different price, rate, level, quality/;
+const stripCitedPriceQuotes = htmlText => htmlText.replace(/<blockquote\b[\s\S]*?<\/blockquote>/gi, bq => {
+  const cited = /chapter 541|BC\.541\.htm/i.test(bq);
+  return cited && STATUTE_PRICE.test(bq) ? bq.replace(/\bdifferent prices?\b/gi, "") : bq;
+});
+const all = [...html, ...js].map(f => (f.endsWith(".html") ? stripCitedPriceQuotes(text(f)) : text(f))).join("\n").toLowerCase();
+for (const w of ["stripe", "checkout", "buy now", "add to cart", "paypal", "price", "pay now", "order now", "subscribe now"]) ok(!all.includes(w), `no "${w}" anywhere in html/js (except "different price(s)" as a quoted, cited 541.101(b)(3) or (c) line)`);
 ok(!/\$\s?\d/.test(all.replace(/\$300\b/g, "").replace(/\$7,500\b/g, "")), "no dollar amounts except the $300 state registration fee and the $7,500 civil penalty ceiling (cited legal facts)");
 // Three pages share one art setting (window sill and lamp). No two of them may sit next to each other in any link list.
 const SHARED_ART = ["access-my-data", "correct-my-data", "opt-out-of-sale"];

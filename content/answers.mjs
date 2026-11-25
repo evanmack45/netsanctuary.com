@@ -790,7 +790,7 @@ export const PAGES = [
     title: "Can a company refuse me over Texas privacy rights?",
     h1: "Can a company charge more or refuse service if I use my rights under the Texas privacy law?",
     description: "Section 541.101(b)(3) bars discrimination for using your rights, such as denying service or charging more. Subsection (c) allows loyalty and no-fee offers.",
-    short: "Generally no. Section 541.101(b)(3) says a controller cannot discriminate against a consumer for exercising any of the consumer rights, including by denying goods or services, charging different prices or rates, or providing a different level of quality. Subsection (c) carves out a company's duty to provide a service that needs data it does not hold, different pricing after an opt-out, and bona fide loyalty or club card programs.",
+    short: "Generally no. Section 541.101(b)(3) bars discrimination for using any of the consumer rights, including denying goods or services, charging more, or providing a different level of quality. Subsection (c) carves out a company's duty to provide a service that needs data it does not hold, a different charge after an opt-out, and bona fide loyalty or club card programs.",
     sections: [
       { h: "The rule", blocks: [
         { p: "Section 541.101(b) lists what a controller cannot do. Item (3) is:" },
