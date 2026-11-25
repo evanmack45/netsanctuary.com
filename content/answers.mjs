@@ -106,6 +106,52 @@ export const PAGES = [
     related: ["people-search-said-no", "texas-attorney-general-complaint", "listing-came-back"],
   },
   {
+    slug: "access-my-data",
+    title: "Can I see or copy my data under Texas privacy law?",
+    h1: "Can I ask a company to show me, or give me a copy of, the data it holds on me under the Texas privacy law?",
+    description: "Section 541.051(b)(1) and (4): confirm whether a company processes your data, access it, and get a portable copy of what you gave it. Free twice a year.",
+    short: "Yes, if the company is a covered controller and you are a Texas resident. Section 541.051(b)(1) gives you the right to confirm whether it is processing your personal data and to access it. Section 541.051(b)(4) adds a portable copy of the data you previously provided, if it is available in digital format. The company must authenticate you, answer within 45 days, and answer free of charge at least twice a year.",
+    sections: [
+      { h: "What section 541.051 gives you", blocks: [
+        { p: "The rights sit in section 541.051(b). Two of them concern seeing your data:" },
+        { q: "confirm whether a controller is processing the consumer's personal data and to access the personal data;", src: "bc541" },
+        { q: "if the data is available in a digital format, obtain a copy of the consumer's personal data that the consumer previously provided to the controller in a portable and, to the extent technically feasible, readily usable format that allows the consumer to transmit the data to another controller without hindrance; or", src: "bc541" },
+        { p: "The Attorney General's page on the Act sums up the first right as:" },
+        { q: "Right to know whether a company is processing the consumer's personal data and to obtain the personal data in a readable format;", src: "agtdpsa" },
+        { p: "The two statute items differ in reach. The copy right in (b)(4) is limited to data you previously provided to the company, and only if it is available in digital format. Item (b)(1) does not carry that limit in its text. The statute does not say what form access under (b)(1) must take." },
+      ] },
+      { h: "How to ask", blocks: [
+        { q: "A consumer is entitled to exercise the consumer rights authorized by this section at any time by submitting a request to a controller specifying the consumer rights the consumer wishes to exercise.", src: "bc541" },
+        { p: "Name the right you want to use. Section 541.055(a) tells the company to offer ways to ask:" },
+        { q: "A controller shall establish two or more secure and reliable methods to enable consumers to submit a request to exercise their consumer rights under this chapter.", src: "bc541" },
+        { q: "if the controller maintains an Internet website, the controller must provide a mechanism on the website for consumers to submit requests for information required to be disclosed under this chapter.", src: "bc541" },
+      ] },
+      { h: "What the company can ask of you", blocks: [
+        { p: "Only an authenticated request has to be honored. Section 541.001 defines the term:" },
+        { q: "to verify through reasonable means that the consumer who is entitled to exercise the consumer's rights under Subchapter B is the same consumer exercising those consumer rights with respect to the personal data at issue.", src: "bc541" },
+        { q: "If a controller is unable to authenticate the request using commercially reasonable efforts, the controller is not required to comply with a consumer request submitted under Section 541.051 and may request that the consumer provide additional information reasonably necessary to authenticate the consumer and the consumer's request.", src: "bc541" },
+        { p: "Timing and cost come from section 541.052. The company answers without undue delay and within 45 days, with one 45-day extension if it tells you why. Responses are free at least twice a year per consumer. [[The 45-day page|/deletion-request-45-days/]] and [[the fee page|/deletion-request-fee/]] cover both rules." },
+      ] },
+      { h: "What falls outside the right", blocks: [
+        { p: "The right reaches personal data, and the definition has limits:" },
+        { q: "The term does not include deidentified data or publicly available information.", src: "bc541" },
+        { p: "Section 541.106(c) removes the access, correction, deletion and copy rights from one more category:" },
+        { q: "The consumer rights under Sections 541.051(b)(1)-(4) and controller duties under Section 541.101 do not apply to pseudonymous data in cases in which the controller is able to demonstrate any information necessary to identify the consumer is kept separately and is subject to effective technical and organizational controls that prevent the controller from accessing the information.", src: "bc541" },
+        { p: "A consumer under the Act is a Texas resident acting in an individual or household context, and the company has to be one the Act covers. [[Small business coverage|/texas-privacy-law-small-business/]] explains who is in. If a people-search site answers an access request by pointing at public records, [[People-search said no|/people-search-said-no/]] covers that reply." },
+      ] },
+      { h: "If the company says no", blocks: [
+        { q: "If a controller declines to take action regarding the consumer's request, the controller shall inform the consumer without undue delay, which may not be later than the 45th day after the date of receipt of the request, of the justification for declining to take action and provide instructions on how to appeal the decision in accordance with Section 541.053.", src: "bc541" },
+        { p: "[[Appealing a denied request|/appeal-denied-privacy-request/]] walks through that step. Enforcement is by the Attorney General only: [[the complaint page|/texas-attorney-general-complaint/]]." },
+      ] },
+    ],
+    notSaid: [
+      { t: "A required format for the access response. The statute calls for a portable, readily usable format only for the copy right, and the phrase \"readable format\" appears only in the Attorney General's summary.", absent: ["readable format"], files: ["bc541"] },
+      { t: "A form letter or template for the request. Neither the chapter nor the Attorney General's page supplies one.", absent: ["template", "sample letter", "form letter"], files: ["bc541", "agtdpsa"] },
+      { t: "How any particular company handles an access request. We did not send one.", absent: [], files: [], ours: true },
+    ],
+    related: ["deletion-request-45-days", "deletion-request-fee", "appeal-denied-privacy-request"],
+  },
+  {
     slug: "people-search-said-no",
     title: "A people-search site said no to your request",
     h1: "A people-search site refused my request. Why does \"publicly available\" matter?",
