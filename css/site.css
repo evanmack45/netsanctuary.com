@@ -81,5 +81,5 @@ main p a,main li a{padding-block:.2rem}
 .page-art img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:var(--line)}
 @media print{.page-art{display:none}}
 
-main p, main li { max-width: 68ch; }
+main p, main li { max-width: 65ch; }
 .hero-shot{display:block;width:100%;max-width:46rem;height:auto;border:1px solid var(--line);border-radius:10px;margin:0 0 1.25rem;background:#fff}
