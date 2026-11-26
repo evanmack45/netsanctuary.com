@@ -107,7 +107,7 @@ ${jsonLd(p)}
 ${artFigure(p, artFor(p.slug))}      <h1 class="page-h1">${esc(p.h1)}</h1>
       <div class="answer" role="note">
         <h2 class="answer-label">Short answer</h2>
-        <p>${esc(p.short)}</p>
+        <p>${inline(p.short)}</p>
         <p class="checked">Checked against the sources below, ${CHECKED}. Not legal advice.</p>
       </div>
 ${p.sections.map(s => `

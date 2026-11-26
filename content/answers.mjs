@@ -61,7 +61,7 @@ export const PAGES = [
     title: "You sent a Texas deletion request: the next 45 days",
     h1: "You sent a Texas deletion request. What does the law say happens in the first 45 days?",
     description: "Section 541.052 gives a company 45 days to answer, one extension, and a duty to explain a refusal and how to appeal. Here is the text and what it leaves out.",
-    short: "The company has up to 45 days to answer. It can extend once by 45 days if it tells you why within the first 45. If it refuses, it must say why and how to appeal.",
+    short: "The company has up to 45 days to answer under section 541.052. It can extend once by 45 days if it tells you why within the first 45. If it refuses, it must say why and how to appeal. See the [[Texas Data Privacy and Security Act|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights/texas-data-privacy-and-security-act]].",
     sections: [
       { h: "The 45-day clock", blocks: [
         
