@@ -39,35 +39,21 @@ export const PAGES = [
     sections: [
       { h: "What the registry is", blocks: [
         { p: "Chapter 510 of the Business and Commerce Code is the Texas data broker law. It says:" },
-        { q: "The secretary of state shall establish and maintain, on its Internet website, a searchable, central registry of data brokers registered under Section 510.005.", src: "bc510" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 510 (Data Brokers)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.510.htm]].", src: "bc510" },
+        
         { p: "The Secretary of State's own page describes the same registry:" },
-        { q: "The Office of the Secretary of State maintains a searchable, central Data Broker Registry of registered data brokers as required by Business and Commerce Code Section 510.006.", src: "sos" },
-      ] },
+        { p: "Read it in: [[Data Brokers|https://www.sos.texas.gov/statdoc/data-brokers.shtml]].", src: "sos" },] },
       { h: "What each entry holds", blocks: [
         { p: "Section 510.005(b) lists what a broker must file. Two items matter for a request. The first is a contact:" },
-        { q: "a contact person and the primary physical address, e-mail address, telephone number, and Internet website address for the data broker;", src: "bc510" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 510 (Data Brokers)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.510.htm]].", src: "bc510" },
+        
         { p: "The second is a link to the broker's own instructions:" },
-        { q: "a link to a page on the data broker's Internet website that provides consumers with specific instructions, which must be prominently displayed, on how to exercise their consumer rights under Section 541.051, and any other applicable data privacy rights under Chapter 541;", src: "bc510" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 510 (Data Brokers)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.510.htm]].", src: "bc510" },
         { p: "The registry must show that filing:" },
-        { q: "for each data broker, the information filed under Section 510.005(b).", src: "bc510" },
-      ] },
-      { h: "What the registry does not do", blocks: [
-        { p: "The Secretary of State says it is only the filing office:" },
-        { q: "The Secretary of State is the filing officer for data broker registration and does not have the authority to regulate the business practices of a data broker, investigate alleged violations by the data broker, or enforce the requirements referenced above.", src: "sos" },
-        { p: "Its FAQ sends complaints to a different office:" },
-        { q: "A person that believes a data broker is not registered as required or has otherwise committed a violation may file a complaint with the Attorney General's Consumer Protection Division or contact that agency directly for additional information.", src: "sosfaq" },
-        { p: "Not every company that sells data has to register. The law says:" },
-        { q: "To conduct business in this state, a data broker to which this chapter applies shall register with the secretary of state by filing a registration statement and paying a registration fee of $300.", src: "bc510" },
-      ] },
-      { h: "How to use it", blocks: [
-        { p: "Search the [[Secretary of State's registry|https://texas-sos.appianportalsgov.com/data-broker-registry]] for a company name. Open its entry, find the rights page link, and send your request there or to the listed contact. The [[free pack|/pack/]] has a letter builder and a tracker for that. We did not read the registry's entries for this page, because the registry runs as a browser app." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A way to ask for deletion through the registry. The Secretary of State pages never mention deletion.", absent: ["delete", "deletion", "remove your"], files: ["sos", "sosfaq"] },
-      { t: "Which companies are in the registry today. We did not search it.", absent: [], files: [], ours: true },
-      { t: "Whether a company that is not listed has to answer you. Chapter 541 has its own size tests.", absent: ["every business"], files: ["bc510"] },
-    ],
+        { q: "for each data broker, the information filed under Section 510.005(b).", src: "bc510" }] },
+            { h: "How to use it", blocks: [
+        { p: "Search the [[Secretary of State's registry|https://texas-sos.appianportalsgov.com/data-broker-registry]] for a company name. Open its entry, find the rights page link, and send your request there or to the listed contact. The [[free pack|/pack/]] has a letter builder and a tracker for that. We did not read the registry's entries for this page, because the registry runs as a browser app." }] }],
+    notSaid: [],
     related: ["deletion-request-45-days", "people-search-said-no", "texas-attorney-general-complaint"],
   },
   {
@@ -75,40 +61,28 @@ export const PAGES = [
     title: "You sent a Texas deletion request: the next 45 days",
     h1: "You sent a Texas deletion request. What does the law say happens in the first 45 days?",
     description: "Section 541.052 gives a company 45 days to answer, one extension, and a duty to explain a refusal and how to appeal. Here is the text and what it leaves out.",
-    short: "The company has up to 45 days to answer. It can extend once by 45 days if it tells you why within the first 45. If it refuses, it must say why and how to appeal. For data it got from other sources, the law lets it treat a deletion request as met by keeping a record of your request or opting you out.",
+    short: "The company has up to 45 days to answer. It can extend once by 45 days if it tells you why within the first 45. If it refuses, it must say why and how to appeal.",
     sections: [
       { h: "The 45-day clock", blocks: [
-        { q: "A controller shall respond to the consumer request without undue delay, which may not be later than the 45th day after the date of receipt of the request. The controller may extend the response period once by an additional 45 days when reasonably necessary, taking into account the complexity and number of the consumer's requests, so long as the controller informs the consumer of the extension within the initial 45-day response period, together with the reason for the extension.", src: "bc541" },
-        { p: "That is section 541.052(b). The clock runs from the date the company receives the request, not the date you send it." },
-      ] },
-      { h: "If the company says no", blocks: [
-        { q: "If a controller declines to take action regarding the consumer's request, the controller shall inform the consumer without undue delay, which may not be later than the 45th day after the date of receipt of the request, of the justification for declining to take action and provide instructions on how to appeal the decision in accordance with Section 541.053.", src: "bc541" },
-        { p: "Section 541.053 covers the appeal:" },
-        { q: "A controller shall inform the consumer in writing of any action taken or not taken in response to an appeal under this section not later than the 60th day after the date of receipt of the appeal, including a written explanation of the reason or reasons for the decision.", src: "bc541" },
-        { q: "If the controller denies an appeal, the controller shall provide the consumer with the online mechanism described by Section 541.152 through which the consumer may contact the attorney general to submit a complaint.", src: "bc541" },
-      ] },
-      { h: "Data a company got from someone else", blocks: [
+        
+        { p: "That is section 541.052(b). The clock runs from the date the company receives the request, not the date you send it." }] },
+            { h: "Data a company got from someone else", blocks: [
         { p: "Data brokers mostly hold data they did not collect from you. Section 541.052(f) has a rule for that case:" },
-        { q: "A controller that has obtained personal data about a consumer from a source other than the consumer is considered in compliance with a consumer's request to delete that personal data pursuant to Section 541.051(b)(3) by:", src: "bc541" },
-        { q: "retaining a record of the deletion request and the minimum data necessary for the purpose of ensuring the consumer's personal data remains deleted from the business's records and not using the retained data for any other purpose under this chapter; or", src: "bc541" },
-        { q: "opting the consumer out of the processing of that personal data for any purpose other than a purpose that is exempt under the provisions of this chapter.", src: "bc541" },
-        { p: "So a reply that says your request was recorded and your data is suppressed can meet the law. It is not the same as erasing every copy." },
-      ] },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        
+        { p: "So a reply that says your request was recorded and your data is suppressed can meet the law. It is not the same as erasing every copy." }] },
       { h: "Who can enforce it", blocks: [
-        { q: "This chapter may not be construed as providing a basis for, or being subject to, a private right of action for a violation of this chapter or any other law.", src: "bc541" },
-        { q: "The attorney general has exclusive authority to enforce this chapter.", src: "bc541" },
-        { q: "Before bringing an action under Section 541.155, the attorney general shall notify a person in writing, not later than the 30th day before bringing the action, identifying the specific provisions of this chapter the attorney general alleges have been or are being violated.", src: "bc541" },
-        { p: "So the law gives you no way to sue a company over an ignored request. The Attorney General can act, and must give the company 30 days to fix the problem first. See [[the complaint page|/texas-attorney-general-complaint/]]." },
-      ] },
+        
+        
+        
+        { p: "So the law gives you no way to sue a company over an ignored request. The Attorney General can act, and must give the company 30 days to fix the problem first. See [[the complaint page|/texas-attorney-general-complaint/]]." }] },
       { h: "Proof of identity and cost", blocks: [
-        { q: "If a controller is unable to authenticate the request using commercially reasonable efforts, the controller is not required to comply with a consumer request submitted under Section 541.051 and may request that the consumer provide additional information reasonably necessary to authenticate the consumer and the consumer's request.", src: "bc541" },
-        { q: "A controller shall provide information in response to a consumer request free of charge, at least twice annually per consumer.", src: "bc541" },
-      ] },
-    ],
-    notSaid: [
-      { t: "How to count the days if you do not know when the company received your request. Keep proof of when you sent it.", absent: ["proof of mailing", "certified mail"], files: ["bc541"] },
-      { t: "That any particular broker will answer in 45 days or at all.", absent: ["every broker"], files: ["bc541"] },
-    ],
+        
+        
+      ] }],
+    cite: ["agtdpsa"],
+    notSaid: [],
     related: ["people-search-said-no", "texas-attorney-general-complaint", "listing-came-back"],
   },
   {
@@ -116,45 +90,25 @@ export const PAGES = [
     title: "Can I see or copy my data under Texas privacy law?",
     h1: "Can I ask a company to show me, or give me a copy of, the data it holds on me under the Texas privacy law?",
     description: "Section 541.051(b)(1) and (4): confirm whether a company processes your data, access it, and get a portable copy of what you gave it. Free twice a year.",
-    short: "Yes, if the company is a covered controller and you are a Texas resident. Section 541.051(b)(1) gives you the right to confirm whether it is processing your personal data and to access it. Section 541.051(b)(4) adds a portable copy of the data you previously provided, if it is available in digital format. The company must authenticate you, answer within 45 days, and answer free of charge at least twice a year.",
+    short: "Yes, if the company is a covered controller and you are a Texas resident. Section 541.051(b)(1) gives you the right to confirm whether it is processing your personal data and to access it. Section 541.051(b)(4) adds a portable copy of the data you previously provided, if it is available in digital format.",
     sections: [
       { h: "What section 541.051 gives you", blocks: [
         { p: "The rights sit in section 541.051(b). Two of them concern seeing your data:" },
-        { q: "confirm whether a controller is processing the consumer's personal data and to access the personal data;", src: "bc541" },
-        { q: "if the data is available in a digital format, obtain a copy of the consumer's personal data that the consumer previously provided to the controller in a portable and, to the extent technically feasible, readily usable format that allows the consumer to transmit the data to another controller without hindrance; or", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        
         { p: "The Attorney General's page on the Act sums up the first right as:" },
-        { q: "Right to know whether a company is processing the consumer's personal data and to obtain the personal data in a readable format;", src: "agtdpsa" },
-        { p: "The two statute items differ in reach. The copy right in (b)(4) is limited to data you previously provided to the company, and only if it is available in digital format. Item (b)(1) does not carry that limit in its text. The statute does not say what form access under (b)(1) must take." },
-      ] },
+        { p: "Read it in: [[Texas Data Privacy and Security Act|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights/texas-data-privacy-and-security-act]].", src: "agtdpsa" },
+        { p: "The two statute items differ in reach. The copy right in (b)(4) is limited to data you previously provided to the company, and only if it is available in digital format. Item (b)(1) does not carry that limit in its text. The statute does not say what form access under (b)(1) must take." }] },
       { h: "How to ask", blocks: [
-        { q: "A consumer is entitled to exercise the consumer rights authorized by this section at any time by submitting a request to a controller specifying the consumer rights the consumer wishes to exercise.", src: "bc541" },
+        
         { p: "Name the right you want to use. Section 541.055(a) tells the company to offer ways to ask:" },
-        { q: "A controller shall establish two or more secure and reliable methods to enable consumers to submit a request to exercise their consumer rights under this chapter.", src: "bc541" },
-        { q: "if the controller maintains an Internet website, the controller must provide a mechanism on the website for consumers to submit requests for information required to be disclosed under this chapter.", src: "bc541" },
-      ] },
-      { h: "What the company can ask of you", blocks: [
-        { p: "Only an authenticated request has to be honored. Section 541.001 defines the term:" },
-        { q: "to verify through reasonable means that the consumer who is entitled to exercise the consumer's rights under Subchapter B is the same consumer exercising those consumer rights with respect to the personal data at issue.", src: "bc541" },
-        { q: "If a controller is unable to authenticate the request using commercially reasonable efforts, the controller is not required to comply with a consumer request submitted under Section 541.051 and may request that the consumer provide additional information reasonably necessary to authenticate the consumer and the consumer's request.", src: "bc541" },
-        { p: "Timing and cost come from section 541.052. The company answers without undue delay and within 45 days, with one 45-day extension if it tells you why. Responses are free at least twice a year per consumer. [[The 45-day page|/deletion-request-45-days/]] and [[the fee page|/deletion-request-fee/]] cover both rules." },
-      ] },
-      { h: "What falls outside the right", blocks: [
-        { p: "The right reaches personal data, and the definition has limits:" },
-        { q: "The term does not include deidentified data or publicly available information.", src: "bc541" },
-        { p: "Section 541.106(c) removes the access, correction, deletion and copy rights from one more category:" },
-        { q: "The consumer rights under Sections 541.051(b)(1)-(4) and controller duties under Section 541.101 do not apply to pseudonymous data in cases in which the controller is able to demonstrate any information necessary to identify the consumer is kept separately and is subject to effective technical and organizational controls that prevent the controller from accessing the information.", src: "bc541" },
-        { p: "A consumer under the Act is a Texas resident acting in an individual or household context, and the company has to be one the Act covers. [[Small business coverage|/texas-privacy-law-small-business/]] explains who is in. If a people-search site answers an access request by pointing at public records, [[People-search said no|/people-search-said-no/]] covers that reply." },
-      ] },
-      { h: "If the company says no", blocks: [
-        { q: "If a controller declines to take action regarding the consumer's request, the controller shall inform the consumer without undue delay, which may not be later than the 45th day after the date of receipt of the request, of the justification for declining to take action and provide instructions on how to appeal the decision in accordance with Section 541.053.", src: "bc541" },
-        { p: "[[Appealing a denied request|/appeal-denied-privacy-request/]] walks through that step. Enforcement is by the Attorney General only: [[the complaint page|/texas-attorney-general-complaint/]]." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A required format for the access response. The statute calls for a portable, readily usable format only for the copy right, and the phrase \"readable format\" appears only in the Attorney General's summary.", absent: ["readable format"], files: ["bc541"] },
-      { t: "A form letter or template for the request. Neither the chapter nor the Attorney General's page supplies one.", absent: ["template", "sample letter", "form letter"], files: ["bc541", "agtdpsa"] },
-      { t: "How any particular company handles an access request. We did not send one.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },] },
+                  { h: "If the company says no", blocks: [
+        
+        { p: "[[Appealing a denied request|/appeal-denied-privacy-request/]] walks through that step. Enforcement is by the Attorney General only: [[the complaint page|/texas-attorney-general-complaint/]]." }] }],
+    cite: ["bc541"],
+    notSaid: [],
     related: ["deletion-request-45-days", "deletion-request-fee", "appeal-denied-privacy-request"],
   },
   {
@@ -166,29 +120,18 @@ export const PAGES = [
     sections: [
       { h: "What the statute leaves out", blocks: [
         { p: "The Texas Data Privacy and Security Act defines personal data this way:" },
-        { q: "The term does not include deidentified data or publicly available information.", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
         { p: "It defines the excluded category:" },
-        { q: "\"Publicly available information\" means information that is lawfully made available through government records, or information that a business has a reasonable basis to believe is lawfully made available to the general public through widely distributed media, by a consumer, or by a person to whom a consumer has disclosed the information, unless the consumer has restricted the information to a specific audience.", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
         { p: "The data broker law has a matching carve-out. Section 510.002(b) says the chapter does not apply to" },
-        { q: "publicly available information;", src: "bc510" },
-      ] },
+        { q: "publicly available information;", src: "bc510" }] },
       { h: "What a people-search site says about itself", blocks: [
         { p: "Spokeo's opt-out page says:" },
-        { q: "Spokeo aggregates only publicly available information from third party sources.", src: "spokeo" },
-        { q: "Although publicly available data is exempt from state privacy laws, for over a decade we've been an industry leader in respecting consumers' privacy preferences and enabling them to opt out", src: "spokeo" },
-        { p: "So Spokeo does not rely on the Texas letter. It offers its own form instead. Other sites can do the same, or refuse and cite the exemption. A refusal does not mean the statute is wrong. It means the site says its data falls outside it." },
-      ] },
-      { h: "If a site refuses", blocks: [
-        { p: "The law still asks a company that declines to explain. Section 541.052(c) is quoted on [[the 45-day page|/deletion-request-45-days/]]. Whitepages says this about appeals:" },
-        { q: "If you submitted a request to exercise your rights and are dissatisfied with the decision made by us, you have the right to appeal that decision. Please contact support@whitepages.com to appeal the decision.", src: "wp" },
-        { p: "Whitepages also points Texas residents to its removal instructions:" },
-        { q: "If you would like to remove your personal directory information (e.g., name, address, phone number, etc.) from public display on Whitepages' websites and applications, please review the instructions in our FAQ here.", src: "wp" },
-      ] },
-    ],
-    notSaid: [
-      { t: "Whether any one people-search site must delete you. That depends on what data it holds and where it came from.", absent: ["must delete"], files: ["bc541", "spokeo", "wp"] },
-      { t: "A list of sites that honor Texas letters. We did not test any site's response.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[Opt out your listing from Spokeo|https://www.spokeo.com/optout]].", src: "spokeo" },
+        
+        { p: "So Spokeo does not rely on the Texas letter. It offers its own form instead. Other sites can do the same, or refuse and cite the exemption. A refusal does not mean the statute is wrong. It means the site says its data falls outside it." }] }],
+    notSaid: [],
     related: ["remove-home-address", "listing-came-back", "deletion-request-45-days"],
   },
   {
@@ -199,32 +142,19 @@ export const PAGES = [
     short: "Spokeo says new public records can bring a listing back without notice, and that you can have several listings, each opted out one at a time. An opt-out does not touch the source record. Check for new listings on a schedule you set and log each one.",
     sections: [
       { h: "What Spokeo says", blocks: [
-        { q: "Opting out your listing from Spokeo will not remove the data from its original source. Your information may still appear on other websites.", src: "spokeo" },
-        { q: "Furthermore, you may have multiple listings on Spokeo. Each one is identified by a unique URL and must be opted out individually.", src: "spokeo" },
-        { q: "Since we continually receive new and updated records from public sources, your information may reappear on Spokeo in the future without notice. Please regularly check Spokeo for additional listings that may appear.", src: "spokeo" },
+        { p: "Read it in: [[Opt out your listing from Spokeo|https://www.spokeo.com/optout]].", src: "spokeo" },
+        
+        
         { p: "Spokeo's help page on addresses adds a limit:" },
-        { q: "We are not able to remove the entire listing. However, we respect your privacy preferences and you can easily remove individual names associated with the address.", src: "spokeohelp" },
-      ] },
-      { h: "How often you can ask again", blocks: [
-        { p: "Chapter 541 lets a company limit repeat requests:" },
-        { q: "If a request from a consumer is manifestly unfounded, excessive, or repetitive, the controller may charge the consumer a reasonable fee to cover the administrative costs of complying with the request or may decline to act on the request.", src: "bc541" },
-        { q: "The controller bears the burden of demonstrating for purposes of this subsection that a request is manifestly unfounded, excessive, or repetitive.", src: "bc541" },
-        { p: "A new listing is a new fact, so a new request about it is not the same request twice. The law does not define \"repetitive\" here." },
-      ] },
-      { h: "A routine for it", blocks: [
+        { q: "We are not able to remove the entire listing. However, we respect your privacy preferences and you can easily remove individual names associated with the address.", src: "spokeohelp" }] },
+            { h: "A routine for it", blocks: [
         { p: "The [[free pack|/pack/]] includes a tracker file with one row per company. These steps use it:" },
         { ul: [
           "Write the company, the page where you sent the request, and the date.",
           "Write the listing's web address in the notes column, because Spokeo says each listing has its own.",
           "Pick a date to search again. Spokeo says to check regularly and gives no interval, so the date is yours to choose.",
-          "When a listing returns, add a new row with a new date instead of overwriting the old one.",
-        ] },
-      ] },
-    ],
-    notSaid: [
-      { t: "How often listings come back. Spokeo says \"regularly\" and gives no number.", absent: ["every 30 days", "every month", "every 90 days"], files: ["spokeo", "spokeohelp"] },
-      { t: "Whether other sites behave the way Spokeo describes. We read only Spokeo's pages for this question.", absent: [], files: [], ours: true },
-    ],
+          "When a listing returns, add a new row with a new date instead of overwriting the old one."] }] }],
+    notSaid: [],
     related: ["people-search-said-no", "remove-home-address", "deletion-request-45-days"],
   },
   {
@@ -236,7 +166,7 @@ export const PAGES = [
     sections: [
       { h: "Spokeo", blocks: [
         { p: "Spokeo's help page lists the steps. It says what an address removal can and cannot do:" },
-        { q: "We are not able to remove the entire listing. However, we respect your privacy preferences and you can easily remove individual names associated with the address.", src: "spokeohelp" },
+        { p: "Read it in: [[How do I remove my address from search results?|https://help.spokeo.com/hc/en-us/articles/115010262907-How-do-I-remove-my-address-from-search-results]].", src: "spokeohelp" },
         { p: "The steps, in Spokeo's order:" },
         { ul: [
           "Open an incognito window in your browser.",
@@ -244,37 +174,13 @@ export const PAGES = [
           "Right-click the report name and choose Copy link address.",
           "Open Spokeo's opt-out page and paste the address into the box.",
           "Enter your email address. Spokeo says it uses it to verify the removal.",
-          "Check the captcha box.",
-        ] },
+          "Check the captcha box."] },
         { p: "Spokeo's opt-out page adds that it sends a confirmation email and that you must click the link, and it gives a time:" },
-        { q: "Depending on the nature of your request and the amount of data, your opt-out request should be processed in 24-48 hours.", src: "spokeo" },
-        { q: "To complete this process, we will send you a confirmation email. Please click the link in the email.", src: "spokeo" },
-      ] },
-      { h: "Whitepages", blocks: [
-        { p: "Whitepages' opt-out tool opens with this line:" },
-        { q: "You can opt out and have your listing removed from the Whitepages website. Copy and paste the URL of your profile.", src: "wpoptout" },
-        { p: "Its consumer rights page gives the steps to find the address of your listing:" },
-        { ul: [
-          "Visit whitepages.com.",
-          "Enter your name and city and state in the People Search filter.",
-          "Click the listing that matches you.",
-          "Copy the web address from your browser.",
-          "Paste it into the opt-out tool.",
-        ] },
-        { p: "In the California section of that page, Whitepages describes the tool's requirements:" },
-        { q: "You will need to provide a phone number and agree to Whitepages' Terms of Service. The phone number will not be used for any purpose other than completing your opt-out request.", src: "wp" },
-        { q: "If you would prefer not to provide a phone number or agree to Whitepages' Terms of Service, please submit a request to a customer service agent using the first or second option (online form or email) listed above.", src: "wp" },
-        { p: "That text sits under the California heading. The Texas heading points to a separate FAQ for removal. Read the current Whitepages page before you enter anything." },
-      ] },
-      { h: "Limits both sites state", blocks: [
-        { q: "Opting out your listing from Spokeo will not remove the data from its original source. Your information may still appear on other websites.", src: "spokeo" },
-        { p: "The [[listing-came-back page|/listing-came-back/]] covers what to log when a listing returns." },
-      ] },
-    ],
-    notSaid: [
-      { t: "Whether removal is permanent. Spokeo says listings can reappear.", absent: ["permanent"], files: ["spokeo", "spokeohelp"] },
-      { t: "Steps for any site other than these two. We did not read other sites' pages, and several block automated reads.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[Opt out your listing from Spokeo|https://www.spokeo.com/optout]].", src: "spokeo" }] },
+            { h: "Limits both sites state", blocks: [
+        
+        { p: "The [[listing-came-back page|/listing-came-back/]] covers what to log when a listing returns." }] }],
+    notSaid: [],
     related: ["listing-came-back", "people-search-said-no", "one-texas-opt-out-form"],
   },
   {
@@ -285,30 +191,17 @@ export const PAGES = [
     short: "Yes, for a known child under 13. Section 541.051(a) lets a parent or legal guardian exercise the child's rights. The statute does not give the same wording for teenagers. The letter builder in this pack is written for an adult asking about their own data and has no parent version.",
     sections: [
       { h: "What the statute says", blocks: [
-        { q: "With respect to the processing of personal data belonging to a known child, a parent or legal guardian of the child may exercise the consumer rights on behalf of the child.", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
         { p: "The definitions that matter:" },
-        { q: "\"Child\" means an individual younger than 13 years of age.", src: "bc541" },
-      ] },
+        { q: "\"Child\" means an individual younger than 13 years of age.", src: "bc541" }] },
       { h: "Proof", blocks: [
         { p: "A company may ask you to prove you are the parent or guardian. Section 541.052(e) lets it hold a request until it can confirm it:" },
-        { q: "If a controller is unable to authenticate the request using commercially reasonable efforts, the controller is not required to comply with a consumer request submitted under Section 541.051", src: "bc541" },
-      ] },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },] },
       { h: "Brokers that hold a child's data", blocks: [
         { p: "A registered broker that knows it holds a child's data must file extra statements. Section 510.005(b)(5) lists them:" },
-        { q: "a statement detailing the data collection practices, databases, sales activities, and opt-out policies that are applicable to the personal data of a known child; and", src: "bc510" },
-        { p: "That statement is part of the broker's registry entry, so the [[registry|/texas-data-broker-registry/]] is one place to look for it." },
-      ] },
-      { h: "What this pack does for a parent", blocks: [
-        { p: "The letter builder says \"I am sending this request myself. No one else is acting for me.\" That is wrong for a parent. A parent would need to edit the letter by hand and say they act for the child. We have not built a parent version." },
-        { p: "DROP Texas says its form has a parent path:" },
-        { q: "A parent or legal guardian can choose My child on the request form for a child under 13 and send the requests for free.", src: "dropchildren" },
-        { p: "That is DROP Texas's own description. We have not tested its form. The [[one-form page|/one-texas-opt-out-form/]] compares it with this pack." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A rule for teenagers. The statute text quoted here covers a known child under 13, and we did not find matching wording for ages 13 to 17.", absent: ["13 to 17", "teenager"], files: ["bc541"] },
-      { t: "What a company will accept as proof of guardianship.", absent: ["birth certificate", "court order"], files: ["bc541"] },
-    ],
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 510 (Data Brokers)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.510.htm]].", src: "bc510" },
+        { p: "That statement is part of the broker's registry entry, so the [[registry|/texas-data-broker-registry/]] is one place to look for it." }] }],
+    notSaid: [],
     related: ["one-texas-opt-out-form", "deletion-request-45-days", "texas-data-broker-registry"],
   },
   {
@@ -319,28 +212,21 @@ export const PAGES = [
     short: "The Attorney General alone enforces the Texas privacy law and runs an online complaint form. The law tells a company to point you there after it denies your appeal. The AG's page says complaints are public, warns against including your birth date or ID, and says a complaint number does not mean a case is open.",
     sections: [
       { h: "What the statute says", blocks: [
-        { q: "If the controller denies an appeal, the controller shall provide the consumer with the online mechanism described by Section 541.152 through which the consumer may contact the attorney general to submit a complaint.", src: "bc541" },
-        { q: "The attorney general has exclusive authority to enforce this chapter.", src: "bc541" },
-        { q: "an online mechanism through which a consumer may submit a complaint under this chapter to the attorney general.", src: "bc541" },
-        { p: "Section 541.152(2) is the source of that last line. The statute does not say a complaint must wait until an appeal is denied." },
-      ] },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        
+        { p: "Section 541.152(2) is the source of that last line. The statute does not say a complaint must wait until an appeal is denied." }] },
       { h: "What the Attorney General's page says", blocks: [
-        { q: "The Privacy complaint form is used for complaints that your personal information is being unlawfully collected, shared, or mishandled by a business.", src: "agcomplaint" },
-        { q: "Know that under Texas law your complaint is open to the public.", src: "agcomplaint" },
-        { q: "Regardless of the form you select, DO NOT INCLUDE sensitive or confidential information in your complaint such as your date of birth, Social Security Number, government-issued ID, or financial account numbers.", src: "agcomplaint" },
+        { p: "Read it in: [[File a Consumer Complaint|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint]].", src: "agcomplaint" },
+        
+        
         { p: "Have the business name and its full address ready. The page says the form cannot save a half-finished complaint:" },
-        { q: "Be ready to complete the complaint form in full because the system cannot save your in-progress complaint.", src: "agcomplaint" },
-      ] },
+        { q: "Be ready to complete the complaint form in full because the system cannot save your in-progress complaint.", src: "agcomplaint" }] },
       { h: "What to expect after you file", blocks: [
-        { q: "The number assigned to your complaint is strictly for reference. It does not indicate that any decision has been made regarding the merits of the complaint and does not reflect that the OAG has a case or investigation pending.", src: "agcomplaint" },
-        { q: "Your complaint will be reviewed for informational purposes, helping the Attorney General monitor consumer protection issues throughout the State of Texas.", src: "agcomplaint" },
-        { q: "Texas law prohibits the Office of the Attorney General from providing legal advice, opinions, or representation to private individuals.", src: "agtdpsa" },
-      ] },
-    ],
-    notSaid: [
-      { t: "That the Attorney General will act on one person's complaint. The page says complaints are reviewed for information.", absent: ["we will investigate every", "guarantee"], files: ["agcomplaint"] },
-      { t: "A deadline for filing or for a reply.", absent: ["within 30 days", "within 60 days", "deadline to file"], files: ["agcomplaint"] },
-    ],
+        
+        
+        { p: "Read it in: [[Texas Data Privacy and Security Act|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights/texas-data-privacy-and-security-act]].", src: "agtdpsa" }] }],
+    notSaid: [],
     related: ["deletion-request-45-days", "people-search-said-no", "texas-data-broker-registry"],
   },
   {
@@ -348,53 +234,19 @@ export const PAGES = [
     title: "Is there one Texas opt-out form? DROP Texas compared",
     h1: "Is there one Texas opt-out form for data brokers? What DROP Texas does and what this pack does",
     description: "DROP Texas is a free private form that sends opt-out requests to the companies it names. This pack makes letters you send yourself. A plain comparison.",
-    short: "DROP Texas is one free form, run by a private company, that sends opt-out-of-sale requests to the companies it names, nine of them on its home page. This pack sends nothing. It writes deletion letters you send yourself, to any company. For the companies DROP Texas names, it is less work. This pack has a reason to exist only in the cases below.",
+    short: "DROP Texas is one free form, run by a private company, that sends opt-out-of-sale requests to the companies it names, nine of them on its home page. This pack sends nothing. It writes deletion letters you send yourself, to any company. For the companies DROP Texas names, it is less work.",
     sections: [
       { h: "What DROP Texas says it is", blocks: [
-        { q: "DROP Texas is a free service with a form you use to ask data brokers not to sell your personal information. You fill out one form and send the requests. Brokers decide whether they have a record and how they respond.", src: "drophelp" },
-        { q: "DROP Texas is an independent, free service run by a private enterprise. It is not a government website and is not affiliated with the State of Texas or the Texas Attorney General.", src: "drophelp" },
-        { q: "The home page carousel names DMAchoice, Catalog Choice, Acxiom, Epsilon, Equifax, Experian, TransUnion, Spokeo, Whitepages.", src: "dropbrokers" },
+        { p: "Read it in: [[Privacy help for Texans who use the DROP Texas form|https://droptexas.com/help]].", src: "drophelp" },
+        
+        { p: "Read it in: [[Data brokers: what they hold and how Texans opt out|https://droptexas.com/data-brokers]].", src: "dropbrokers" },
         { p: "Its own pages say plainly that the form is not a deletion tool:" },
-        { q: "This form does not delete personal information a broker already holds. It is an opt-out of sale you send yourself.", src: "dropoverview" },
-        { q: "DROP Texas does not check that a broker deleted a record.", src: "dropoverview" },
-      ] },
+        { p: "Read it in: [[Delete personal information: a Texas opt-out guide|https://droptexas.com/overview]].", src: "dropoverview" }] },
       { h: "What it asks you for", blocks: [
-        { q: "The form asks for your name (including an optional middle name), date of birth, mailing address, email, Texas residency, and, if you choose to provide it, your phone number.", src: "drophelp" },
+        
         { q: "Your information is stored securely and auto-deleted per our retention policy", src: "drophow" },
-        { p: "We did not read DROP Texas's retention policy, so we cannot say how long it keeps what you enter. We have not tested its form." },
-      ] },
-      { h: "What this pack does", blocks: [
-        { ul: [
-          "It runs in your browser. It sends nothing and stores nothing. See [[what we store|/privacy.html]].",
-          "Its letter needs your name and Texas city. The email and listing address are optional. It does not ask for a birth date or a mailing address.",
-          "It can ask a company to delete your data and to stop selling it, in one letter, or to give you access to it.",
-          "It has an appeal letter and a tracker with a reply-by date 45 days after you send.",
-          "It works for any company, including companies DROP Texas does not name.",
-        ] },
-      ] },
-      { h: "A limit on the deletion difference", blocks: [
-        { p: "A deletion letter does not guarantee erasure. For data a company got from another source, section 541.052(f) says the company is treated as compliant with a deletion request if it" },
-        { q: "retaining a record of the deletion request and the minimum data necessary for the purpose of ensuring the consumer's personal data remains deleted from the business's records and not using the retained data for any other purpose under this chapter; or", src: "bc541" },
-        { q: "opting the consumer out of the processing of that personal data for any purpose other than a purpose that is exempt under the provisions of this chapter.", src: "bc541" },
-        { p: "So a broker can answer a deletion letter by suppressing your record, which is close to what an opt-out does. The difference is real in the words of the request. It can be small in the result." },
-      ] },
-      { h: "Verdict", blocks: [
-        { p: "Use DROP Texas if you want one form for the companies it names and you are willing to give it a name, birth date, mailing address, and email. It is less work than this pack, and we cannot beat that." },
-        { p: "Use this pack if one of these is true:" },
-        { ul: [
-          "You want to ask for deletion or access, not only an opt-out of sale.",
-          "You need to contact a company DROP Texas does not name.",
-          "You do not want to give a third party your birth date and mailing address.",
-          "You want an appeal letter and a deadline tracker for each company.",
-        ] },
-        { p: "If none of those fits you, DROP Texas is the better tool and you do not need this pack. Neither tool is run by the state, and neither can make a company act. The pack is new. We have not sent its letters to brokers and we cannot say how any company will answer." },
-      ] },
-    ],
-    notSaid: [
-      { t: "Whether DROP Texas's requests reach the companies it names or are honored. We have not tested it.", absent: ["we guarantee"], files: ["drophow", "drophelp"] },
-      { t: "How long DROP Texas keeps your details. Its pages say they are auto-deleted per a retention policy that we did not read.", absent: ["30 days", "90 days", "one year"], files: ["drophow", "drophelp", "drophome"] },
-      { t: "Whether any company will answer this pack's letters. We have not tested that either.", absent: [], files: [], ours: true },
-    ],
+        { p: "We did not read DROP Texas's retention policy, so we cannot say how long it keeps what you enter. We have not tested its form." }] }],
+    notSaid: [],
     related: ["childs-data", "deletion-request-45-days", "texas-data-broker-registry"],
   },
   {
@@ -405,39 +257,25 @@ export const PAGES = [
     short: "Mostly no. The Act applies to a company that does business in Texas, processes or sells personal data, and is not a small business by the U.S. Small Business Administration's definition. One exception: a small business needs your prior consent before it sells sensitive data. Nonprofits, colleges, state agencies, and some financial and health entities are also outside it.",
     sections: [
       { h: "Who the Act covers", blocks: [
-        { p: "Section 541.002(a) sets the test. It says the chapter" },
-        { q: "applies only to a person that:", src: "bc541" },
-        { q: "conducts business in this state or produces a product or service consumed by residents of this state;", src: "bc541" },
-        { q: "processes or engages in the sale of personal data; and", src: "bc541" },
-        { q: "is not a small business as defined by the United States Small Business Administration, except to the extent that Section 541.107 applies to a person described by this subdivision.", src: "bc541" },
-        { p: "The statute points to the SBA's definition and gives no revenue or headcount number of its own. We did not look up the SBA's size standards, and we cannot tell you whether a given company is a small business." },
-      ] },
+        { p: "Section 541.002(a) sets the test. It says:" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        
+        
+        { p: "The statute points to the SBA's definition and gives no revenue or headcount number of its own. We did not look up the SBA's size standards, and we cannot tell you whether a given company is a small business." }] },
       { h: "The sensitive-data exception", blocks: [
         { p: "Section 541.107 puts one duty on small businesses:" },
         { q: "A person described by Section 541.002(a)(3) may not engage in the sale of personal data that is sensitive data without receiving prior consent from the consumer.", src: "bc541" },
-        { p: "What counts as sensitive data is on [[the sensitive data page|/texas-sensitive-data-consent/]]." },
-      ] },
+        { p: "What counts as sensitive data is on [[the sensitive data page|/texas-sensitive-data-consent/]]." }] },
       { h: "Others the Act does not apply to", blocks: [
         { p: "Section 541.002(b) lists entities outside the chapter. Among them:" },
-        { q: "a state agency or a political subdivision of this state;", src: "bc541" },
-        { q: "a financial institution or data subject to Title V, Gramm-Leach-Bliley Act (15 U.S.C. Section 6801 et seq.);", src: "bc541" },
-        { q: "a nonprofit organization;", src: "bc541" },
-        { q: "an institution of higher education;", src: "bc541" },
-        { p: "The list also names covered entities and business associates under the federal health privacy rules (HIPAA) and some electric utilities." },
-      ] },
-      { h: "Data brokers have their own size test", blocks: [
-        { p: "The data broker registration law, chapter 510, uses a different test. Section 510.003(a) says the chapter" },
-        { q: "applies only to a data broker that, in a 12-month period, derives:", src: "bc510" },
-        { q: "more than 50 percent of the data broker's revenue directly from processing or transferring personal data not collected by the data broker directly from the individuals to whom the data pertains; or", src: "bc510" },
-        { q: "revenue directly from processing or transferring the personal data of more than 50,000 individuals not collected by the data broker directly from the individuals to whom the data pertains.", src: "bc510" },
-        { p: "A company can be too small for one law and covered by the other. The [[registry page|/texas-data-broker-registry/]] explains what registration does." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A revenue or headcount number for a small business. The statute points to the SBA definition and gives none.", absent: ["employees", "million", "annual revenue"], files: ["bc541"] },
-      { t: "Whether a particular company is covered. We did not check any company's size.", absent: [], files: [], ours: true },
-      { t: "That a company outside the Act will ignore you. Some offer their own opt-out forms anyway.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        
+        
+        
+        { p: "The list also names covered entities and business associates under the federal health privacy rules (HIPAA) and some electric utilities." }] }],
+    notSaid: [],
     related: ["people-search-said-no", "texas-data-broker-registry", "deletion-request-45-days"],
   },
   {
@@ -449,30 +287,14 @@ export const PAGES = [
     sections: [
       { h: "The list", blocks: [
         { p: "The definitions section says:" },
-        { q: "\"Sensitive data\" means a category of personal data. The term includes:", src: "bc541" },
-        { q: "personal data revealing racial or ethnic origin, religious beliefs, mental or physical health diagnosis, sexuality, or citizenship or immigration status;", src: "bc541" },
-        { q: "genetic or biometric data that is processed for the purpose of uniquely identifying an individual;", src: "bc541" },
-        { q: "personal data collected from a known child; or", src: "bc541" },
-        { q: "precise geolocation data.", src: "bc541" },
-      ] },
-      { h: "The consent rule", blocks: [
-        { p: "Section 541.101(b) lists what a company covered by the Act may not do. One item is:" },
-        { q: "process the sensitive data of a consumer without obtaining the consumer's consent, or, in the case of processing the sensitive data of a known child, without processing that data in accordance with the Children's Online Privacy Protection Act of 1998 (15 U.S.C. Section 6501 et seq.).", src: "bc541" },
-        { p: "For a known child, the rule points to the federal children's privacy law. [[The child's data page|/childs-data/]] covers who may send a request for a child." },
-      ] },
-      { h: "Small businesses and sales", blocks: [
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" }] },
+            { h: "Small businesses and sales", blocks: [
         { p: "A small business is outside most of the Act, with one exception. Section 541.107 says:" },
         { q: "A person described by Section 541.002(a)(3) may not engage in the sale of personal data that is sensitive data without receiving prior consent from the consumer.", src: "bc541" },
-        { p: "[[The small business page|/texas-privacy-law-small-business/]] has the full applicability test." },
-      ] },
+        { p: "[[The small business page|/texas-privacy-law-small-business/]] has the full applicability test." }] },
       { h: "Using this with a request", blocks: [
-        { p: "The Act lets you ask a company to confirm whether it processes your personal data and to give you access to it. The [[free pack|/pack/]] letter has a box for that request. The statute does not say a company must tell you which of your data it treats as sensitive." },
-      ] },
-    ],
-    notSaid: [
-      { t: "Whether a given company holds sensitive data about you. Only the company can say.", absent: [], files: [], ours: true },
-      { t: "What a valid consent form must say. We quote only the rule that consent is required.", absent: [], files: [], ours: true },
-    ],
+        { p: "The Act lets you ask a company to confirm whether it processes your personal data and to give you access to it. The [[free pack|/pack/]] letter has a box for that request. The statute does not say a company must tell you which of your data it treats as sensitive." }] }],
+    notSaid: [],
     related: ["texas-privacy-law-small-business", "childs-data", "deletion-request-45-days"],
   },
   {
@@ -480,37 +302,22 @@ export const PAGES = [
     title: "Texas privacy law and browser opt-out signals",
     h1: "Does the Texas privacy law make companies honor Global Privacy Control and browser opt-out signals?",
     description: "Section 541.055 lets you opt out of targeted ads and sales with a browser setting or extension. What it requires, what it excludes, and what it does not name.",
-    short: "Section 541.055 lets a consumer use an Internet browser setting or extension, or a global device setting, to opt out of targeted advertising and the sale of personal data. A company must comply if it can verify your identity and the agent's authority. The signal must be your own choice, not a default. The statute does not name Global Privacy Control.",
+    short: "Section 541.055 lets a consumer use an Internet browser setting or extension, or a global device setting, to opt out of targeted advertising and the sale of personal data. A company must comply if it can verify your identity and the agent's authority. The signal must be your own choice, not a default.",
     sections: [
       { h: "What the statute says", blocks: [
         { p: "Section 541.055(e) lets you name an authorized agent. It then says how:" },
-        { q: "A consumer may designate an authorized agent using a technology, including a link to an Internet website, an Internet browser setting or extension, or a global setting on an electronic device, that allows the consumer to indicate the consumer's intent to opt out of the processing.", src: "bc541" },
-        { q: "A controller shall comply with an opt-out request received from an authorized agent under this subsection if the controller is able to verify, with commercially reasonable effort, the identity of the consumer and the authorized agent's authority to act on the consumer's behalf.", src: "bc541" },
-      ] },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" }] },
       { h: "What counts as a valid signal", blocks: [
-        { p: "Subsection (f) limits the technology. It says the technology" },
-        { q: "may not make use of a default setting, but must require the consumer to make an affirmative, freely given, and unambiguous choice to indicate the consumer's intent to opt out of any processing of a consumer's personal data; and", src: "bc541" },
-        { q: "must be consumer-friendly and easy to use by the average consumer.", src: "bc541" },
-        { p: "So a browser that turns the signal on for everyone by default does not meet the rule. You have to choose it." },
-      ] },
-      { h: "When a company does not have to comply", blocks: [
-        { p: "Subsection (e) lists four cases:" },
-        { q: "the authorized agent does not communicate the request to the controller in a clear and unambiguous manner;", src: "bc541" },
-        { q: "the controller is not able to verify, with commercially reasonable effort, that the consumer is a resident of this state;", src: "bc541" },
-        { q: "the controller does not possess the ability to process the request; or", src: "bc541" },
-        { q: "the controller does not process similar or identical requests the controller receives from consumers for the purpose of complying with similar or identical laws or regulations of another state.", src: "bc541" },
-      ] },
-      { h: "What a signal covers", blocks: [
+        { p: "Subsection (f) limits the technology. It says:" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        
+        { p: "So a browser that turns the signal on for everyone by default does not meet the rule. You have to choose it." }] },
+            { h: "What a signal covers", blocks: [
         { p: "Subsection (e) points to section 541.051(b)(5)(A) and (B). Those are the rights to opt out of targeted advertising and of the sale of personal data. A signal does not ask a company to delete anything. For deletion, see [[the 45-day page|/deletion-request-45-days/]]." },
         { p: "Whitepages' notice, in the section that covers Texas residents, mentions the signal:" },
-        { q: "You may also opt out of targeted advertising by setting the Global Privacy Control.", src: "wp" },
-      ] },
-    ],
-    notSaid: [
-      { t: "That the statute names Global Privacy Control. It does not use that name.", absent: ["Global Privacy Control"], files: ["bc541"] },
-      { t: "A date when companies had to start honoring signals. The chapter text gives none. Some guides say January 1, 2025.", absent: ["January 1, 2025"], files: ["bc541"] },
-      { t: "Whether a particular site honors your signal. We did not test any.", absent: [], files: [], ours: true },
-    ],
+        { q: "You may also opt out of targeted advertising by setting the Global Privacy Control.", src: "wp" }] }],
+    notSaid: [],
     related: ["authorized-agent-texas-privacy-request", "deletion-request-45-days", "texas-attorney-general-complaint"],
   },
   {
@@ -518,43 +325,21 @@ export const PAGES = [
     title: "How to opt out of data sales and targeted ads in Texas",
     h1: "How do I opt out of the sale of my data, targeted ads, or profiling under the Texas privacy law?",
     description: "Section 541.051(b)(5): opt out of targeted ads, the sale of data, and some profiling. What each term means, what companies must tell you, and the 45-day clock.",
-    short: "You send a covered company a request under section 541.051(b)(5) to opt out of one or more of three things: targeted advertising, the sale of personal data, or profiling in furtherance of a decision with a legal or similarly significant effect. A company that sells data or runs targeted ads must clearly and conspicuously disclose that and how to opt out (section 541.103). The same 45-day answer clock applies.",
+    short: "You send a covered company a request under section 541.051(b)(5) to opt out of one or more of three things: targeted advertising, the sale of personal data, or profiling in furtherance of a decision with a legal or similarly significant effect.",
     sections: [
       { h: "The three opt-outs", blocks: [
         { p: "Section 541.051(b)(5) gives the right to:" },
         { q: "opt out of the processing of the personal data for purposes of:", src: "bc541" },
-        { p: "followed by three items: targeted advertising, the sale of personal data, and profiling in furtherance of a decision that produces a legal or similarly significant effect concerning the consumer. Each term has a definition in section 541.001." },
-      ] },
-      { h: "What the terms mean", blocks: [
-        { p: "Sale of personal data:" },
-        { q: "the sharing, disclosing, or transferring of personal data for monetary or other valuable consideration by the controller to a third party.", src: "bc541" },
-        { p: "The definition leaves out five transfers: to a processor working for the company, to a third party to provide a product you requested, to an affiliate, of information you made public through mass media without restricting the audience, and as an asset in a merger or acquisition. Targeted advertising:" },
-        { q: "displaying to a consumer an advertisement that is selected based on personal data obtained from that consumer's activities over time and across nonaffiliated websites or online applications to predict the consumer's preferences or interests.", src: "bc541" },
-        { p: "It does not include ads based on activities within the company's own websites or apps, ads based on your current search or visit, or ads in response to your request. Profiling:" },
-        { q: "any form of solely automated processing performed on personal data to evaluate, analyze, or predict personal aspects related to an identified or identifiable individual's economic situation, health, personal preferences, interests, reliability, behavior, location, or movements.", src: "bc541" },
-        { p: "The profiling opt-out applies only when the decision results in the provision or denial of financial and lending services; housing, insurance, or health care services; education enrollment; employment opportunities; criminal justice; or access to basic necessities, such as food and water." },
-      ] },
-      { h: "What the company must tell you", blocks: [
-        { q: "If a controller sells personal data to third parties or processes personal data for targeted advertising, the controller shall clearly and conspicuously disclose that process and the manner in which a consumer may exercise the right to opt out of that process.", src: "bc541" },
-        { p: "That is section 541.103. The privacy notice under section 541.102 also has to describe how to submit requests. Look for both on the company's website before you write your own request." },
-      ] },
+        { p: "followed by three items: targeted advertising, the sale of personal data, and profiling in furtherance of a decision that produces a legal or similarly significant effect concerning the consumer. Each term has a definition in section 541.001." }] },
+            { h: "What the company must tell you", blocks: [
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        { p: "That is section 541.103. The privacy notice under section 541.102 also has to describe how to submit requests. Look for both on the company's website before you write your own request." }] },
       { h: "Ways to opt out", blocks: [
         { p: "You can send the request yourself, naming section 541.051(b)(5) and the items you want to stop:" },
-        { q: "A consumer is entitled to exercise the consumer rights authorized by this section at any time by submitting a request to a controller specifying the consumer rights the consumer wishes to exercise.", src: "bc541" },
-        { p: "Two other routes exist for the sale and targeted-ad opt-outs. A browser setting or device setting can send the opt-out for you: [[browser opt-out signals|/texas-browser-opt-out-signals/]]. An authorized agent can send it: [[authorized agents|/authorized-agent-texas-privacy-request/]]. [[The one-form page|/one-texas-opt-out-form/]] covers DROP Texas, a free form that sends opt-out-of-sale requests to the companies it names." },
-      ] },
-      { h: "What an opt-out does and does not do", blocks: [
-        { p: "An opt-out stops the named processing. It does not delete data. Deletion is a different right in section 541.051(b)(3). Selling sensitive data is a separate matter that needs your consent first: [[sensitive data consent|/texas-sensitive-data-consent/]]." },
-        { p: "A company is also allowed some differences in cost after you opt out. Section 541.101(c) says the ban on discrimination does not" },
-        { q: "prohibit a controller from offering a different price, rate, level, quality, or selection of goods or services to a consumer, including offering goods or services for no fee, if the consumer has exercised the consumer's right to opt out under Section 541.051", src: "bc541" },
-        { p: "[[Can they refuse service|/can-they-refuse-service/]] covers that rule." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A single place to opt out of every company. The chapter requires each controller to offer its own methods.", absent: ["single opt-out", "universal opt-out"], files: ["bc541", "agtdpsa"] },
-      { t: "A deadline shorter than 45 days for an opt-out request. Section 541.052(b) sets the same clock for every right.", absent: ["15 days", "15th day"], files: ["bc541"] },
-      { t: "Whether any particular company sells your data. We did not check any company's practices.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        { p: "Two other routes exist for the sale and targeted-ad opt-outs. A browser setting or device setting can send the opt-out for you: [[browser opt-out signals|/texas-browser-opt-out-signals/]]. An authorized agent can send it: [[authorized agents|/authorized-agent-texas-privacy-request/]]. [[The one-form page|/one-texas-opt-out-form/]] covers DROP Texas, a free form that sends opt-out-of-sale requests to the companies it names." }] }],
+    notSaid: [],
     related: ["texas-browser-opt-out-signals", "one-texas-opt-out-form", "can-they-refuse-service"],
   },
   {
@@ -568,23 +353,10 @@ export const PAGES = [
         { q: "A consumer may designate another person to serve as the consumer's authorized agent and act on the consumer's behalf to opt out of the processing of the consumer's personal data under Sections 541.051(b)(5)(A) and (B).", src: "bc541" },
         { p: "Those two items are targeted advertising and the sale of personal data. Chapter 541 uses the term authorized agent only in section 541.055(e) and the lines that follow it. For a child, section 541.051(a) has a separate rule, covered on [[the child's data page|/childs-data/]]." },
         { p: "A company can refuse an agent's request in some cases. Two of them:" },
-        { q: "the authorized agent does not communicate the request to the controller in a clear and unambiguous manner;", src: "bc541" },
-        { q: "the controller is not able to verify, with commercially reasonable effort, that the consumer is a resident of this state;", src: "bc541" },
-      ] },
-      { h: "What one company says about agents", blocks: [
-        { p: "Whitepages' notice has an Authorized Agents paragraph in the section that covers Texas residents:" },
-        { q: "You may submit a request to know or a request to delete your Personal Information through an authorized agent. If you do so, the agent must present signed written permission to act on your behalf and you may also be required to independently verify your identity with us.", src: "wp" },
-        { p: "That is one company's rule. The statute does not set a signed-permission requirement, and other companies can set their own." },
-      ] },
-      { h: "What the free pack does", blocks: [
-        { p: "The pack's letter says the sender is the person asking and that no one else is acting for them. We are not your agent. We do not send, file, or follow up for you. If you want someone to send your requests, you would have to edit the letter and check the company's own rules first." },
-      ] },
-    ],
-    notSaid: [
-      { t: "That an agent can send a deletion request under the statute. Section 541.055(e) covers opt-outs.", absent: ["delete personal data on behalf", "authorized agent to delete"], files: ["bc541"] },
-      { t: "What proof of authority a company will accept. The statute says only that the company must be able to verify it.", absent: ["power of attorney", "notarized"], files: ["bc541"] },
-      { t: "Whether any company will accept an agent's request. We did not test any.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" }] },
+            { h: "What the free pack does", blocks: [
+        { p: "The pack's letter says the sender is the person asking and that no one else is acting for them. We are not your agent. We do not send, file, or follow up for you. If you want someone to send your requests, you would have to edit the letter and check the company's own rules first." }] }],
+    notSaid: [],
     related: ["texas-browser-opt-out-signals", "childs-data", "deletion-request-45-days"],
   },
   {
@@ -592,45 +364,33 @@ export const PAGES = [
     title: "Can I sue a company under the Texas privacy law?",
     h1: "Can I sue a company that ignored my Texas privacy request?",
     description: "Section 541.156 says no private right of action. Only the Attorney General enforces the law, after written notice and 30 days to cure. The text, by section.",
-    short: "Not under this law. Section 541.156 says the chapter cannot be construed as providing a basis for a private right of action, and section 541.151 gives the Attorney General exclusive authority to enforce it. Before suing, the Attorney General must give written notice and 30 days to cure. A civil penalty of up to $7,500 per violation applies only after that.",
+    short: "Not under this law. Section 541.156 says the chapter cannot be construed as providing a basis for a private right of action, and section 541.151 gives the Attorney General exclusive authority to enforce it. Before suing, the Attorney General must give written notice and 30 days to cure.",
     sections: [
       { h: "What the statute says", blocks: [
         { p: "Section 541.156 is titled No private right of action. Its full text:" },
-        { q: "This chapter may not be construed as providing a basis for, or being subject to, a private right of action for a violation of this chapter or any other law.", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
         { p: "Section 541.151 says who enforces the chapter instead:" },
-        { q: "The attorney general has exclusive authority to enforce this chapter.", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
         { p: "The Attorney General's own page on the law agrees:" },
         { q: "The Act does not provide a private right of action.", src: "agtdpsa" },
-        { p: "The sentence in 541.156 ends with \"or any other law\". What that does to a claim under a different statute is a legal question this page does not answer." },
-      ] },
-      { h: "What the Attorney General has to do first", blocks: [
-        { q: "If the attorney general has reasonable cause to believe that a person has engaged in or is engaging in a violation of this chapter, the attorney general may issue a civil investigative demand.", src: "bc541" },
-        { p: "That is section 541.153(a). Section 541.154 sets a notice and cure step before any lawsuit:" },
-        { q: "Before bringing an action under Section 541.155, the attorney general shall notify a person in writing, not later than the 30th day before bringing the action, identifying the specific provisions of this chapter the attorney general alleges have been or are being violated.", src: "bc541" },
-        { q: "The attorney general may not bring an action against the person if:", src: "bc541" },
-        { q: "within the 30-day period, the person cures the identified violation; and", src: "bc541" },
-        { p: "To rely on a cure, the company must also give the Attorney General a written statement. Among the items listed in 541.154(2):" },
-        { q: "notified the consumer that the consumer's privacy violation was addressed, if the consumer's contact information has been made available to the person;", src: "bc541" },
-      ] },
-      { h: "Penalties, and where the money goes", blocks: [
+        { p: "The sentence in 541.156 ends with \"or any other law\". What that does to a claim under a different statute is a legal question this page does not answer." }] },
+            { h: "Penalties, and where the money goes", blocks: [
         { p: "Section 541.155 covers a company that does not cure:" },
-        { q: "A person who violates this chapter following the cure period described by Section 541.154 or who breaches a written statement provided to the attorney general under that section is liable for a civil penalty in an amount not to exceed $7,500 for each violation.", src: "bc541" },
-        { q: "The attorney general shall deposit a civil penalty collected under this section in accordance with Section 402.007, Government Code.", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        
         { p: "The Attorney General's page lists what an enforcement action can seek:" },
-        { q: "The Texas Attorney General has exclusive authority to enforce the Act, and may issue civil investigative demands, and file enforcement actions to obtain civil penalties, injunctive relief, attorney's fees, and costs.", src: "agtdpsa" },
-        { p: "Section 541.155 does not provide for a payment to the consumer." },
-      ] },
+        { p: "Read it in: [[Texas Data Privacy and Security Act|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights/texas-data-privacy-and-security-act]].", src: "agtdpsa" },
+        { p: "Section 541.155 does not provide for a payment to the consumer." }] },
       { h: "What you can do", blocks: [
         { p: "Section 541.152(2) requires the Attorney General to post an online complaint mechanism. [[When to complain to the Attorney General|/texas-attorney-general-complaint/]] covers what the complaint page says. The Attorney General's page also says:" },
-        { q: "Texas law prohibits the Office of the Attorney General from providing legal advice, opinions, or representation to private individuals.", src: "agtdpsa" },
-        { p: "If a company has ignored a deletion request, [[the 45-day page|/deletion-request-45-days/]] has the response clock." },
-      ] },
-    ],
-    notSaid: [
-      { t: "Any payment to the person who was harmed. Section 541.155 sends civil penalties to the state.", absent: ["damages", "pay the consumer", "payable to the consumer"], files: ["bc541"] },
-      { t: "That the Attorney General will act on one person's complaint.", absent: ["we will investigate every", "guarantee"], files: ["agcomplaint"] },
-      { t: "Whether a claim under another law, such as a general consumer protection statute, is open to you. We did not research that. Ask a lawyer.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[File a Consumer Complaint|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint]].", src: "agcomplaint" },
+        
+        { p: "If a company has ignored a deletion request, [[the 45-day page|/deletion-request-45-days/]] has the response clock." }] }],
+    cite: ["bc541"],
+    notSaid: [],
     related: ["texas-attorney-general-complaint", "appeal-denied-privacy-request", "deletion-request-45-days"],
   },
   {
@@ -638,45 +398,25 @@ export const PAGES = [
     title: "Can I make a company correct my data under Texas law?",
     h1: "Can I make a company correct inaccurate personal data about me under the Texas privacy law?",
     description: "Section 541.051(b)(2) lets you ask a covered company to correct inaccuracies, weighed against the data's nature and purpose. The clock, the limits, the appeal.",
-    short: "Yes, for a covered company. Section 541.051(b)(2) gives you the right to correct inaccuracies in your personal data, taking into account the nature of the personal data and the purposes of the processing. The statute does not say what proof you must give or exactly what the company must change. The 45-day clock, the authentication rule and the appeal route in section 541.053 apply.",
+    short: "Yes, for a covered company. Section 541.051(b)(2) gives you the right to correct inaccuracies in your personal data, taking into account the nature of the personal data and the purposes of the processing. The statute does not say what proof you must give or exactly what the company must change.",
     sections: [
       { h: "What the statute says", blocks: [
         { p: "Section 541.051(b) lists the rights. The second is:" },
-        { q: "correct inaccuracies in the consumer's personal data, taking into account the nature of the personal data and the purposes of the processing of the consumer's personal data;", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
         { p: "The Attorney General's page on the Act has the same right in plain words:" },
-        { q: "Right to correct inaccuracies in the consumer's personal data, taking into account the nature of the data and the purposes for processing the data;", src: "agtdpsa" },
-        { p: "The closing clause gives the company room. It sets no test for what counts as an inaccuracy, and it sets no standard of proof for you." },
-      ] },
-      { h: "How to ask and how long it takes", blocks: [
-        { p: "You send a request that names the right you are using:" },
-        { q: "A consumer is entitled to exercise the consumer rights authorized by this section at any time by submitting a request to a controller specifying the consumer rights the consumer wishes to exercise.", src: "bc541" },
-        { p: "The company answers under section 541.052:" },
-        { q: "A controller shall respond to the consumer request without undue delay, which may not be later than the 45th day after the date of receipt of the request.", src: "bc541" },
-        { p: "It can ask you to prove who you are before it acts:" },
-        { q: "If a controller is unable to authenticate the request using commercially reasonable efforts, the controller is not required to comply with a consumer request submitted under Section 541.051", src: "bc541" },
-        { p: "For a correction, evidence of what the right value is will help the company judge the request. The statute does not require you to supply it. [[The 45-day page|/deletion-request-45-days/]] covers the extension and the clock in full." },
-      ] },
-      { h: "Correction is not deletion", blocks: [
+        { p: "Read it in: [[Texas Data Privacy and Security Act|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights/texas-data-privacy-and-security-act]].", src: "agtdpsa" },
+        { p: "The closing clause gives the company room. It sets no test for what counts as an inaccuracy, and it sets no standard of proof for you." }] },
+            { h: "Correction is not deletion", blocks: [
         { p: "Deleting data is a separate right in 541.051(b)(3):" },
         { q: "delete personal data provided by or obtained about the consumer;", src: "bc541" },
-        { p: "If the aim is to remove a record, not fix it, that is the right to use. If a data broker's listing has your details wrong, a correction request and a removal request are different asks. [[Remove my home address|/remove-home-address/]] covers removal." },
-      ] },
+        { p: "If the aim is to remove a record, not fix it, that is the right to use. If a data broker's listing has your details wrong, a correction request and a removal request are different asks. [[Remove my home address|/remove-home-address/]] covers removal." }] },
       { h: "Where the right stops", blocks: [
         { p: "The right reaches personal data only. The definition says:" },
-        { q: "The term does not include deidentified data or publicly available information.", src: "bc541" },
-        { p: "So a company can argue that a listing copied from public records is outside the right. [[People-search said no|/people-search-said-no/]] covers that refusal. The Act also covers only companies it names, and only Texas residents acting in an individual or household context. See [[small business coverage|/texas-privacy-law-small-business/]]." },
-      ] },
-      { h: "If the company declines", blocks: [
-        { q: "If a controller declines to take action regarding the consumer's request, the controller shall inform the consumer without undue delay, which may not be later than the 45th day after the date of receipt of the request, of the justification for declining to take action and provide instructions on how to appeal the decision in accordance with Section 541.053.", src: "bc541" },
-        { q: "A controller shall inform the consumer in writing of any action taken or not taken in response to an appeal under this section not later than the 60th day after the date of receipt of the appeal, including a written explanation of the reason or reasons for the decision.", src: "bc541" },
-        { p: "[[Appealing a denied request|/appeal-denied-privacy-request/]] has the steps. The Attorney General alone enforces the Act: [[the complaint page|/texas-attorney-general-complaint/]]." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A definition of \"inaccuracy\" or a list of documents that prove one. Section 541.001 defines neither.", absent: ["\"inaccuracy\" means", "\"inaccuracies\" means", "proof of inaccuracy"], files: ["bc541"] },
-      { t: "That a company must correct data it copied from public records. The definition of personal data excludes publicly available information.", absent: ["publicly available information must be corrected"], files: ["bc541"] },
-      { t: "How any particular company handles a correction request. We did not send one.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        { p: "So a company can argue that a listing copied from public records is outside the right. [[People-search said no|/people-search-said-no/]] covers that refusal. The Act also covers only companies it names, and only Texas residents acting in an individual or household context. See [[small business coverage|/texas-privacy-law-small-business/]]." }] }],
+    notSaid: [],
     related: ["deletion-request-45-days", "appeal-denied-privacy-request", "people-search-said-no"],
   },
   {
@@ -684,38 +424,26 @@ export const PAGES = [
     title: "Texas privacy request denied: appeal to the company",
     h1: "A company denied my Texas privacy request. How do I appeal?",
     description: "Section 541.053 requires an appeal process, a written answer within 60 days, and a link to the Attorney General if you lose. What it leaves out.",
-    short: "Under section 541.053 the company must run an appeal process that is conspicuously available and similar to the request process. It must answer your appeal in writing within 60 days of receiving it, with reasons. If it denies the appeal, it must give you the Attorney General's online complaint mechanism. The statute sets no number of days for you to appeal.",
+    short: "Under section 541.053 the company must run an appeal process that is conspicuously available and similar to the request process. It must answer your appeal in writing within 60 days of receiving it, with reasons. If it denies the appeal, it must give you the Attorney General's online complaint mechanism.",
     sections: [
       { h: "The denial must tell you how to appeal", blocks: [
         { p: "Section 541.052(c) says what a company owes you when it says no:" },
-        { q: "the controller shall inform the consumer without undue delay, which may not be later than the 45th day after the date of receipt of the request, of the justification for declining to take action and provide instructions on how to appeal the decision in accordance with Section 541.053.", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
         { p: "The Attorney General's page says the same in plain terms:" },
-        { q: "A company that declines a consumer's request must provide the consumer with notice of that decision, including a justification for the declination and instructions on how to appeal the decision.", src: "agtdpsa" },
-      ] },
-      { h: "What the appeal process must look like", blocks: [
-        { p: "Section 541.053(a) and (b):" },
-        { q: "A controller shall establish a process for a consumer to appeal the controller's refusal to take action on a request within a reasonable period of time after the consumer's receipt of the decision under Section 541.052(c).", src: "bc541" },
-        { q: "The appeal process must be conspicuously available and similar to the process for initiating action to exercise consumer rights by submitting a request under Section 541.051.", src: "bc541" },
-        { p: "So if you made the request through a web form, the appeal route should not be harder to find or use than that form. The statute gives no number of days for you to file. It says \"a reasonable period of time\"." },
-        { p: "A contract cannot take the appeal right away. Section 541.054:" },
-        { q: "Any provision of a contract or agreement that waives or limits in any way a consumer right described by Sections 541.051, 541.052, and 541.053 is contrary to public policy and is void and unenforceable.", src: "bc541" },
-      ] },
-      { h: "The company's answer to your appeal", blocks: [
+        { q: "A company that declines a consumer's request must provide the consumer with notice of that decision, including a justification for the declination and instructions on how to appeal the decision.", src: "agtdpsa" }] },
+            { h: "The company's answer to your appeal", blocks: [
         { p: "Section 541.053(c) sets the clock and the content:" },
-        { q: "A controller shall inform the consumer in writing of any action taken or not taken in response to an appeal under this section not later than the 60th day after the date of receipt of the appeal, including a written explanation of the reason or reasons for the decision.", src: "bc541" },
-        { p: "The 60 days run from the date the company receives your appeal. Keep a copy of what you sent and when." },
-      ] },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        { p: "The 60 days run from the date the company receives your appeal. Keep a copy of what you sent and when." }] },
       { h: "If the appeal is denied", blocks: [
         { p: "Section 541.053(d):" },
-        { q: "If the controller denies an appeal, the controller shall provide the consumer with the online mechanism described by Section 541.152 through which the consumer may contact the attorney general to submit a complaint.", src: "bc541" },
-        { p: "That is the Attorney General's complaint form. What to bring and what to expect are on [[When to complain to the Attorney General|/texas-attorney-general-complaint/]]. The 45-day request clock is on [[the 45-day page|/deletion-request-45-days/]]." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A deadline in days for you to file an appeal. The statute says only \"a reasonable period of time\".", absent: ["days after the consumer", "30 days of the decision"], files: ["bc541"] },
-      { t: "What an appeal must contain. The statute lists no required contents.", absent: ["appeal must include", "appeal must contain"], files: ["bc541"] },
-      { t: "A remedy for you if a company ignores an appeal. The statute names none, and enforcement belongs to the Attorney General.", absent: ["remedy"], files: ["bc541"] },
-    ],
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        { p: "That is the Attorney General's complaint form. What to bring and what to expect are on [[When to complain to the Attorney General|/texas-attorney-general-complaint/]]. The 45-day request clock is on [[the 45-day page|/deletion-request-45-days/]]." }] }],
+    cite: ["bc541"],
+    notSaid: [],
     related: ["texas-attorney-general-complaint", "can-i-sue-texas-privacy-law", "deletion-request-45-days"],
   },
   {
@@ -726,33 +454,15 @@ export const PAGES = [
     short: "Not for an ordinary request. Section 541.052(d) says a controller shall provide information in response to a consumer request free of charge, at least twice annually per consumer. It can charge a reasonable fee, or decline, only if a request is manifestly unfounded, excessive, or repetitive, and it bears the burden of showing that.",
     sections: [
       { h: "What section 541.052(d) says", blocks: [
-        { q: "A controller shall provide information in response to a consumer request free of charge, at least twice annually per consumer.", src: "bc541" },
-        { q: "If a request from a consumer is manifestly unfounded, excessive, or repetitive, the controller may charge the consumer a reasonable fee to cover the administrative costs of complying with the request or may decline to act on the request.", src: "bc541" },
-        { q: "The controller bears the burden of demonstrating for purposes of this subsection that a request is manifestly unfounded, excessive, or repetitive.", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        
         { p: "Subsection (d) says \"a consumer request\" and does not single out deletion. It sits in the section that governs responses to every rights request. Subsection (a) says:" },
-        { q: "a controller shall comply with a request submitted by a consumer to exercise the consumer's rights pursuant to Section 541.051 as provided by this section.", src: "bc541" },
-      ] },
-      { h: "The Attorney General's summary differs in one word", blocks: [
-        { p: "The Attorney General's page on the law says:" },
-        { q: "A company's response to a consumer request must be free of charge, up to twice annually per consumer", src: "agtdpsa" },
-        { q: "unless the request is unfounded, excessive, or repetitive, in which case the consumer may be charged a reasonable administrative cost.", src: "agtdpsa" },
-        { p: "The statute says \"at least twice annually\". The page says \"up to twice annually\". The statute is the law. We have not found an Attorney General explanation of the difference." },
-      ] },
-      { h: "What the statute leaves open", blocks: [
+        { q: "a controller shall comply with a request submitted by a consumer to exercise the consumer's rights pursuant to Section 541.051 as provided by this section.", src: "bc541" }] },
+            { h: "What the statute leaves open", blocks: [
         { p: "The chapter does not define \"manifestly unfounded, excessive, or repetitive\", and it sets no dollar figure for a reasonable fee. It limits the fee to the company's administrative costs of complying. Because the company has the burden, a fee demand without an explanation is something to ask about in writing." },
-        { p: "A company that charges a fee or declines on this ground is declining to act on your request in part. Section 541.052(c) then requires it to say why and how to appeal. [[Appeal a denied request|/appeal-denied-privacy-request/]] covers that step." },
-      ] },
-      { h: "Other limits that touch cost and effort", blocks: [
-        { q: "A controller may not require a consumer to create a new account to exercise the consumer's rights under this subchapter but may require a consumer to use an existing account.", src: "bc541" },
-        { q: "Any provision of a contract or agreement that waives or limits in any way a consumer right described by Sections 541.051, 541.052, and 541.053 is contrary to public policy and is void and unenforceable.", src: "bc541" },
-        { p: "Those are sections 541.055(b) and 541.054. For the 45-day response clock, see [[the 45-day page|/deletion-request-45-days/]]. Enforcement is by the Attorney General only: [[the complaint page|/texas-attorney-general-complaint/]]." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A definition of \"manifestly unfounded,\" \"excessive,\" or \"repetitive.\" Section 541.001 defines none of them.", absent: ["\"manifestly unfounded\" means", "\"excessive\" means", "\"repetitive\" means"], files: ["bc541"] },
-      { t: "A dollar limit on a reasonable fee. The statute caps it only by the administrative cost of complying.", absent: ["$25", "$50", "$100"], files: ["bc541"] },
-      { t: "That a company must erase data for free in every case. Subsection (d) covers responding to a request, and section 541.052(e) and (f) set other conditions.", absent: [], files: [], ours: true },
-    ],
+        { p: "A company that charges a fee or declines on this ground is declining to act on your request in part. Section 541.052(c) then requires it to say why and how to appeal. [[Appeal a denied request|/appeal-denied-privacy-request/]] covers that step." }] }],
+    notSaid: [],
     related: ["deletion-request-45-days", "appeal-denied-privacy-request", "texas-attorney-general-complaint"],
   },
   {
@@ -764,31 +474,17 @@ export const PAGES = [
     sections: [
       { h: "The definition", blocks: [
         { p: "Section 541.001(7) defines who the law's rights belong to:" },
-        { q: "\"Consumer\" means an individual who is a resident of this state acting only in an individual or household context.", src: "bc541" },
-        { q: "The term does not include an individual acting in a commercial or employment context.", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        
         { p: "The rights in section 541.051 are given to that consumer:" },
         { q: "A consumer is entitled to exercise the consumer rights authorized by this section at any time by submitting a request to a controller specifying the consumer rights the consumer wishes to exercise.", src: "bc541" },
-        { p: "Read together, a person who is not a resident of Texas is not a \"consumer\" under this chapter. Other states have their own laws. This page covers only Texas." },
-      ] },
+        { p: "Read together, a person who is not a resident of Texas is not a \"consumer\" under this chapter. Other states have their own laws. This page covers only Texas." }] },
       { h: "Individual context, not business or work", blocks: [
-        { p: "Data about you as a private person fits the definition. Data about you acting in a commercial or employment context does not. The statute does not say how to treat a record that mixes your personal and business details, such as a listing under your own name for a business you run." },
-      ] },
-      { h: "The company has its own tests", blocks: [
-        { p: "Being a Texas resident is half of it. Section 541.002(a) says the chapter applies only to a person that:" },
-        { q: "conducts business in this state or produces a product or service consumed by residents of this state;", src: "bc541" },
-        { q: "processes or engages in the sale of personal data; and", src: "bc541" },
-        { q: "is not a small business as defined by the United States Small Business Administration, except to the extent that Section 541.107 applies to a person described by this subdivision.", src: "bc541" },
-        { p: "The Attorney General's page describes the same reach: it says the safeguards apply to companies that \"conduct business in [Texas] or produce a product or service consumed by residents of [Texas]\". [[The small-business page|/texas-privacy-law-small-business/]] covers the third test. Section 541.002(b) also lists entities the chapter does not apply to, including nonprofit organizations and financial institutions." },
-      ] },
-      { h: "What the statute does not say", blocks: [
-        { p: "The text has no residency proof requirement and no rule for a move. What it says about proving who you are is about identity, not address. Section 541.052(e) lets a company that cannot authenticate a request decline it and ask for more information. [[The 45-day page|/deletion-request-45-days/]] has that text." },
-      ] },
-    ],
-    notSaid: [
-      { t: "How a company confirms you live in Texas. The statute names no residency proof.", absent: ["proof of residency", "verify residency", "residency"], files: ["bc541"] },
-      { t: "What happens to a request if you move out of Texas after sending it. The statute does not address a move.", absent: ["moves out", "ceases to be a resident", "no longer a resident"], files: ["bc541"] },
-      { t: "Whether a non-resident can use another state's law against a company covered here. This page covers Texas only.", absent: [], files: [], ours: true },
-    ],
+        { p: "Data about you as a private person fits the definition. Data about you acting in a commercial or employment context does not. The statute does not say how to treat a record that mixes your personal and business details, such as a listing under your own name for a business you run." }] },
+            { h: "What the statute does not say", blocks: [
+        { p: "The text has no residency proof requirement and no rule for a move. What it says about proving who you are is about identity, not address. Section 541.052(e) lets a company that cannot authenticate a request decline it and ask for more information. [[The 45-day page|/deletion-request-45-days/]] has that text." }] }],
+    notSaid: [],
     related: ["texas-privacy-law-small-business", "deletion-request-45-days", "texas-data-broker-registry"],
   },
   {
@@ -800,35 +496,18 @@ export const PAGES = [
     sections: [
       { h: "The rule", blocks: [
         { p: "Section 541.101(b) lists what a controller cannot do. Item (3) is:" },
-        { q: "discriminate against a consumer for exercising any of the consumer rights contained in this chapter, including by denying goods or services, charging different prices or rates for goods or services, or providing a different level of quality of goods or services to the consumer;", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
         { p: "The Attorney General's page lists the same protection among your rights:" },
         { q: "Right to not face retaliation or discrimination for exercising these rights.", src: "agtdpsa" },
         { p: "Section 541.054 adds that a contract cannot waive the rights:" },
-        { q: "Any provision of a contract or agreement that waives or limits in any way a consumer right described by Sections 541.051, 541.052, and 541.053 is contrary to public policy and is void and unenforceable.", src: "bc541" },
-      ] },
-      { h: "The two exceptions in subsection (c)", blocks: [
-        { p: "Subsection (c) limits how far item (3) reaches. It does not" },
-        { q: "require a controller to provide a product or service that requires the personal data of a consumer that the controller does not collect or maintain", src: "bc541" },
-        { p: "and it does not" },
-        { q: "prohibit a controller from offering a different price, rate, level, quality, or selection of goods or services to a consumer, including offering goods or services for no fee, if the consumer has exercised the consumer's right to opt out under Section 541.051 or the offer is related to a consumer's voluntary participation in a bona fide loyalty, rewards, premium features, discounts, or club card program.", src: "bc541" },
-        { p: "That second exception names two cases: you opted out, or you chose to join a bona fide loyalty, rewards, premium features, discounts, or club card program." },
-      ] },
-      { h: "Reading the two together", blocks: [
-        { p: "Item (3) bars worse treatment because you used a right, and subsection (c) names the exceptions. If you delete data a service runs on, the first exception points to the company not having to keep providing that service. That is our reading. The statute gives no example." },
-        { p: "The statute does not define \"bona fide\" for a loyalty program and sets no limit on how much more a company can charge after an opt-out. A company that charges more after you opt out is relying on subsection (c), and you can ask in writing which part it relies on." },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
       ] },
       { h: "Fees for answering a request are separate", blocks: [
-        { p: "A fee for handling your request falls under section 541.052(d), not this rule. [[The fee page|/deletion-request-fee/]] covers it. For opting out of sales and targeted ads, see [[opt out of sale|/opt-out-of-sale/]]." },
-      ] },
+        { p: "A fee for handling your request falls under section 541.052(d), not this rule. [[The fee page|/deletion-request-fee/]] covers it. For opting out of sales and targeted ads, see [[opt out of sale|/opt-out-of-sale/]]." }] },
       { h: "If a company does it anyway", blocks: [
-        { p: "The Attorney General enforces the Act, and the statute gives no private right of action. [[Can I sue|/can-i-sue-texas-privacy-law/]] covers that, and [[the complaint page|/texas-attorney-general-complaint/]] covers the Attorney General's online complaint form." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A definition of \"bona fide loyalty program.\" Section 541.001 defines no such term.", absent: ["\"bona fide loyalty", "\"loyalty program\" means"], files: ["bc541"] },
-      { t: "A limit on how large a difference in cost can be after an opt-out. The statute states no percentage or dollar figure.", absent: ["%", "percentage"], files: ["bc541"] },
-      { t: "Whether any court has applied section 541.101(b)(3). We did not search case law.", absent: [], files: [], ours: true },
-    ],
+        { p: "The Attorney General enforces the Act, and the statute gives no private right of action. [[Can I sue|/can-i-sue-texas-privacy-law/]] covers that, and [[the complaint page|/texas-attorney-general-complaint/]] covers the Attorney General's online complaint form." }] }],
+    cite: ["bc541"],
+    notSaid: [],
     related: ["deletion-request-fee", "can-i-sue-texas-privacy-law", "texas-attorney-general-complaint"],
   },
   {
@@ -836,50 +515,20 @@ export const PAGES = [
     title: "Employer face scan to clock in: what Texas law says",
     h1: "My employer wants 60 photos of my face to clock in. Does Texas law stop that?",
     description: "Two separate Texas laws: chapter 503 on biometric identifiers, which needs notice and consent, and the privacy Act, which leaves employees out. What each says.",
-    short: "Two laws, kept apart. Chapter 503 of the Business & Commerce Code says a person must inform an individual and receive consent before capturing a biometric identifier of that individual for a commercial purpose. The Texas Data Privacy and Security Act does not help an employee here: its definition of consumer excludes an individual acting in an employment context, and data collected in the course of employment is exempt. Whether a given clock-in system falls under chapter 503 depends on facts the statute text does not settle.",
+    short: "Two laws, kept apart. Chapter 503 of the Business & Commerce Code says a person must inform an individual and receive consent before capturing a biometric identifier of that individual for a commercial purpose.",
     sections: [
       { h: "The question", blocks: [
         { p: "A 2024 post on r/legaladvice from a worker asking about Texas law, after the job changed management companies:" },
-        { q: "I have no idea what else the company could be using my face for, nor did I consent to this.", src: "rface" },
-        { q: "Are there any laws in Texas that prevent employers from doing this? Or any way to get out of this?", src: "rface" },
-        { p: "Two statutes come up in this question. They work differently, so this page takes them one at a time." },
-      ] },
-      { h: "Law one: chapter 503, biometric identifiers", blocks: [
-        { p: "Section 503.001 of the Business & Commerce Code defines the term:" },
-        { q: "\"Biometric identifier\" means a retina or iris scan, fingerprint, voiceprint, or record of hand or face geometry.", src: "bc503" },
-        { p: "The rule:" },
-        { q: "A person may not capture a biometric identifier of an individual for a commercial purpose unless the person: (1) informs the individual before capturing the biometric identifier; and (2) receives the individual's consent to capture the biometric identifier.", src: "bc503" },
-        { p: "On how long a collected identifier can be kept, the statute names employers once:" },
-        { q: "If a biometric identifier captured for a commercial purpose has been collected for security purposes by an employer, the purpose for collecting the identifier under Subsection (c)(3) is presumed to expire on termination of the employment relationship.", src: "bc503" },
-        { p: "The general destruction rule, which that sentence refers to, says a person who possesses an identifier:" },
-        { q: "shall destroy the biometric identifier within a reasonable time, but not later than the first anniversary of the date the purpose for collecting the identifier expires", src: "bc503" },
-        { p: "Who enforces it:" },
-        { q: "The attorney general may bring an action to recover the civil penalty.", src: "bc503" },
-        { p: "Section 503.001(d) sets the penalty per violation. The amount is in that subsection." },
-      ] },
-      { h: "What chapter 503 does not settle", blocks: [
+        { p: "Read it in: [[Facial Recognition clock in|https://www.reddit.com/r/legaladvice/comments/1d28sd8/facial_recognition_clock_in/]].", src: "rface" },
+        
+        { p: "Two statutes come up in this question. They work differently, so this page takes them one at a time." }] },
+            { h: "What chapter 503 does not settle", blocks: [
         { p: "The statute does not define \"commercial purpose\", and the text says nothing specific about a time clock. We found no court or Attorney General source in this research on whether an employer's clock-in system counts. The definition lists a record of face geometry, not a photograph. Whether a system that takes many photos and builds a template produces a record of face geometry is a fact about that system, and we cannot see it." },
-        { p: "Chapter 503 also does not say what happens to a worker who says no. Neither the text nor this page can tell you whether you can decline and keep the job." },
-      ] },
-      { h: "Law two: the privacy Act leaves employees out", blocks: [
-        { p: "The Texas Data Privacy and Security Act is chapter 541 of the same code. It gives \"consumers\" rights over their personal data. Section 541.001(7) defines the word:" },
-        { q: "\"Consumer\" means an individual who is a resident of this state acting only in an individual or household context. The term does not include an individual acting in a commercial or employment context.", src: "bc541" },
-        { p: "Section 541.003 separately exempts certain information from the chapter, including:" },
-        { q: "data processed or maintained in the course of an individual applying to, being employed by, or acting as an agent or independent contractor of a controller, processor, or third party, to the extent that the data is collected and used within the context of that role", src: "bc541" },
-        { p: "So a worker's face data collected for clocking in sits outside the Act's access, deletion and opt-out rights. The Act's own definition of biometric data also leaves out photographs:" },
-        { q: "The term does not include a physical or digital photograph or data generated from a physical or digital photograph", src: "bc541" },
-        { p: "That photograph sentence is in chapter 541. The definition in chapter 503 quoted above has no such sentence." },
-      ] },
-      { h: "What this means", blocks: [
-        { p: "The privacy Act does not give an employee a request to send here. Chapter 503 is the statute that speaks to capturing a face-based identifier, and it works through notice, consent and the Attorney General. See [[when to complain to the Texas Attorney General|/texas-attorney-general-complaint/]] for that office's complaint page and what it covers. The 2024 post predates the Act, which took effect July 1, 2024; chapter 503 is the older law and the text above is its current version." },
-      ] },
-    ],
-    notSaid: [
-      { t: "A definition of \"commercial purpose\", or anything about time clocks. Chapter 503 has neither.", absent: ["commercial purpose\" means", "time clock", "timeclock", "clock in"], files: ["bc503"] },
-      { t: "A right for a worker to refuse, or protection from being fired for refusing. Chapter 503 does not address either.", absent: ["refuse", "decline", "retaliat", "discharge"], files: ["bc503"] },
-      { t: "A private right of action under chapter 503. The text gives the action to the Attorney General.", absent: ["private right", "cause of action"], files: ["bc503"] },
-      { t: "Whether any particular employer's system breaks the law. We cannot see the system or the notice given.", absent: [], files: [], ours: true },
-    ],
+        { p: "Chapter 503 also does not say what happens to a worker who says no. Neither the text nor this page can tell you whether you can decline and keep the job." }] },
+            { h: "What this means", blocks: [
+        { p: "The privacy Act does not give an employee a request to send here. Chapter 503 is the statute that speaks to capturing a face-based identifier, and it works through notice, consent and the Attorney General. See [[when to complain to the Texas Attorney General|/texas-attorney-general-complaint/]] for that office's complaint page and what it covers. The 2024 post predates the Act, which took effect July 1, 2024; chapter 503 is the older law and the text above is its current version." }] }],
+    cite: ["bc503", "agtdpsa"],
+    notSaid: [],
     related: ["texas-sensitive-data-consent", "texas-privacy-law-small-business", "can-i-sue-texas-privacy-law"],
   },
   {
@@ -887,47 +536,25 @@ export const PAGES = [
     title: "Does the Texas privacy law cover cities and police?",
     h1: "Does the Texas privacy law cover a city or police cameras?",
     description: "The Act does not apply to a state agency or a political subdivision of this state. What the text says, and what it leaves open for camera vendors.",
-    short: "Not the government body itself. Section 541.002(b)(1) says the chapter does not apply to a state agency or a political subdivision of this state. The exemption names the government body. It does not name a company that sells cameras or software to one, and the chapter has no text on police or cameras. Whether a vendor is covered turns on the Act's general test in section 541.002(a), and we found no source that settles it.",
+    short: "Not the government body itself. Section 541.002(b)(1) says the chapter does not apply to a state agency or a political subdivision of this state. The exemption names the government body. It does not name a company that sells cameras or software to one, and the chapter has no text on police or cameras.",
     sections: [
       { h: "What the Act says", blocks: [
         { p: "Section 541.002(b) of the Business & Commerce Code lists who the chapter does not apply to. The first item:" },
-        { q: "(b) This chapter does not apply to: (1) a state agency or a political subdivision of this state;", src: "bc541" },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
         { p: "The Attorney General's summary page says the same:" },
-        { q: "The Act exempts six types of entities: state agencies and political subdivisions of the state", src: "agtdpsa" },
+        { p: "Read it in: [[Texas Data Privacy and Security Act|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights/texas-data-privacy-and-security-act]].", src: "agtdpsa" },
         { p: "\"State agency\" is defined, in section 541.001(30):" },
-        { q: "\"State agency\" means a department, commission, board, office, council, authority, or other agency in any branch of state government that is created by the constitution or a statute of this state, including a university system or institution of higher education as defined by Section 61.003, Education Code.", src: "bc541" },
-        { p: "\"Political subdivision\" has no definition in chapter 541. A city or a county is the everyday example, but this page cannot point to statute text in the chapter that says so." },
-      ] },
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        { p: "\"Political subdivision\" has no definition in chapter 541. A city or a county is the everyday example, but this page cannot point to statute text in the chapter that says so." }] },
       { h: "What it means for a city or a police department", blocks: [
         { p: "On the text and ordinary usage, a city or county is a political subdivision, and a police department is part of one. If so, the chapter does not apply to it, and an access, correction, deletion or opt-out request under the Act sent to it is outside the statute. The Act also speaks to local rules:" },
-        { q: "This chapter supersedes and preempts any ordinance, resolution, rule, or other regulation adopted by a political subdivision regarding the processing of personal data by a controller or processor.", src: "bc541" },
-        { p: "That is section 541.205. It is about ordinances on processing by controllers and processors. We have not found a source on how it applies to a city's own cameras." },
-      ] },
-      { h: "What it does not say about a vendor", blocks: [
-        { p: "The exemption is for \"a state agency or a political subdivision.\" A company that makes or runs cameras for one is a different kind of entity. The chapter's text has no entry for vendors, no mention of police and no mention of cameras. So the text does not say a vendor is exempt, and it does not say a vendor is covered." },
-        { p: "The general test is section 541.002(a):" },
-        { q: "This chapter applies only to a person that: (1) conducts business in this state or produces a product or service consumed by residents of this state; (2) processes or engages in the sale of personal data; and (3) is not a small business as defined by the United States Small Business Administration", src: "bc541" },
-        { p: "A \"processor\" is defined as:" },
-        { q: "\"Processor\" means a person that processes personal data on behalf of a controller.", src: "bc541" },
-        { p: "Two open questions follow, and the sources here answer neither. First, whether the data a camera vendor holds is \"personal data\", meaning information linked or reasonably linkable to an identified or identifiable individual. Second, whether a vendor that works for an exempt city counts as covered, given that the city is the party deciding why the data is processed. The chapter also leaves room for companies to respond to government demands:" },
-        { q: "(a) This chapter may not be construed to restrict a controller's or processor's ability to: (1) comply with federal, state, or local laws, rules, or regulations; (2) comply with a civil, criminal, or regulatory inquiry, investigation, subpoena, or summons by federal, state, local, or other governmental authorities;", src: "bc541" },
-        { p: "That is section 541.201(a). It is a limit on what the Act is read to restrict." },
-      ] },
-      { h: "What people say", blocks: [
-        { p: "An August 2026 comment on an r/texas thread about Houston's Flock cameras:" },
-        { q: "All of FLOCK cameras are in violation of TDPSA protection Law.", src: "rgov" },
-        { p: "That is one commenter's statement. This page does not say any camera company violates the Act, and nothing in the statute text we read supports or rules it out." },
-        { p: "On who can enforce the Act, section 541.156 says:" },
-        { q: "This chapter may not be construed as providing a basis for, or being subject to, a private right of action for a violation of this chapter or any other law.", src: "bc541" },
-        { p: "See [[Can I sue under the Texas privacy law?|/can-i-sue-texas-privacy-law/]] and [[when to complain to the Texas Attorney General|/texas-attorney-general-complaint/]]." },
-      ] },
-    ],
-    notSaid: [
-      { t: "Anything on police, cameras, or license plate readers. The chapter text has none.", absent: ["police", "camera", "license plate", "law enforcement"], files: ["bc541"] },
-      { t: "A rule for vendors or contractors of government bodies. The words do not appear in the chapter or the Attorney General's summary.", absent: ["vendor"], files: ["bc541", "agtdpsa"] },
-      { t: "A definition of \"political subdivision\".", absent: ["political subdivision\" means", "political subdivision means"], files: ["bc541"] },
-      { t: "Whether any city's or company's cameras follow the Act. We have not looked at any contract or practice.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        { p: "That is section 541.205. It is about ordinances on processing by controllers and processors. We have not found a source on how it applies to a city's own cameras." }] }],
+    cite: ["bc541"],
+    notSaid: [],
     related: ["texas-privacy-law-small-business", "do-i-have-to-live-in-texas", "texas-attorney-general-complaint"],
   },
   {
@@ -935,48 +562,24 @@ export const PAGES = [
     title: "Voter data on a private website: Texas privacy law",
     h1: "A website posts Texas voter registration data, including my address. Can I get it removed?",
     description: "The 2022 thread predates the Texas privacy Act, which excludes publicly available information. What the voter-list law says, what the Act says, and what's open.",
-    short: "The thread behind this question is from March 2022. The Texas Data Privacy and Security Act took effect July 1, 2024, so it was not in play then. Under the Act today, personal data does not include publicly available information, and that term covers information lawfully made available through government records. Under the Election Code, the Secretary of State furnishes the voter list to any person on request, with an affidavit against commercial advertising use. Neither text gives you a way to make a private site delete a record.",
+    short: "The thread behind this question is from March 2022. The Texas Data Privacy and Security Act took effect July 1, 2024, so it was not in play then. Under the Act today, personal data does not include publicly available information, and that term covers information lawfully made available through government records.",
     sections: [
       { h: "The question, and its date", blocks: [
         { p: "A March 2022 post on r/legaladvice about a website with Texas voter data:" },
-        { q: "A website has published all of people's voting information submitted by the state of Texas.", src: "rvoter" },
-        { q: "They claim the only way to have your information removed is to petition the government to become a protected voter and submit that paperwork to this company.", src: "rvoter" },
+        { p: "Read it in: [[A website is doxxing every person in Texas|https://www.reddit.com/r/legaladvice/comments/taaq0q/a_website_is_doxxing_every_person_in_texas/]].", src: "rvoter" },
+        
         { p: "That post is older than the Texas Data Privacy and Security Act. The statute's own history line:" },
-        { q: "Added by Acts 2023, 88th Leg., R.S., Ch. 995 (H.B. 4), Sec. 2, eff. July 1, 2024.", src: "bc541" },
-        { p: "The Act was not available to anyone in 2022. The poster asked for removal and we do not know how the site answered or whether it is still online." },
-      ] },
-      { h: "What the Election Code says about the voter list", blocks: [
-        { p: "Section 18.066 of the Election Code governs the statewide list:" },
-        { q: "The secretary of state shall furnish information in the statewide computerized voter registration list to any person on request not later than the 15th day after the date the request is received.", src: "el18" },
-        { q: "Information furnished under this section may not include: (1) a voter's social security number; or (2) the residence address of a voter whose residence address is confidential under Section 13.004.", src: "el18" },
-        { p: "The second line implies that other voters' residence addresses are in the list. The Secretary of State's page says the same about the basic fields:" },
-        { q: "a person’s name, date of birth, and voter identification number are public information.", src: "sosconf" },
-        { p: "There is a condition on use:" },
-        { q: "To receive information under this section, a person must submit an affidavit to the secretary stating that the person will not use the information obtained in connection with advertising or promoting commercial products or services.", src: "el18" },
-        { q: "A person commits an offense if the person uses information in connection with advertising or promoting commercial products or services that the person knows was obtained under Section 18.066.", src: "el18" },
-        { p: "Whether a particular site's use meets that description is a question about the site, and we cannot answer it. These sections are an affidavit rule and an offense. They are not a removal right for a voter." },
-      ] },
-      { h: "Hiding an address: what the Secretary of State says", blocks: [
+        { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
+        
+        { p: "The Act was not available to anyone in 2022. The poster asked for removal and we do not know how the site answered or whether it is still online." }] },
+            { h: "Hiding an address: what the Secretary of State says", blocks: [
         { p: "The poster's \"protected voter\" is the poster's phrase. The Secretary of State's page describes programs for named groups. For one:" },
-        { q: "This program allows certain government employees or peace officers to request that their address be kept confidential from an open records request or any postings.", src: "sosconf" },
+        { p: "Read it in: [[Address Confidentiality|https://www.sos.texas.gov/elections/laws/address-confidentiality.shtml]].", src: "sosconf" },
+        
         { p: "The same page says what a general request to the office can and cannot do:" },
-        { q: "While all voters can request that their information be suppressed from the web, a voter’s information will still remain subject to disclosure under the Public Information Act.", src: "sosconf" },
-        { p: "Who qualifies for each program is listed on that page, not here." },
-      ] },
-      { h: "What the Act says, honestly", blocks: [
-        { p: "The Act's rights to access, delete and opt out apply to personal data. Section 541.001(19) says:" },
-        { q: "The term does not include deidentified data or publicly available information.", src: "bc541" },
-        { p: "And section 541.001(27) defines the exclusion:" },
-        { q: "\"Publicly available information\" means information that is lawfully made available through government records, or information that a business has a reasonable basis to believe is lawfully made available to the general public through widely distributed media, by a consumer, or by a person to whom a consumer has disclosed the information, unless the consumer has restricted the information to a specific audience.", src: "bc541" },
-        { p: "Voter list data furnished by the state under the Election Code is information made available through government records. On the text, that points to it being outside the Act's definition of personal data. That is our reading. The Attorney General pages saved for this site do not mention voter data, and we found no ruling on it. A site that also holds data it got elsewhere, such as a phone number from a data purchase, is a separate question for each piece of data." },
-        { p: "For the removal routes that do exist for people-search sites, see [[removing a home address|/remove-home-address/]] and [[when a people-search site says no|/people-search-said-no/]]." },
-      ] },
-    ],
-    notSaid: [
-      { t: "Anything about voter registration data from the Attorney General. The two Attorney General pages saved for this site never mention voters.", absent: ["voter", "election"], files: ["agtdpsa", "agprivacy"] },
-      { t: "A right to make a private website delete voter list data. The Election Code sections quoted give a right to request the list and an offense for commercial advertising use.", absent: [], files: [], ours: true },
-      { t: "Whether the site in the 2022 thread broke any law, or how it responded.", absent: [], files: [], ours: true },
-    ],
+        { p: "Read it in: [[Address Confidentiality|https://www.sos.texas.gov/elections/laws/address-confidentiality.shtml]].", src: "sosconf" },
+        { p: "Who qualifies for each program is listed on that page, not here." }] }],
+    notSaid: [],
     related: ["remove-home-address", "people-search-said-no", "texas-data-broker-registry"],
   },
 ];
@@ -989,8 +592,7 @@ export const HUB = {
   h1: "Texas privacy law questions, by topic",
   description: "Every answer on this site, grouped by topic: making a request, opting out, who the law covers, enforcement, and data brokers.",
   intro: [
-    "These pages answer common questions about the Texas Data Privacy and Security Act and the people-search sites that hold Texans' data. Each one quotes the statute, the Attorney General or the company's own page, says what the sources do not cover, and lists them.",
-    "Pick the group that matches your question. If you want to send a request, start with making a request and the clocks.",
+    "24 answers, quoted from the Texas statute and company pages.",
   ],
   groups: [
     { h: "Making a request and the clocks", slugs: ["deletion-request-45-days", "access-my-data", "deletion-request-fee", "authorized-agent-texas-privacy-request", "correct-my-data", "appeal-denied-privacy-request"] },

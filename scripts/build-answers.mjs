@@ -41,8 +41,9 @@ function artFigure(p, art) {
 
 function sourcesFor(p) {
   const keys = new Set();
-  for (const s of p.sections) for (const b of s.blocks) if (b.q) keys.add(b.src);
-  for (const n of p.notSaid) for (const f of n.files) keys.add(f);
+  for (const s of p.sections) for (const b of s.blocks) if (b.src) keys.add(b.src);
+  for (const n of (p.notSaid || [])) for (const f of n.files || []) keys.add(f);
+  for (const k of p.cite || []) keys.add(k);
   return [...keys];
 }
 
@@ -115,11 +116,12 @@ ${p.sections.map(s => `
         ${renderBlocks(s.blocks, SOURCES)}
       </section>`).join("\n")}
 
+${p.notSaid?.length ? `
       <section class="not-said">
         <h2>What these pages do not say</h2>
         <ul>${p.notSaid.map(n => `<li>${inline(n.t)}</li>`).join("")}</ul>
         <p>We cannot see your situation, and we do not know how any company will answer you.</p>
-      </section>
+      </section>` : ""}
 
       <section class="note">
         <p><strong>The free pack.</strong> If you want to send a request, the <a href="/pack/">free pack</a> has a letter builder that runs in your browser, an appeal letter, and a tracker. We send nothing for you.</p>
@@ -235,17 +237,9 @@ writeFileSync(root + HUB.slug + "/index.html", hubPage());
 
 // Home page: questions block between markers, placed before the sources section.
 const home = readFileSync(root + "index.html", "utf8");
-const block = `<!-- answers:start -->
-      <section id="questions" aria-labelledby="h-q">
-        <h2 id="h-q">Common questions, answered from the sources</h2>
-        <p>Each page quotes the statute or the company's own page, says what the sources do not cover, and lists them. <a href="/${HUB.slug}/">Browse all ${PAGES.length} questions by topic</a>.</p>
-        <ul class="links">${PAGES.map(p => `<li><a href="/${p.slug}/">${esc(p.title)}</a></li>`).join("")}</ul>
-      </section>
-      <!-- answers:end -->`;
-let out;
-if (home.includes("<!-- answers:start -->")) out = home.replace(/<!-- answers:start -->[\s\S]*?<!-- answers:end -->/, block);
-else out = home.replace('<section id="sources"', block + '\n\n      <section id="sources"');
-writeFileSync(root + "index.html", out);
+if (home.includes("<!-- answers:start -->")) {
+  writeFileSync(root + "index.html", home.replace(/<!-- answers:start -->[\s\S]*?<!-- answers:end -->\n?/, ""));
+}
 
 const urls = [["/", DATE], ["/pack/", DATE], ["/privacy.html", DATE], [`/${HUB.slug}/`, DATE], ...PAGES.map(p => [`/${p.slug}/`, DATE])];
 writeFileSync(root + "sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([u, d]) => `  <url>\n    <loc>${SITE}${u}</loc>\n    <lastmod>${d}</lastmod>\n  </url>`).join("\n")}\n</urlset>\n`);

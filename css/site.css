@@ -1,4 +1,4 @@
-:root{--bg:#f5f2ea;--ink:#1c2a29;--muted:#55635f;--teal:#1d5c58;--teal-d:#14423f;--rust:#a9481f;--card:#fffdf8;--line:#d9d3c4;--note:#eef3ef}
+:root{--bg:#ffffff;--ink:#1c2a29;--muted:#55635f;--teal:#1d5c58;--teal-d:#14423f;--rust:#a9481f;--card:#ffffff;--line:#d5d9dd;--note:#eef3ef}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
@@ -30,8 +30,8 @@ h3{font-size:1.1rem;margin:1.4rem 0 .3rem}
 .card h3:first-child{margin-top:0}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .grid .card{margin:0}
-.note{background:var(--note);border-left:5px solid var(--teal);padding:.9rem 1.1rem;border-radius:0 10px 10px 0;margin:1.4rem 0}
-.warn{background:#fbf0e8;border-left-color:var(--rust)}
+.note{background:var(--note);border:1px solid var(--line);padding:.9rem 1.1rem;border-radius:10px;margin:1.4rem 0}
+.warn{background:#fbf0e8}
 .legal{font-weight:600}
 ol.steps{padding-left:1.3rem}
 ol.steps li{margin:.7rem 0}
@@ -62,7 +62,7 @@ legend{font-weight:700;padding:0 .4rem}
 .crumbs{margin:1.4rem 0 .4rem;font-size:.92rem;color:var(--muted)}
 .crumbs a{display:inline-block;padding:.35rem 0}
 .page-h1{margin-top:.4rem}
-.answer{margin:0 0 1.5rem;padding:1rem 1.1rem .4rem;background:var(--note);border-left:5px solid var(--teal);border-radius:0 10px 10px 0}
+.answer{margin:0 0 1.5rem;padding:1rem 1.1rem .4rem;background:var(--note);border:1px solid var(--line);border-radius:10px}
 .answer-label{margin:0 0 .4rem;font-size:.95rem;font-weight:700;color:var(--teal-d)}
 .answer p{font-size:1.06rem}
 .answer .checked{font-size:.9rem;color:var(--muted)}
@@ -80,3 +80,6 @@ main p a,main li a{padding-block:.2rem}
 .page-art{margin:0 0 1.25rem}
 .page-art img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:var(--line)}
 @media print{.page-art{display:none}}
+
+main p, main li { max-width: 68ch; }
+.hero-shot{display:block;width:100%;max-width:46rem;height:auto;border:1px solid var(--line);border-radius:10px;margin:0 0 1.25rem;background:#fff}
