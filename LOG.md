@@ -55,3 +55,8 @@ Live head 60d4046 (content recut e3181a1). Shared CSS (white background, no side
 ## 26 Nov 2026, 2:16 PM CT — 450-word cap and tighter answer fold
 
 ff7d8c3. Tightened shared answer chrome (crumb, checked line, pack blurb) so every measured answer-page fold at 390 is 100 words or fewer. Trimmed leftover sentences on /can-i-sue-texas-privacy-law/ and /correct-my-data/ only. All 9 pages that were over 450 visible words are now at or under 450 (employer-face-scan is 450). Government-exemption cites were not changed. Gate on the 9 live pages: PASS (no P0), Lighthouse 100, CLS 0. Table: /workspace/mason/recut-2026-11-27.md section 1.
+
+## 2026-11-26 (CT) Compass rows (Mason)
+- NS-1: SKIP. Needs Evan's GoDaddy sign-in for the GitHub Pages verification TXT, then a cert retry. www.netsanctuary.com still fails SSL (no SAN for www). Apex is fine.
+- NS-2: PASS. og:title, og:description, og:image and twitter:card already on home and all answer pages. Live curl showed og:image on five sampled pages (`/`, `/deletion-request-45-days/`, `/employer-face-scan/`, `/access-my-data/`, `/opt-out-of-sale/`). No new commit for this row.
+- NS-3: PASS. `/deletion-request-45-days/` short now names section 541.052 and links the AG TDPSA page, inside the first 60 words. measure.js 359 words, fold 87/69. Gate PASS, no P0, Lighthouse 100, CLS 0 (`/workspace/mason/gate-compass-ns-45/`). Reran N1–N3; our domain was not cited. Commit `4b66293`.
