@@ -1,6 +1,6 @@
 // Content owner for the eight answer pages. Every quote (q) must appear in sources/text/<file> (scripts/check-quotes.mjs).
 // Every "not said" claim lists terms that must be absent from the files it names.
-export const CHECKED = "Wednesday, 25 November 2026, America/Chicago";
+export const CHECKED = "25 Nov 2026";
 export const DATE = "2026-11-25";
 
 export const SOURCES = {
@@ -388,7 +388,7 @@ export const PAGES = [
         { p: "Section 541.152(2) requires the Attorney General to post an online complaint mechanism. [[When to complain to the Attorney General|/texas-attorney-general-complaint/]] covers what the complaint page says. The Attorney General's page also says:" },
         { p: "Read it in: [[File a Consumer Complaint|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint]].", src: "agcomplaint" },
         
-        { p: "If a company has ignored a deletion request, [[the 45-day page|/deletion-request-45-days/]] has the response clock." }] }],
+] }],
     cite: ["bc541"],
     notSaid: [],
     related: ["texas-attorney-general-complaint", "appeal-denied-privacy-request", "deletion-request-45-days"],
@@ -406,11 +406,11 @@ export const PAGES = [
         
         { p: "The Attorney General's page on the Act has the same right in plain words:" },
         { p: "Read it in: [[Texas Data Privacy and Security Act|https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-privacy-rights/texas-data-privacy-and-security-act]].", src: "agtdpsa" },
-        { p: "The closing clause gives the company room. It sets no test for what counts as an inaccuracy, and it sets no standard of proof for you." }] },
+        { p: "It sets no test for what counts as an inaccuracy, and it sets no standard of proof for you." }] },
             { h: "Correction is not deletion", blocks: [
         { p: "Deleting data is a separate right in 541.051(b)(3):" },
         { q: "delete personal data provided by or obtained about the consumer;", src: "bc541" },
-        { p: "If the aim is to remove a record, not fix it, that is the right to use. If a data broker's listing has your details wrong, a correction request and a removal request are different asks. [[Remove my home address|/remove-home-address/]] covers removal." }] },
+        { p: "If the aim is to remove a record, not fix it, that is the right to use. [[Remove my home address|/remove-home-address/]] covers removal." }] },
       { h: "Where the right stops", blocks: [
         { p: "The right reaches personal data only. The definition says:" },
         { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },

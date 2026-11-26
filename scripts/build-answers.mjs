@@ -97,18 +97,18 @@ ${jsonLd(p)}
       <a class="wordmark" href="/">Net <span>Sanctuary</span></a>
       <nav aria-label="Site">
         <a href="/">Home</a>
-        <a href="/pack/">The free pack</a>
+        <a href="/pack/">The pack</a>
       </nav>
     </div>
   </header>
   <main id="main">
     <div class="wrap">
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Net Sanctuary</a> &rsaquo; <a href="/${HUB.slug}/">Common questions</a></nav>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/${HUB.slug}/">Questions</a></nav>
 ${artFigure(p, artFor(p.slug))}      <h1 class="page-h1">${esc(p.h1)}</h1>
       <div class="answer" role="note">
         <h2 class="answer-label">Short answer</h2>
         <p>${esc(p.short)}</p>
-        <p class="checked">Checked against the sources below on ${CHECKED}. This is a reading guide, not legal advice, and we are not your agent.</p>
+        <p class="checked">Checked against the sources below, ${CHECKED}. Not legal advice.</p>
       </div>
 ${p.sections.map(s => `
       <section>
@@ -124,7 +124,7 @@ ${p.notSaid?.length ? `
       </section>` : ""}
 
       <section class="note">
-        <p><strong>The free pack.</strong> If you want to send a request, the <a href="/pack/">free pack</a> has a letter builder that runs in your browser, an appeal letter, and a tracker. We send nothing for you.</p>
+        <p>The <a href="/pack/">free pack</a> has a letter builder, an appeal letter, and a tracker. We send nothing for you.</p>
       </section>
 
       <section id="related">
@@ -205,13 +205,13 @@ ${ld}
       <a class="wordmark" href="/">Net <span>Sanctuary</span></a>
       <nav aria-label="Site">
         <a href="/">Home</a>
-        <a href="/pack/">The free pack</a>
+        <a href="/pack/">The pack</a>
       </nav>
     </div>
   </header>
   <main id="main">
     <div class="wrap">
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Net Sanctuary</a> &rsaquo; Common questions</nav>
+      <nav class="crumbs" aria-label="Breadcrumb">Questions</nav>
 ${artFigure({ slug: h.slug }, art)}      <h1 class="page-h1">${esc(h.h1)}</h1>
 ${h.intro.map(t => `      <p>${inline(t)}</p>`).join("\n")}
 ${h.groups.map(g => `
