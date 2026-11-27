@@ -88,3 +88,5 @@ Dash order 11/27 11:15 AM CT, plus Shears 11:06–11:19 bar items (batch 3, NS f
 - `/privacy.html`: added the existing `/img/home-builder.webp` screenshot in the fold (same asset and alt as `/pack/`). No new sentences. Email wrap unchanged. Hero 0.35, sweep prose 18.
 
 Local Shears-method results (every NS URL): fold prose ≤40 at 390 and 1280, fold words ≤100/130, hero 0.350, taps fail 0, overflow 0, answers ≤450, wps ≤110. check-quotes, check-seo, and check-site passed.
+
+Live head `39da166`. Pages built that commit. Live HTML, CSS, and `img/hero/hero-request-780x715.webp` equal the repo. Live Shears remasure matched local (hero 0.350328 on sampled pages). visual-qa-gate on live home, /pack/, /privacy.html, and /employer-face-scan/: PASS (no P0, no P1). Pre-existing P2: no og:image on /pack/ and /privacy.html. Lighthouse mobile 100 (privacy performance 99), CLS 0, LCP 1.1s. Out: /workspace/mason/scan-pass-qa/ns-39da166/.
