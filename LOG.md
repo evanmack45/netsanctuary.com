@@ -105,3 +105,5 @@ Shears re-gate 12:29 PM CT: official words/screen at 390 on `/employer-face-scan
 Cut eight words below the fold from the last body paragraph: it now ends “chapter 503 is the older law.” The short is unchanged. The BC 541.001(7) link and cite stay in “Read it in,” Sources, and JSON-LD.
 
 Local official `measure.js`: 390 total 436 / fold 30 / screens 4.0 / words/screen **109**. 1280 fold 27. Sweep-method prose 20 / 20, hero 0.350328.
+
+Live at `7a40bd6`. Pages built `7a40bd6`. `scripts/verify-live.mjs`: all live checks passed. Official `measure.js` on https://netsanctuary.com/employer-face-scan/: 390 total 436 / fold 30 / screens 4.0 / words/screen **109**; 1280 fold 27. Sweep prose 20 / 20, hero 0.350328, tapsFail 0. visual-qa-gate PASS (no P0, no P1), Lighthouse mobile 100/100/100/100, CLS 0, LCP 1.1s. Out: `/workspace/mason/scan-pass-qa/ns-7a40bd6/`. Fold shots (viewed): `/workspace/mason/scan-pass-shots/order-1115/ns-7a40bd6-employer-{390,1280}.png`.
