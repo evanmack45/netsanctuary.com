@@ -39,6 +39,28 @@ function artFigure(p, art) {
 }
 
 
+
+function wordCount(s) {
+  return (String(s).trim().match(/\S+/g) || []).length;
+}
+function proseWords(s) {
+  const n = wordCount(s);
+  return n >= 12 ? n : 0;
+}
+function shortLead(h1, short) {
+  const s = String(short).trim();
+  const budget = Math.max(0, 40 - proseWords(h1));
+  const m = s.match(/^([\s\S]*?[.!?])(?:\s+([\s\S]+))?$/);
+  const first = m ? m[1].trim() : s;
+  const rest = m && m[2] ? m[2].trim() : "";
+  if (proseWords(first) <= budget) return { lead: first, full: rest ? s : "" };
+  const bits = first.split(/(?<=[,;:])\s+/);
+  let lead = bits[0] || first;
+  if (lead.endsWith(",")) lead = lead.slice(0, -1);
+  if (proseWords(lead) <= budget) return { lead, full: s };
+  return { lead: first, full: s };
+}
+
 function sourcesFor(p) {
   const keys = new Set();
   for (const s of p.sections) for (const b of s.blocks) if (b.src) keys.add(b.src);
@@ -76,7 +98,12 @@ function page(p) {
   <meta name="description" content="${esc(p.description)}">
   <link rel="canonical" href="${url}">
   <meta name="theme-color" content="#1d5c58">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Net Sanctuary">
   <meta property="og:title" content="${esc(p.title)}">
@@ -94,7 +121,7 @@ ${jsonLd(p)}
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header no-print">
     <div class="wrap">
-      <a class="wordmark" href="/">Net <span>Sanctuary</span></a>
+      <a class="wordmark" href="/"><img src="/img/brand/lockup-transparent.svg" width="206" height="48" alt="Net Sanctuary"></a>
       <nav aria-label="Site">
         <a href="/">Home</a>
         <a href="/pack/">The pack</a>
@@ -105,11 +132,15 @@ ${jsonLd(p)}
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/${HUB.slug}/">Questions</a></nav>
 ${artFigure(p, artFor(p.slug))}      <h1 class="page-h1">${esc(p.h1)}</h1>
-      <div class="answer" role="note">
+      ${(() => { const { lead, full } = shortLead(p.h1, p.short); return `<div class="answer" role="note">
         <h2 class="answer-label">Short answer</h2>
-        <p>${inline(p.short)}</p>
+        <p class="answer-lead">${inline(lead)}</p>${full ? `
+        <details class="short-more">
+          <summary>Full short answer</summary>
+          <p>${inline(full)}</p>
+        </details>` : ""}
         <p class="checked">Checked against the sources below, ${CHECKED}. Not legal advice.</p>
-      </div>
+      </div>`; })()}
 ${p.sections.map(s => `
       <section>
         <h2>${esc(s.h)}</h2>
@@ -142,7 +173,9 @@ ${p.notSaid?.length ? `
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>Not legal advice. We are not your agent. We never send, file, or follow up for you, and we never ask for your ID.</p>
+      <p>Not legal advice. We are not your agent.</p>
+      <p>We never send, file, or follow up for you.</p>
+      <p>We never ask for your ID.</p>
       <p><a href="/privacy.html">Privacy</a> &middot; <a href="/">Home</a> &middot; <a href="/pack/">The pack</a></p>
       <p><a href="https://www.afternic.com/domain/netsanctuary.com">This domain is for sale</a></p>
     </div>
@@ -184,7 +217,12 @@ function hubPage() {
   <meta name="description" content="${esc(h.description)}">
   <link rel="canonical" href="${url}">
   <meta name="theme-color" content="#1d5c58">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Net Sanctuary">
   <meta property="og:title" content="${esc(h.title)}">
@@ -202,7 +240,7 @@ ${ld}
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header no-print">
     <div class="wrap">
-      <a class="wordmark" href="/">Net <span>Sanctuary</span></a>
+      <a class="wordmark" href="/"><img src="/img/brand/lockup-transparent.svg" width="206" height="48" alt="Net Sanctuary"></a>
       <nav aria-label="Site">
         <a href="/">Home</a>
         <a href="/pack/">The pack</a>
@@ -223,7 +261,9 @@ ${h.groups.map(g => `
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>Not legal advice. We are not your agent. We never send, file, or follow up for you, and we never ask for your ID.</p>
+      <p>Not legal advice. We are not your agent.</p>
+      <p>We never send, file, or follow up for you.</p>
+      <p>We never ask for your ID.</p>
       <p><a href="/privacy.html">Privacy</a> &middot; <a href="/">Home</a> &middot; <a href="/pack/">The pack</a></p>
       <p><a href="https://www.afternic.com/domain/netsanctuary.com">This domain is for sale</a></p>
     </div>

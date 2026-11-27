@@ -28,14 +28,19 @@
 }
   </script>
   <meta name="theme-color" content="#1d5c58">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/site.css">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+  <link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="wordmark" href="./">Net <span>Sanctuary</span></a>
+      <a class="wordmark" href="./"><img src="/img/brand/lockup-transparent.svg" width="206" height="48" alt="Net Sanctuary"></a>
       <nav aria-label="Site">
         <a href="pack/">The pack</a>
       </nav>
@@ -47,7 +52,10 @@
       <section class="hero">
         <h1>Ask data brokers to delete your information. You send the request, not us.</h1>
         <p class="lead">A free pack for Texans: request letters, a 45-day tracker, and a plain guide.</p>
-        <img class="hero-shot" src="img/home-builder.webp" width="1280" height="720" alt="The letter builder on this site, showing a sample Texas privacy request letter.">
+        <picture>
+          <source media="(max-width: 600px)" srcset="img/hero/hero-request-780x300.webp 1x, img/hero/hero-request-1560x600.webp 2x">
+          <img class="hero-shot" src="img/hero/hero-request-1200x500.webp" srcset="img/hero/hero-request-1200x500.webp 1x, img/hero/hero-request-2400x1000.webp 2x" width="1200" height="500" alt="A request letter under a teal arch, an envelope in flight, and a 45-day tracker grid from Day 1 to Day 45 with empty day squares and no days ticked.">
+        </picture>
         <div class="btns">
           <a class="btn btn-primary" href="pack/">Open the free pack</a>
         </div>
@@ -58,7 +66,9 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>Not legal advice. We are not your agent. We never send, file, or follow up for you, and we never ask for your ID.</p>
+      <p>Not legal advice. We are not your agent.</p>
+      <p>We never send, file, or follow up for you.</p>
+      <p>We never ask for your ID.</p>
       <p><a data-waitlist-mailto href="mailto:netsanctuary@agentmail.to?subject=Add%20me%20to%20the%20Net%20Sanctuary%20list&amp;body=Please%20add%20this%20address%20to%20the%20Net%20Sanctuary%20list.%0A%0AOptional%3A%20one%20thing%20you%20wish%20the%20pack%20did%3A%0A">Get a note when it changes</a></p>
       <p><a href="privacy.html">Privacy</a> &middot; <a href="pack/">The pack</a> &middot; <a href="texas-privacy-questions/">Common questions</a></p>
       <p><a href="https://www.afternic.com/domain/netsanctuary.com">This domain is for sale</a></p>

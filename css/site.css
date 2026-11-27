@@ -83,3 +83,25 @@ main p a,main li a{padding-block:.2rem}
 
 main p, main li { max-width: 65ch; }
 .hero-shot{display:block;width:100%;max-width:46rem;height:auto;border:1px solid var(--line);border-radius:10px;margin:0 0 1.25rem;background:#fff}
+
+
+/* scan-pass-2026-11-28: lockup, 48px tap targets, short-answer disclosure */
+.wordmark{display:inline-flex;align-items:center;min-height:48px;min-width:48px;line-height:0}
+.wordmark img{display:block;height:40px;width:auto}
+@media (min-width:640px){.wordmark img{height:48px}}
+.site-header nav a,.crumbs a,.btn,.site-footer a,summary.short-more-sum,details.short-more > summary,ul.links a{
+  min-height:48px;display:inline-flex;align-items:center
+}
+.site-header nav a,.crumbs a,.site-footer a{min-width:48px}
+nav a{min-height:48px;padding:.65rem 0}
+.site-footer a{min-height:48px;padding:.65rem 0}
+ul.links a{min-height:48px}
+.crumbs a{padding:.65rem 0}
+details.short-more{margin:.35rem 0 .8rem}
+details.short-more > summary{
+  cursor:pointer;font-weight:600;font-size:.95rem;min-height:48px;
+  display:flex;align-items:center
+}
+
+details.short-more > summary::before{content:"▸ ";display:inline-block;width:1.1em}
+details.short-more[open] > summary::before{content:"▾ "}
