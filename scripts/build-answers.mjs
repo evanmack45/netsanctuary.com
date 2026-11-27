@@ -133,13 +133,11 @@ ${jsonLd(p)}
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/${HUB.slug}/">Questions</a></nav>
 ${artFigure(p, artFor(p.slug))}      <h1 class="page-h1">${esc(p.h1)}</h1>
       ${(() => { const { lead, full } = shortLead(p.h1, p.short); return `<div class="answer" role="note">
-        <h2 class="answer-label">Short answer</h2>
         <p class="answer-lead">${inline(lead)}</p>${full ? `
         <details class="short-more">
           <summary>Full short answer</summary>
           <p>${inline(full)}</p>
         </details>` : ""}
-        <p class="checked">Checked against the sources below, ${CHECKED}. Not legal advice.</p>
       </div>`; })()}
 ${p.sections.map(s => `
       <section>
@@ -166,6 +164,7 @@ ${p.notSaid?.length ? `
 
       <section id="sources">
         <h2>Sources</h2>
+        <p class="checked">Checked against the sources below, ${CHECKED}. Not legal advice.</p>
         <p class="small">Pages read on ${CHECKED}. Each quote above appears in the page it links to.</p>
         <ol class="src">${src.map(k => `<li><a href="${esc(SOURCES[k].url)}">${esc(SOURCES[k].title)}</a>, ${esc(SOURCES[k].note)}</li>`).join("")}</ol>
       </section>

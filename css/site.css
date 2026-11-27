@@ -113,3 +113,19 @@ details a, details.short-more a {
   padding-block: 0.2rem;
   display: inline;
 }
+
+/* Shears 11/27 recut: 0.35 hero at 390. Photos and the pack/privacy screenshot use a taller crop of the existing asset. */
+@media (max-width: 640px) {
+  .page-art img,
+  .hero-shot {
+    width: 100%;
+    height: 325px;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .hero-shot-builder {
+    object-position: left center;
+    margin-bottom: 10rem;
+  }
+  .answer { margin-bottom: 6rem; }
+}

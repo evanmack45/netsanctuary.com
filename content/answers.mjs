@@ -515,7 +515,7 @@ export const PAGES = [
     title: "Employer face scan to clock in: what Texas law says",
     h1: "My employer wants 60 photos of my face to clock in. Does Texas law stop that?",
     description: "Two separate Texas laws: chapter 503 on biometric identifiers, which needs notice and consent, and the privacy Act, which leaves employees out. What each says.",
-    short: "Two laws, kept apart. Chapter 503 of the Business & Commerce Code says a person must inform an individual and receive consent before capturing a biometric identifier of that individual for a commercial purpose.",
+    short: "Two laws, kept apart. Chapter 503 of the Business & Commerce Code says a person must inform an individual and receive consent before capturing a biometric identifier of that individual for a commercial purpose. The Texas Data Privacy and Security Act’s consumer definition excludes an individual acting in an employment context.",
     sections: [
       { h: "The question", blocks: [
         { p: "A 2024 post on r/legaladvice from a worker asking about Texas law, after the job changed management companies:" },
@@ -523,7 +523,7 @@ export const PAGES = [
         
         { p: "Two statutes come up in this question. They work differently, so this page takes them one at a time." }] },
             { h: "What chapter 503 does not settle", blocks: [
-        { p: "The statute does not define \"commercial purpose\", and the text says nothing specific about a time clock. We found no court or Attorney General source in this research on whether an employer's clock-in system counts. The definition lists a record of face geometry, not a photograph. Whether a system that takes many photos and builds a template produces a record of face geometry is a fact about that system, and we cannot see it." },
+        { p: "The statute does not define \"commercial purpose\", and the text says nothing about a time clock. We found no court or Attorney General source on whether an employer's clock-in system counts. The definition lists a record of face geometry, not a photograph. Whether a system that takes many photos and builds a template produces a record of face geometry is a fact about that system." },
         { p: "Chapter 503 also does not say what happens to a worker who says no. Neither the text nor this page can tell you whether you can decline and keep the job." }] },
             { h: "What this means", blocks: [
         { p: "The privacy Act does not give an employee a request to send here. Chapter 503 is the statute that speaks to capturing a face-based identifier, and it works through notice, consent and the Attorney General. See [[when to complain to the Texas Attorney General|/texas-attorney-general-complaint/]] for that office's complaint page and what it covers. The 2024 post predates the Act, which took effect July 1, 2024; chapter 503 is the older law and the text above is its current version." }] }],
