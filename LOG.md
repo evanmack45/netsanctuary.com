@@ -90,3 +90,10 @@ Dash order 11/27 11:15 AM CT, plus Shears 11:06–11:19 bar items (batch 3, NS f
 Local Shears-method results (every NS URL): fold prose ≤40 at 390 and 1280, fold words ≤100/130, hero 0.350, taps fail 0, overflow 0, answers ≤450, wps ≤110. check-quotes, check-seo, and check-site passed.
 
 Live head `39da166`. Pages built that commit. Live HTML, CSS, and `img/hero/hero-request-780x715.webp` equal the repo. Live Shears remasure matched local (hero 0.350328 on sampled pages). visual-qa-gate on live home, /pack/, /privacy.html, and /employer-face-scan/: PASS (no P0, no P1). Pre-existing P2: no og:image on /pack/ and /privacy.html. Lighthouse mobile 100 (privacy performance 99), CLS 0, LCP 1.1s. Out: /workspace/mason/scan-pass-qa/ns-39da166/.
+
+## 2026-11-27 ~12:15 PM CT (Mason)
+
+Shears re-gate after 39da166: two leftover items on this domain.
+
+- `/pack/`: CSS only. The builder text, URL, email, and date fields have min-height 48px (they measured 47.58). `.check` labels have a 48px hit area.
+- `/employer-face-scan/`: fetched https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm. Section 541.001(7) is the consumer definition the short states: a consumer is a Texas resident acting only in an individual or household context, and the term does not include an individual acting in a commercial or employment context. The claim is unchanged. The short now cites that statute (`bc541`, already in the source set) as well as the AG overview; a “Read it in” pointer sits in “What this means.”

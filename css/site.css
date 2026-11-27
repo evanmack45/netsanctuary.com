@@ -129,3 +129,18 @@ details a, details.short-more a {
   }
   .answer { margin-bottom: 6rem; }
 }
+
+/* Shears 11/27 pack taps: the five text fields were 47.58px; check labels need a 48px hit area. */
+#builder-card input[type=text],
+#builder-card input[type=url],
+#builder-card input[type=email],
+#builder-card input[type=date] {
+  min-height: 48px;
+}
+#builder-card .check {
+  min-height: 48px;
+  align-items: center;
+}
+#builder-card .check input {
+  margin-top: 0;
+}
