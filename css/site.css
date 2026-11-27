@@ -50,7 +50,7 @@ legend{font-weight:700;padding:0 .4rem}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
 .out-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin:.8rem 0}
 .status{min-height:1.5em;font-weight:600;color:var(--teal-d)}
-.addr{font-family:ui-monospace,Menlo,Consolas,monospace;background:#fff;border:1px solid var(--line);padding:.15rem .45rem;border-radius:6px;word-break:break-all}
+.addr{font-family:ui-monospace,Menlo,Consolas,monospace;background:#fff;border:1px solid var(--line);padding:.15rem .45rem;border-radius:6px;display:inline-block;max-width:100%;overflow-wrap:anywhere}
 .site-footer{border-top:1px solid var(--line);background:var(--card);padding:1.4rem 0 2rem;font-size:.92rem;color:var(--muted)}
 .site-footer p{margin:.4rem 0}
 .site-footer a{display:inline-block;padding:.4rem 0;min-height:24px;line-height:1.3}
@@ -105,3 +105,11 @@ details.short-more > summary{
 
 details.short-more > summary::before{content:"▸ ";display:inline-block;width:1.1em}
 details.short-more[open] > summary::before{content:"▾ "}
+
+/* Shears tap rule: secondary links inside disclosures are 24px, not 48 */
+details a, details.short-more a {
+  min-height: 24px;
+  min-width: 0;
+  padding-block: 0.2rem;
+  display: inline;
+}

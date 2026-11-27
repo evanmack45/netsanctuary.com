@@ -67,3 +67,11 @@ ff7d8c3. Tightened shared answer chrome (crumb, checked line, pack blurb) so eve
 - Home hero is the regenerated unticked request art (`img/hero/hero-request-{780x300,1560x600,1200x500,2400x1000}.webp` from `/workspace/ansel/netsanctuary-brand/hero/`). First set `done=k<0` in `/workspace/ansel/brand6-work/site_netsanctuary.py` and rebuilt so the tracker shows empty day squares and implies no progress. Alt text does not claim ticked days. Kit og cards were not used; home og stays `img/home-builder.webp`.
 - Fold-prose at 390 is ≤40 on all 27 URLs; fold words ≤100; tap targets 48px; answer visible words still ≤450. Pack visible words 679 (were 721); the tool page was already over 450 and was not grown. Privacy fold 127→96.
 - Spokeo, Whitepages, DROP Texas, Texas Attorney General, and the Secretary of State stay plain text (no Simple Icons entry, no official press-kit SVG). Full table, shot paths, and asset log: `/workspace/mason/scan-pass-2026-11-28.md`.
+- Gated ship `ea4f0d1`. Live body equals repo. visual-qa-gate on the live home: PASS (no P0), Lighthouse mobile 100, CLS 0.
+
+## 2026-11-27 (CT) Visual sweep follow-up (Shears 2026-11-27, Mason pages)
+
+- #3 `/pack/`: added the existing letter-builder screenshot (`img/home-builder.webp`) in the fold. Lockup, fold-prose 12, fold 51, taps 48 already met from the scan pass. Did not cut further pack copy. Local gate PASS (no P0). Shots: `/workspace/mason/sweep-qa/sweep-ns-pack-{390,1280}.png`.
+- #8 `/privacy.html`: inbox paragraph already moved under a disclosure in the scan pass (fold-prose 0, fold 96). Fixed the boxed email address so it no longer breaks mid-letter at 390. Header lockup is in place. No new invented graphic. Shots: `/workspace/mason/sweep-qa/sweep-ns-privacy-390.png`.
+- Answer pages: already have the Ansel lockup, first-sentence shorts, and 48px nav from the scan pass. Tried moving the "Checked against…" line to Sources; that pulled body paragraphs into the 390 fold and broke the 40-word fold-prose cap on 5 NS pages, so the line stayed in the short-answer box. Caps held (rechecked).
+- Tap rule (this order): 48px for nav, main buttons, and disclosure summaries; 24px for secondary links inside disclosures (`css/site.css`).
