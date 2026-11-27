@@ -527,7 +527,7 @@ export const PAGES = [
         { p: "Chapter 503 also does not say what happens to a worker who says no. Neither the text nor this page can tell you whether you can decline and keep the job." }] },
             { h: "What this means", blocks: [
         { p: "Read it in: [[Texas Business & Commerce Code chapter 541 (Texas Data Privacy and Security Act)|https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm]].", src: "bc541" },
-        { p: "The privacy Act does not give an employee a request to send here. Chapter 503 is the statute that speaks to capturing a face-based identifier, and it works through notice, consent and the Attorney General. See [[when to complain to the Texas Attorney General|/texas-attorney-general-complaint/]] for that office's complaint page and what it covers. The 2024 post predates the Act, which took effect July 1, 2024; chapter 503 is the older law and the text above is its current version." }] }],
+        { p: "The privacy Act does not give an employee a request to send here. Chapter 503 is the statute that speaks to capturing a face-based identifier, and it works through notice, consent and the Attorney General. See [[when to complain to the Texas Attorney General|/texas-attorney-general-complaint/]] for that office's complaint page and what it covers. The 2024 post predates the Act, which took effect July 1, 2024; chapter 503 is the older law." }] }],
     cite: ["bc503", "agtdpsa", "bc541"],
     notSaid: [],
     related: ["texas-sensitive-data-consent", "texas-privacy-law-small-business", "can-i-sue-texas-privacy-law"],

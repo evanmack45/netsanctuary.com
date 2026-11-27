@@ -97,3 +97,11 @@ Shears re-gate after 39da166: two leftover items on this domain.
 
 - `/pack/`: CSS only. The builder text, URL, email, and date fields have min-height 48px (they measured 47.58). `.check` labels have a 48px hit area.
 - `/employer-face-scan/`: fetched https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm. Section 541.001(7) is the consumer definition the short states: a consumer is a Texas resident acting only in an individual or household context, and the term does not include an individual acting in a commercial or employment context. The claim is unchanged. The short now cites that statute (`bc541`, already in the source set) as well as the AG overview; a “Read it in” pointer sits in “What this means.”
+
+## 2026-11-27 ~12:35 PM CT (Mason)
+
+Shears re-gate 12:29 PM CT: official words/screen at 390 on `/employer-face-scan/` was 111 (total 444, screens 4.0, cap 110), after the 541 citation added a “Read it in” line and a source.
+
+Cut eight words below the fold from the last body paragraph: it now ends “chapter 503 is the older law.” The short is unchanged. The BC 541.001(7) link and cite stay in “Read it in,” Sources, and JSON-LD.
+
+Local official `measure.js`: 390 total 436 / fold 30 / screens 4.0 / words/screen **109**. 1280 fold 27. Sweep-method prose 20 / 20, hero 0.350328.
